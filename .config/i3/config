@@ -1,0 +1,240 @@
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#=================SETUP=========================
+#Var's
+set $initi 5
+set $inito 0
+set $step  5
+
+#Conf
+for_window [class="^.*"] border pixel 2
+title_align center
+gaps inner $initi
+gaps outer $inito
+
+#Windows follow mouse
+focus_follows_mouse no
+
+#================Programs======================
+set $mod Mod4
+set $term termite
+set $music spotify
+set $resources htop
+set $net google-chrome-stable
+set $filemng vifm
+set $comp compton
+
+#================Fonts=========================
+# Font for window titles, etc.
+font pango:monospace 8
+
+#================Startup=======================
+#Programs startup
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id $comp --config ~/.config/i3/compton.conf
+exec --no-startup-id $music
+
+#==============Windows manipulation============
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+#Split toogle
+bindsym $mod+t split toggle
+
+# move the currently focused window to the scratchpad
+bindsym $mod+minus move scratchpad
+
+# Show the next scratchpad window or hide the focused scratchpad window.
+# If there are multiple scratchpad windows, this command cycles through them.
+bindsym $mod+plus scratchpad show
+
+#===================Workspaces====================
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+
+# switch to workspace
+bindsym $mod+1 workspace $ws1
+bindsym $mod+2 workspace $ws2
+bindsym $mod+3 workspace $ws3
+bindsym $mod+4 workspace $ws4
+bindsym $mod+5 workspace $ws5
+bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
+bindsym $mod+9 workspace $ws9
+bindsym $mod+0 workspace $ws10
+
+# move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace $ws1
+bindsym $mod+Shift+2 move container to workspace $ws2
+bindsym $mod+Shift+3 move container to workspace $ws3
+bindsym $mod+Shift+4 move container to workspace $ws4
+bindsym $mod+Shift+5 move container to workspace $ws5
+bindsym $mod+Shift+6 move container to workspace $ws6
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
+bindsym $mod+Shift+9 move container to workspace $ws9
+bindsym $mod+Shift+0 move container to workspace $ws10
+
+#Assign Aplications certain workspaces
+for_window [class="Spotify"] move scratchpad
+
+#================i3 Functionality=============
+# reload the configuration file
+bindsym $mod+Shift+c reload
+# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+bindsym $mod+Shift+r restart
+# exit i3 (logs you out of your X session)
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+
+#=================Resizing=====================
+#Resize windows
+mode "resize" {
+    bindsym h resize shrink width 10 px or 10 ppt
+    bindsym j resize grow height 10 px or 10 ppt
+    bindsym k resize shrink height 10 px or 10 ppt
+    bindsym l resize grow width 10 px or 10 ppt
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+r mode "default"
+}
+
+bindsym $mod+r mode "resize"
+
+#Gaps mode
+mode "gaps" {
+    bindsym l gaps outer current plus $step
+    bindsym h gaps outer current minus $step
+    bindsym k gaps inner current plus $step
+    bindsym j gaps inner current minus $step
+    bindsym t gaps inner current set $initi; gaps outer current set $inito
+    bindsym n gaps inner current set 0; gaps outer current set 0
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+g mode "default"
+}
+
+bindsym $mod+g mode "gaps"
+
+#Move windows
+mode "move" {
+    bindsym h move left
+    bindsym j move down
+    bindsym k move up
+    bindsym l move right
+
+    bindsym u layout stacking
+    bindsym i layout tabbed
+    bindsym o layout toggle split
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+m mode "default"
+}
+
+bindsym $mod+m mode "move"
+
+#Launch mode
+mode "launch" {
+    #Wallpaper
+    bindsym y exec --no-startup-id feh --randomize --bg-fill $HOME/Wallpapers/*
+    bindsym r exec --no-startup-id $term -e 'betterlockscreen -u ~/Wallpapers/'
+
+    #Pavucontrol
+    bindsym s exec pavucontrol
+
+    #Nmtui
+    bindsym w --no-startup-id exec $term -e nmtui
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+p mode "default"
+}
+
+bindsym $mod+p mode "launch"
+#===================Colors======================
+# Set colors
+set $blue           #3390FF
+set $darkblue       #005AC6
+set $skin           #E57860
+set $darkred        #C32700
+set $red            #FF0000
+set $yellow         #FFFF66
+set $purple         #8E44AD
+set $grey           #8C8C8C
+set $black          #000000
+set $white          #FFFFFF
+set $transparent    #00000000
+
+#                       BORDER		BACKGROUND	TEXT		INDICATOR
+client.focused		    $white      $black		$white		$purple
+client.unfocused	    $black     	$black		$white		$purple
+client.focused_inactive	$grey     	$black		$white		$purple
+client.urgent		    $black	    $red    	$black		$purple
+client.background       $black
+
+#=================Bar==============================
+#Start polybar
+exec_always --no-startup-id ~/.scripts/polybar.sh
+
+#==================Key bindings=====================
+# start a terminal
+bindsym $mod+Return exec --no-startup-id $term
+
+# kill focused window
+bindsym $mod+Shift+q kill
+
+# start dmenu (a program launcher)
+bindsym $mod+Shift+d exec --no-startup-id dmenu_run -nf '$white' -nb '$black' -sb '$red' -sf '$black' -b -i
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -nf '$white' -nb '$black' -sb '$red' -sf '$black' -b -i'
+
+#Lock Screen
+bindsym $mod+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -l
+bindsym $mod+Shift+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -s
+
+#Browser
+bindsym $mod+n exec $net
+bindsym $mod+Shift+n exec $net --incognito
+
+#Terminal Based
+bindsym $mod+i exec --no-startup-id $term -e $resources
+bindsym $mod+e exec --no-startup-id $term -e $filemng
+bindsym XF86Calculator exec --no-startup-id $term -e python
+
+#Screenshots
+bindsym $mod+Print exec --no-startup-id ~/.scripts/takescreen
+
+#Multimedia
+bindsym XF86AudioMute           exec --no-startup-id amixer sset 'Master' toggle
+bindsym XF86AudioLowerVolume    exec --no-startup-id amixer sset 'Master' 1%-
+bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer sset 'Master' 1%+
+
+#Media controls
+bindsym XF86AudioPlay   exec --no-startup-id playerctl play-pause
+bindsym XF86AudioPause  exec --no-startup-id playerctl play-pause
+bindsym XF86AudioNext   exec --no-startup-id playerctl next
+bindsym XF86AudioPrev   exec --no-startup-id playerctl previous

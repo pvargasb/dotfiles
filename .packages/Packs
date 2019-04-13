@@ -1,0 +1,55 @@
+#Before WM
+i3
+dmenu
+terminal = termite
+
+#After WM
+alsa-utils
+feh
+compton
+playerctl
+nvidia
+ucode-intel
+networkmanager
+htop
+vifm
+
+#Installed
+Spotify
+Google-chrome
+sysstat
+vlc
+zip
+unzip
+imagemagick
+jsoncpp
+polybar
+python-dbus
+virtualbox
+pulseaudio-alsa
+pavucontrol
+betterlockscreen
+sxiv
+jdk-7
+lxappearance
+zathura-pdf-mupdf
+nvidia-settings #For composition mode
+vim-plug
+dunst
+maim
+xclip
+xdotool
+
+#Font
+ttf-dejvu
+ttf-font-awesome
+
+#Personalization
+#Theme
+Sweet
+
+#Cursor
+Bibata
+
+#Icons
+Zafiro
