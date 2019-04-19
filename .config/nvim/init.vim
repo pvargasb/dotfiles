@@ -50,7 +50,7 @@
     """ General
 
         " Navigating with guides
-        map ,, <Esc>/<++><Enter>"_c4l
+        map ,, <Esc>/<++><Enter>c4l
         " Source file
         map <leader>% :source ~/.vimrc<CR>
 
@@ -68,9 +68,6 @@
         map <C-j> <C-w>j
         map <C-k> <C-w>k
         map <C-l> <C-w>l
-
-		" Paste selected text to system clipboard (requires gvim/nvim/vim-x11 installed):
-		map <C-p> "+P
 
         " Show output file
         map <leader>p :!opout <c-r>%<CR><CR>
@@ -102,20 +99,11 @@
         " Set ESC
         inoremap jj <ESC>
 
-        " Navigating with guides
-        inoremap ,, <Esc>/<++><Enter>"_c4l
-
     """ Visual
 
         " Move indentation
         vnoremap < <gv
         vnoremap > >gv
-
-		" Copy selected text to system clipboard (requires gvim/nvim/vim-x11 installed):
-		vnoremap <C-c> "+y
-
-        " Navigating with guides
-        vnoremap ,, <Esc>/<++><Enter>"_c4l
 
 
 """ LaTeX
@@ -175,9 +163,6 @@
 	autocmd Filetype markdown,rmd inoremap ,2 ##<Space><Enter><++><Esc>kA
 	autocmd Filetype markdown,rmd inoremap ,3 ###<Space><Enter><++><Esc>kA
 	autocmd Filetype markdown,rmd inoremap ,l --------<Enter>
-	autocmd Filetype rmd inoremap ,r ```{r}<CR>```<CR><CR><esc>2kO
-	autocmd Filetype rmd inoremap ,p ```{python}<CR>```<CR><CR><esc>2kO
-	autocmd Filetype rmd inoremap ,c ```<cr>```<cr><cr><esc>2kO
 
 
 """ Vim-plug
