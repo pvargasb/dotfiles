@@ -3,11 +3,11 @@ while read file
 do
     case "$1" in
         "w")
-            [ "$(printf "No\\nYes" | dmenu -i -b -p "Set $file as Wallpaper?")" = "Yes" ] && feh --bg-fill "$file" & ;;
+            [ "$(printf "No\\nYes" | dmenu -i -p "Set $file as Wallpaper?")" = "Yes" ] && feh --bg-fill "$file" & ;;
         "x")
-            [ "$(printf "No\\nYes" | dmenu -i -b -p "Set $file as LockScreen?")" = "Yes" ] && betterlockscreen -u "$file" ;;
+            [ "$(printf "No\\nYes" | dmenu -i -p "Set $file as LockScreen?")" = "Yes" ] && betterlockscreen -u "$file" ;;
         "d")
-		    [ "$(printf "No\\nYes" | dmenu -i -b -p "Delete $file?")" = "Yes" ] && rm "$file" ;;
+		    [ "$(printf "No\\nYes" | dmenu -i -p "Delete $file?")" = "Yes" ] && rm "$file" ;;
         "D")
             rm "$file" ;;
    esac
