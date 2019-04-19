@@ -195,10 +195,10 @@ set $white          #FFFFFF
 set $transparent    #00000000
 
 #                       BORDER		BACKGROUND	TEXT		INDICATOR
-client.focused		    $white      $black		$white		$purple
-client.unfocused	    $black     	$black		$white		$purple
-client.focused_inactive	$grey     	$black		$white		$purple
-client.urgent		    $black	    $red    	$black		$purple
+client.focused		    $white      $black		$white		$yellow
+client.unfocused	    $black     	$black		$white		$yellow
+client.focused_inactive	$grey     	$black		$white		$yellow
+client.urgent		    $black	    $red    	$black		$yellow
 client.background       $black
 
 #=================Bar==============================
