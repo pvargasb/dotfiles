@@ -173,6 +173,7 @@
         Plug 'terryma/vim-multiple-cursors'
         Plug 'PotatoesMaster/i3-vim-syntax'
         Plug 'morhetz/gruvbox'
+        Plug 'tpope/vim-surround'
     call plug#end()
 
 """ NerdTree
