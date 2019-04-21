@@ -103,7 +103,7 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 
 #Assign Aplications certain workspaces
 for_window [class="Spotify"] move scratchpad
-for_window [class="^floatingTerm$"] floating enable
+for_window [class="^floatingSet$"] floating enable
 
 #================i3 Functionality=============
 # reload the configuration file
@@ -209,7 +209,7 @@ exec_always --no-startup-id ~/.scripts/polybar.sh
 #==================Key bindings=====================
 # start a terminal
 bindsym $mod+Return exec --no-startup-id $term
-bindsym $mod+Shift+Return exec --no-startup-id $term --class floatingTerm
+bindsym $mod+Shift+Return exec --no-startup-id $term --class floatingSet
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -229,7 +229,7 @@ bindsym $mod+Shift+n exec $net --incognito
 #Terminal Based
 bindsym $mod+i exec --no-startup-id $term -e $resources
 bindsym $mod+e exec --no-startup-id $term -e $filemng
-bindsym XF86Calculator exec --no-startup-id $term -e python
+bindsym XF86Calculator exec --no-startup-id $term -e python --class floatingSet
 
 #Screenshots
 bindsym $mod+Print exec --no-startup-id ~/.scripts/takescreen
