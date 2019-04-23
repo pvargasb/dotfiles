@@ -4,6 +4,7 @@
     filetype plugin on
     syntax enable
     set number
+    set foldmethod=indent
     set clipboard=unnamedplus
 
     " Use spaces instead of tabs
@@ -130,7 +131,7 @@
     autocmd FileType tex inoremap ,v \vio{}<Tab><++><Esc>T{i
     autocmd FileType tex inoremap ,a \href{}{<++>}<Space><++><Esc>2T{i
     autocmd FileType tex inoremap ,sc \textsc{}<Space><++><Esc>T{i
-    autocmd FileType tex inoremap ,chap \chapter{}<Enter><Enter><++><Esc>2kf}i
+    autocmd FileType tex inoremap ,ch \chapter{}<Enter><Enter><++><Esc>2kf}i
     autocmd FileType tex inoremap ,sec \section{}<Enter><Enter><++><Esc>2kf}i
     autocmd FileType tex inoremap ,ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
     autocmd FileType tex inoremap ,sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
