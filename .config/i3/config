@@ -30,7 +30,7 @@ font pango:monospace 8
 #================Startup=======================
 #Programs startup
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id $comp --config ~/.config/i3/compton.conf
+exec --no-startup-id $comp
 exec --no-startup-id $music
 
 #==============Windows manipulation============
