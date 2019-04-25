@@ -83,8 +83,7 @@
         map <leader>O :set nospell<CR>
 
         " Highlight search
-        map <leader>h :set hlsearch<CR>
-        map <leader>H :set nohlsearch<CR>
+        map <leader>h :set hlsearch!<CR>
 
     """ Normal
 
