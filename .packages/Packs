@@ -18,7 +18,6 @@ vifm
 Spotify
 Google-chrome
 sysstat
-vlc
 zip
 unzip
 imagemagick
@@ -39,6 +38,7 @@ dunst
 maim
 xclip
 xdotool
+mpv
 
 #Font
 ttf-dejvu
