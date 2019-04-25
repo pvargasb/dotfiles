@@ -35,6 +35,7 @@
     " Spell languaje
     set spelllang=es
 
+
 """ Commands
 
    " Automatically deletes all trailing whitespace on save.
@@ -45,6 +46,7 @@
 
     " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 	autocmd VimLeave *.tex !texclear %
+
 
 """ Byndings
 
