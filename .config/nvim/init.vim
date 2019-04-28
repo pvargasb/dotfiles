@@ -135,11 +135,6 @@
     autocmd FileType tex inoremap ,rn (\ref{})<++><Esc>F}i
 
 
-""" Java
-
-    autocmd FileType java inoremap ,sout System.out.println("");<Esc>2hi
-
-
 """ Markdown
 
     autocmd Filetype markdown,rmd map <leader>l yiWi[<esc>Ea](<esc>pa)
