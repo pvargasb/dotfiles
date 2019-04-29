@@ -60,6 +60,10 @@
         " Split byndings
         map <leader>vs :vsplit<CR>
         map <leader>hs :split<CR>
+        map <leader>v+ :vertical res +5<CR>
+        map <leader>v- :vertical res -5<CR>
+        map <leader>h+ :res +5<CR>
+        map <leader>h- :res -5<CR>
 
         " Tab's byndings
         map <leader>t :tabnew<CR>
