@@ -39,6 +39,7 @@ maim
 xclip
 xdotool
 mpv
+tmux
 
 #Font
 ttf-dejvu
