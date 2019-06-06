@@ -215,8 +215,8 @@ bindsym $mod+Shift+Return exec --no-startup-id $term --class floatingSet
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+Shift+d exec --no-startup-id dmenu_run -nf '$white' -nb '$black' -sb '$yellow' -sf '$black' -b -i
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -nf '$white' -nb '$black' -sb '$yellow' -sf '$black' -b -i'
+bindsym $mod+d exec --no-startup-id dmenu_run -nf '$white' -nb '$black' -sb '$yellow' -sf '$black' -b -i
+bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -nf '$white' -nb '$black' -sb '$yellow' -sf '$black' -b -i'
 
 #Lock Screen
 bindsym $mod+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -l
