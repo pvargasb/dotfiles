@@ -173,4 +173,5 @@
 
 """ Gruvbox
 
+    set background=dark
     colorscheme gruvbox
