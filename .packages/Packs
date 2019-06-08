@@ -2,6 +2,7 @@
 i3
 dmenu
 terminal = termite
+xorg-xinit
 
 #After WM
 alsa-utils
