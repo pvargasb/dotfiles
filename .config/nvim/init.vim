@@ -83,11 +83,13 @@
         map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>
 
         " Spell checking
-        map <leader>o :set spell<CR>
-        map <leader>O :set nospell<CR>
+        map <leader>s :set spell!<CR>
 
         " Highlight search
         map <leader>h :set hlsearch!<CR>
+
+        " Replace all
+        map <leader>r :%s//gc<Left><Left><Left>
 
     """ Normal
 
@@ -96,9 +98,6 @@
         nmap <leader>q :q<CR>
         nmap <leader>x :wq<CR>
         nmap <leader>f :q!<CR>
-
-        " Replace all is aliased to S.
-        nnoremap S :%s//gc<Left><Left><Left>
 
     """ Insert
 
