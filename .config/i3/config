@@ -204,7 +204,7 @@ client.background       $black
 
 #=================Bar==============================
 #Start polybar
-exec_always --no-startup-id ~/.scripts/polybar
+exec_always --no-startup-id ~/.scripts/startpolybar
 
 #==================Key bindings=====================
 # start a terminal
