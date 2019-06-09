@@ -79,9 +79,6 @@ PATH=$PATH:~/.scripts
 # Colors
 alias vim='nvim'
 
-# Set keyboard lo la-latin
-setxkbmap latam
-
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
