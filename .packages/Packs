@@ -3,6 +3,7 @@ i3
 dmenu
 terminal = termite
 xorg-xinit
+zsh|oh-my-zsh-git
 
 #After WM
 alsa-utils
@@ -59,5 +60,3 @@ Zafiro
 #Probable
 photorec
 dd_rescue
-zsh
-bspwm
