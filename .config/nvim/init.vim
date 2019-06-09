@@ -77,7 +77,7 @@
         map <C-l> <C-w>l
 
         " Show output file
-        map <leader>p :!opout <c-r>%<CR><CR>
+        map <leader>p :!output <c-r>%<CR><CR>
 
         " Compile document, be it groff/LaTeX/markdown/etc.
         map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>

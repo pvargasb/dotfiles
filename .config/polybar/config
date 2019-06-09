@@ -301,7 +301,7 @@ type = custom/script
 interval = 10
 format-prefix = " "
 format = <label>
-exec = $HOME/.scripts/cputemp.sh
+exec = $HOME/.scripts/cputemp
 format-underline = #4bffdc
 
 [module/powermenu]
