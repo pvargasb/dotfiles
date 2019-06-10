@@ -16,11 +16,11 @@ focus_follows_mouse no
 
 #================Programs======================
 set $mod Mod4
-set $term st
-set $music spotify
+set $term $TERMINAL
+set $music $MUSIC
 set $resources htop
-set $net google-chrome-stable
-set $filemng vifm
+set $net $BROWSER
+set $filemng $FILE
 set $comp compton
 
 #================Fonts=========================
