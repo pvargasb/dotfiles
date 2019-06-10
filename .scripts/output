@@ -5,5 +5,5 @@
 basename="$(echo "$1" | sed 's/\.[^\/.]*$//')"
 
 case "$1" in
-	*.tex) setsid "zathura" "$basename".pdf >/dev/null 2>&1 & ;;
+	*.tex) setsid $READER "$basename".pdf >/dev/null 2>&1 & ;;
 esac
