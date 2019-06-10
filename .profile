@@ -4,7 +4,8 @@
 export PATH="$PATH:~/.scripts"
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="firefox"
+export BROWSER="google-chrome-stable"
+export MUSIC="spotify"
 export READER="zathura"
 export FILE="vifm"
 
