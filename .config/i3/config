@@ -16,11 +16,7 @@ focus_follows_mouse no
 
 #================Programs======================
 set $mod Mod4
-set $term $TERMINAL
-set $music $MUSIC
 set $resources htop
-set $net $BROWSER
-set $filemng $FILE
 set $comp compton
 
 #================Fonts=========================
@@ -31,7 +27,7 @@ font pango:monospace 8
 #Programs startup
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id $comp
-exec --no-startup-id $music
+exec --no-startup-id $MUSIC
 
 #==============Windows manipulation============
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -166,13 +162,13 @@ bindsym $mod+m mode "move"
 mode "launch" {
     #Wallpaper
     bindsym y exec --no-startup-id feh --randomize --bg-fill $HOME/Wallpapers/*
-    bindsym r exec --no-startup-id $term -e 'betterlockscreen -u ~/Wallpapers/'
+    bindsym r exec --no-startup-id $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
 
     #Pavucontrol
     bindsym s exec pavucontrol
 
     #Nmtui
-    bindsym w --no-startup-id exec $term -e nmtui
+    bindsym w --no-startup-id exec $TERMINAL -e nmtui
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -208,8 +204,8 @@ exec_always --no-startup-id ~/.scripts/startpolybar
 
 #==================Key bindings=====================
 # start a terminal
-bindsym $mod+Return exec --no-startup-id $term
-bindsym $mod+Shift+Return exec --no-startup-id $term -c floatingSet
+bindsym $mod+Return exec --no-startup-id $TERMINAL
+bindsym $mod+Shift+Return exec --no-startup-id $TERMINAL -c floatingSet
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -223,13 +219,13 @@ bindsym $mod+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -l
 bindsym $mod+Shift+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -s
 
 #Browser
-bindsym $mod+n exec $net
-bindsym $mod+Shift+n exec $net --incognito
+bindsym $mod+n exec $BROWSER
+bindsym $mod+Shift+n exec $BROWSER --incognito
 
 #Terminal Based
-bindsym $mod+i exec --no-startup-id $term -e $resources
-bindsym $mod+e exec --no-startup-id $term -e $filemng
-bindsym XF86Calculator exec --no-startup-id $term -c floatingSet -e python
+bindsym $mod+i exec --no-startup-id $TERMINAL -e $resources
+bindsym $mod+e exec --no-startup-id $TERMINAL -e $FILE
+bindsym XF86Calculator exec --no-startup-id $TERMINAL -c floatingSet -e python
 
 #Screenshots
 bindsym $mod+Print exec --no-startup-id ~/.scripts/takescreen
