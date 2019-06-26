@@ -4,8 +4,11 @@
     filetype plugin on
     syntax enable
     set number
+    set autoread
     set foldmethod=indent
     set clipboard=unnamedplus
+    set lazyredraw
+    set magic
 
     " Use spaces instead of tabs
     set expandtab
