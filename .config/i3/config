@@ -1,7 +1,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 #=================SETUP=========================
 #Var's
-set $initi 5
+set $initi 0
 set $inito 0
 set $step  5
 
