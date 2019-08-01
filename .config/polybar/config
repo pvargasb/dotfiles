@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #aa000000
-background-alt = #aa000000
+background = #bb000000
+background-alt = #bb000000
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -27,7 +27,7 @@ alert = #bd2c40
 
 [bar/mybar]
 width = 100%
-height = 20
+height = 19
 radius = 0
 fixed-center = true
 
@@ -40,8 +40,8 @@ line-color = #f00
 padding-left = 3
 padding-right = 3
 
-module-margin-left = 2
-module-margin-right = 2
+module-margin-left = 4
+module-margin-right = 4
 
 font-0 = fixed:pixelsize=9;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
@@ -55,14 +55,14 @@ modules-center = i3
 modules-right = alsa filesystem wlan eth
 
 tray-position = right
-tray-padding = 2
+tray-padding = 3
 
 cursor-click = pointer
 cursor-scroll = ns-resize
 
 [module/filesystem]
 type = internal/fs
-interval = 60
+interval = 300
 
 mount-0 = /
 
@@ -86,39 +86,20 @@ format = <label>
 exec = lscpu | grep 'CPU MHz' | awk '{printf "%0.1f", $3/1000}'
 format-underline = #FFBF48
 
-[module/bspwm]
-type = internal/bspwm
-
-label-focused = %index%
-label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
-
-label-occupied = %index%
-label-occupied-padding = 2
-
-label-urgent = %index%!
-label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
-
-label-empty = %index%
-label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
-
 [module/i3]
 type = internal/i3
 format = <label-state> <label-mode>
 
-ws-icon-0 = 1; Main
-ws-icon-1 = 2; Terminal
-ws-icon-2 = 3; Browser
-ws-icon-3 = 4;4: 
-ws-icon-4 = 5;5: 
-ws-icon-5 = 6;6: 
-ws-icon-6 = 7; Editor
-ws-icon-7 = 8; VM
-ws-icon-8 = 9; Video
-ws-icon-9 = 10; Music
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
 ws-icon-default = 
 
 index-sort = true
@@ -182,11 +163,11 @@ format-disconnected =
 #label-disconnected = %ifname% disconnected
 #label-disconnected-foreground = ${colors.foreground-alt}
 
-ramp-signal-0 = 
-ramp-signal-1 = 
-ramp-signal-2 = 
-ramp-signal-3 = 
-ramp-signal-4 = 
+ramp-signal-0 = "  "
+ramp-signal-1 = "  "
+ramp-signal-2 = "  "
+ramp-signal-3 = "  "
+ramp-signal-4 = "  "
 ramp-signal-foreground = ${colors.foreground}
 
 [module/eth]
@@ -195,7 +176,7 @@ interface = enp0s31f6
 interval = 10
 
 format-connected-underline = #55aa55
-format-connected-prefix = " "
+format-connected-prefix = "  "
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
 
@@ -213,7 +194,7 @@ date = " %a %d-%b-%Y"
 
 time = "%I:%M %p"
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
 format-underline = #ffffff
 
@@ -223,10 +204,10 @@ label = %date% %time%
 type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
-label-volume =  %percentage%%
+label-volume =   %percentage%%
 label-volume-foreground = ${root.foreground}
 
-format-muted-prefix = " "
+format-muted-prefix = "  "
 format-muted-foreground = ${colors.foreground-alt}
 label-muted = MUTED
 
@@ -238,7 +219,7 @@ bar-volume-foreground-3 = #55aa55
 bar-volume-foreground-4 = #55aa55
 bar-volume-foreground-5 = #f5a70a
 bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
+bar-volume-gradient = true
 bar-volume-indicator = |
 bar-volume-indicator-font = 2
 bar-volume-fill = ─
