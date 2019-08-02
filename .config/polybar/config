@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #bb000000
-background-alt = #bb000000
+background = #c3000000
+background-alt = #c3000000
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -211,7 +211,7 @@ interval = 60
 
 date = " %a %d-%b-%Y"
 
-time = "%I:%M %p"
+time = "%H:%M"
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
