@@ -1,1 +1,1 @@
-PROMPT='λ %{$fg[green]%}%~/ %{$reset_color%}'
+PROMPT='λ %{$fg[green]%}%1~/ %{$reset_color%}'
