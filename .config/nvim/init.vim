@@ -29,9 +29,6 @@
     " Wildmode
     set wildmode=longest,list,full
 
-    " Vrtical space for cursor
-    set so=7
-
     " Fixed split
     set splitbelow splitright
 
