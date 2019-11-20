@@ -42,6 +42,9 @@ bindsym $mod+l focus right
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
+# Focus parent
+bindsym $mod+a focus parent
+
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
@@ -109,7 +112,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-#=================Resizing=====================
+#=================Modes=======================
 #Resize windows
 mode "resize" {
     bindsym h resize shrink width 5 px or 5 ppt
