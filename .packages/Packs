@@ -60,3 +60,6 @@ Zafiro
 #Probable
 photorec
 dd_rescue
+
+#Security
+ufw
