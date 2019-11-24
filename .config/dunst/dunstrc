@@ -54,7 +54,7 @@
     separator_height = 1
 
     # Padding between text and separator.
-    padding = 1
+    padding = 8
 
     # Horizontal padding.
     horizontal_padding = 8
@@ -240,7 +240,7 @@
     history = ctrl+period
 
     # Context menu.
-    context = ctrl+comma
+    # context = ctrl+comma
 
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
