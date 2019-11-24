@@ -175,10 +175,10 @@ mode "launch" {
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
-    bindsym $mod+d mode "default"
+    bindsym $mod+y mode "default"
 }
 
-bindsym $mod+d mode "launch"
+bindsym $mod+y mode "launch"
 #===================Colors======================
 # Set colors
 set $blue           #3390FF
