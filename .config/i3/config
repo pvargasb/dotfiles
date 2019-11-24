@@ -165,7 +165,7 @@ bindsym $mod+m mode "move"
 mode "launch" {
     #Wallpaper
     bindsym y exec --no-startup-id feh --randomize --bg-fill $HOME/Wallpapers/*
-    bindsym r exec --no-startup-id $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
+    bindsym l exec --no-startup-id $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
 
     #Pavucontrol
     bindsym s exec pavucontrol
