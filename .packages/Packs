@@ -42,6 +42,7 @@ xclip
 xdotool
 mpv
 tmux
+base
 
 #Font
 ttf-dejvu
