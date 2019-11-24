@@ -70,22 +70,6 @@ label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
-[module/spotify]
-type = custom/script
-interval = 2
-format-prefix = " "
-format = <label>
-exec = $HOME/.scripts/spotify.py
-format-underline = #1db954
-
-[module/frecuency]
-type = custom/script
-interval = 2
-format-prefix = " "
-format = <label>
-exec = lscpu | grep 'CPU MHz' | awk '{printf "%0.1f", $3/1000}'
-format-underline = #FFBF48
-
 [module/bspwm]
 type = internal/bspwm
 
@@ -148,24 +132,6 @@ label-visible-padding = ${self.label-focused-padding}
 label-urgent = %icon%
 label-urgent-background = ${module/bspwm.label-urgent-background}
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
-
-[module/cpu]
-type = internal/cpu
-interval = 5
-format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-foreground = ${colors.foreground}
-format-underline = #FFBF48
-label = %percentage:2%%
-
-[module/memory]
-type = internal/memory
-interval = 30
-format-prefix = " "
-;format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-foreground = ${colors.foreground}
-format-underline = #f90000
-label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
@@ -275,74 +241,3 @@ animation-charging-2 = 
 animation-charging-3 = 
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 1000
-
-[module/temperature]
-type = internal/temperature
-thermal-zone = 0
-warn-temperature = 60
-interval = 2
-
-format = <ramp> <label>
-format-underline = #4bffdc
-format-warn = <ramp> <label-warn>
-format-warn-underline = ${self.format-underline}
-
-label = %temperature-c%
-label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
-
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
-ramp-foreground = ${colors.foreground-alt}
-
-[module/temp]
-type = custom/script
-interval = 10
-format-prefix = " "
-format = <label>
-exec = $HOME/.scripts/cputemp
-format-underline = #4bffdc
-
-[module/powermenu]
-type = custom/menu
-
-expand-right = true
-
-format-spacing = 1
-
-label-open = 
-label-open-foreground = ${colors.secondary}
-label-close = 
-label-close-foreground = ${colors.secondary}
-label-separator = |
-label-separator-foreground = ${colors.foreground-alt}
-
-menu-0-0 = reboot
-menu-0-0-exec = menu-open-1
-menu-0-1 = power off
-menu-0-1-exec = menu-open-2
-
-menu-1-0 = cancel
-menu-1-0-exec = menu-open-0
-menu-1-1 = reboot
-menu-1-1-exec = sudo reboot
-
-menu-2-0 = power off
-menu-2-0-exec = sudo poweroff
-menu-2-1 = cancel
-menu-2-1-exec = menu-open-0
-
-;[settings]
-;screenchange-reload = true
-;compositing-background = xor
-;compositing-background = screen
-;compositing-foreground = source
-;compositing-border = over
-;pseudo-transparency = false
-
-;[global/wm]
-;margin-top = 5
-;margin-bottom = 5
-
-; vim:ft=dosini
