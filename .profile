@@ -10,5 +10,7 @@ export READER="zathura"
 export FILE="vifm"
 export WM="i3"
 
-# Start graphical server if i3 not already running.
-[ "$(tty)" = "/dev/tty1" ] && ! pgrep -x $WM >/dev/null && exec startx
+# Start graphical server
+if systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+  exec startx
+fi
