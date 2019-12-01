@@ -17,7 +17,7 @@ focus_follows_mouse no
 #================Programs======================
 set $mod Mod4
 set $resources htop
-set $comp compton
+set $comp picom
 
 #================Fonts=========================
 # Font for window titles, etc.
