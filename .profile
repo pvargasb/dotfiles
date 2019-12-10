@@ -4,6 +4,8 @@
 export PATH="$PATH:~/.scripts"
 export EDITOR="nvim"
 export TERMINAL="st"
+export COMPOSITOR="picom"
+export RESOURCES="htop"
 export BROWSER="google-chrome-stable"
 export MUSIC="spotify"
 export READER="zathura"
