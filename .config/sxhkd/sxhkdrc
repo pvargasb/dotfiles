@@ -1,3 +1,4 @@
+# Basic byndings ===============================================================
 super + Return
     $TERMINAL
 
@@ -19,16 +20,16 @@ super + n
 super + shift + n
     $BROWSER --incognito
 
-meta  + y
+alt   + y
     feh --randomize --bg-fill $HOME/Wallpapers/*
 
-meta  + l
+alt   + l
     $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
 
-meta  + s
+alt   + s
     pavucontrol
 
-meta  + w
+alt   + w
     $TERMINAL -e nmtui
 
 super + x
@@ -38,8 +39,9 @@ super + shift + x
     betterlockscreen -t $(whoami) -s
 
 super + Print
-    take_screen
+    ~/.scripts/take_screen
 
+# Especial byndings ============================================================
 XF86Calculator
     $TERMINAL -c floatingSet -e python
 
