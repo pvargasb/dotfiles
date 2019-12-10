@@ -4,14 +4,14 @@ super + Return
 super + shift + Return
     $TERMINAL -c floatingSet
 
+super + i
+    $TERMINAL -e $RESOURCES
+
+super + e
+    $TERMINAL -e $FILE
+
 super + p
     dmenu_run -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826' -b -i
-
-super + x
-    betterlockscreen -t 'Welcome to Arch' -l
-
-super + shift + x
-    betterlockscreen -t 'Welcome to Arch' -s
 
 super + n
     $BROWSER
@@ -19,17 +19,29 @@ super + n
 super + shift + n
     $BROWSER --incognito
 
-super + i
-    $TERMINAL -e htop
+meta  + y
+    feh --randomize --bg-fill $HOME/Wallpapers/*
 
-super + e
-    $TERMINAL -e vifm
+meta  + l
+    $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
 
-XF86Calculator
-    $TERMINAL -c floatingSet -e python
+meta  + s
+    pavucontrol
+
+meta  + w
+    $TERMINAL -e nmtui
+
+super + x
+    betterlockscreen -t $(whoami) -l
+
+super + shift + x
+    betterlockscreen -t $(whoami) -s
 
 super + Print
     take_screen
+
+XF86Calculator
+    $TERMINAL -c floatingSet -e python
 
 XF86AudioMute
     amixer sset 'Master' toggle

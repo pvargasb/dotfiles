@@ -14,10 +14,8 @@ gaps outer $inito
 #Windows follow mouse
 focus_follows_mouse no
 
-#================Programs======================
+#================Variables=====================
 set $mod Mod4
-set $resources htop
-set $comp picom
 
 #================Fonts=========================
 # Font for window titles, etc.
@@ -26,12 +24,15 @@ font pango:monospace 8
 #================Startup=======================
 #Programs startup
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id $comp
+exec --no-startup-id $COMPOSITOR
 exec --no-startup-id $MUSIC
-exec --no-startup-id sxhkd
+exec --no-startup-id sxhkd -m 1
 exec_always --no-startup-id start_polybar
 
 #==============Windows manipulation============
+# kill focused window
+bindsym $mod+Shift+q kill
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -162,25 +163,6 @@ mode "move" {
 }
 
 bindsym $mod+m mode "move"
-
-#Launch mode
-mode "launch" {
-    #Wallpaper
-    bindsym y exec --no-startup-id feh --randomize --bg-fill $HOME/Wallpapers/*
-    bindsym l exec --no-startup-id $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
-
-    #Pavucontrol
-    bindsym s exec pavucontrol
-
-    #Nmtui
-    bindsym w --no-startup-id exec $TERMINAL -e nmtui
-
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-    bindsym $mod+y mode "default"
-}
-
-bindsym $mod+y mode "launch"
 #===================Colors======================
 # Set colors
 set $blue           #3390FF
@@ -202,7 +184,3 @@ client.unfocused	    $black     	$black		$white		$yellow
 client.focused_inactive	$grey     	$black		$white		$yellow
 client.urgent		    $black	    $red    	$black		$yellow
 client.background       $black
-
-#==================Key bindings=====================
-# kill focused window
-bindsym $mod+Shift+q kill
