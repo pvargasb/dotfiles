@@ -2,6 +2,7 @@
 
 # Export variables
 export PATH="$PATH:~/.scripts"
+export ZDOTDIR="$HOME/.config/zsh"
 export EDITOR="nvim"
 export TERMINAL="st"
 export COMPOSITOR="picom"
