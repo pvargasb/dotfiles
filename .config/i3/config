@@ -27,7 +27,7 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id $COMPOSITOR
 exec --no-startup-id $MUSIC
 exec --no-startup-id sxhkd -m 1
-exec_always --no-startup-id start_polybar
+exec_always --no-startup-id ~/.scripts/start_polybar
 
 #==============Windows manipulation============
 # kill focused window
@@ -165,14 +165,8 @@ mode "move" {
 bindsym $mod+m mode "move"
 #===================Colors======================
 # Set colors
-set $blue           #3390FF
-set $darkblue       #005AC6
-set $skin           #E57860
-set $darkred        #C32700
 set $red            #FF0000
-set $lightred       #EF5455
 set $yellow         #F9D342
-set $purple         #8E44AD
 set $grey           #8C8C8C
 set $black          #292826
 set $white          #FFFFFF
