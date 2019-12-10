@@ -28,6 +28,8 @@ font pango:monospace 8
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id $comp
 exec --no-startup-id $MUSIC
+exec --no-startup-id sxhkd
+exec_always --no-startup-id start_polybar
 
 #==============Windows manipulation============
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -201,45 +203,6 @@ client.focused_inactive	$grey     	$black		$white		$yellow
 client.urgent		    $black	    $red    	$black		$yellow
 client.background       $black
 
-#=================Bar==============================
-#Start polybar
-exec_always --no-startup-id ~/.scripts/startpolybar
-
 #==================Key bindings=====================
-# start a terminal
-bindsym $mod+Return exec --no-startup-id $TERMINAL
-bindsym $mod+Shift+Return exec --no-startup-id $TERMINAL -c floatingSet
-
 # kill focused window
 bindsym $mod+Shift+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+p exec --no-startup-id dmenu_run -nf '$white' -nb '$black' -sb '$grey' -sf '$black' -b -i
-bindsym $mod+Shift+p exec --no-startup-id i3-dmenu-desktop --dmenu='dmenu -nf '$white' -nb '$black' -sb '$grey' -sf '$black' -b -i'
-
-#Lock Screen
-bindsym $mod+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -l
-bindsym $mod+Shift+x exec --no-startup-id betterlockscreen -t 'Welcome to Arch' -s
-
-#Browser
-bindsym $mod+n exec $BROWSER
-bindsym $mod+Shift+n exec $BROWSER --incognito
-
-#Terminal Based
-bindsym $mod+i exec --no-startup-id $TERMINAL -e $resources
-bindsym $mod+e exec --no-startup-id $TERMINAL -e $FILE
-bindsym XF86Calculator exec --no-startup-id $TERMINAL -c floatingSet -e python
-
-#Screenshots
-bindsym $mod+Print exec --no-startup-id ~/.scripts/takescreen
-
-#Multimedia
-bindsym XF86AudioMute           exec --no-startup-id amixer sset 'Master' toggle
-bindsym XF86AudioLowerVolume    exec --no-startup-id amixer sset 'Master' 1%-
-bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer sset 'Master' 1%+
-
-#Media controls
-bindsym XF86AudioPlay   exec --no-startup-id playerctl play-pause
-bindsym XF86AudioPause  exec --no-startup-id playerctl play-pause
-bindsym XF86AudioNext   exec --no-startup-id playerctl next
-bindsym XF86AudioPrev   exec --no-startup-id playerctl previous

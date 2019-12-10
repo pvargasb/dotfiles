@@ -1,0 +1,53 @@
+super + Return
+    $TERMINAL
+
+super + shift + Return
+    $TERMINAL -c floatingSet
+
+super + p
+    dmenu_run -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826' -b -i
+
+super + x
+    betterlockscreen -t 'Welcome to Arch' -l
+
+super + shift + x
+    betterlockscreen -t 'Welcome to Arch' -s
+
+super + n
+    $BROWSER
+
+super + shift + n
+    $BROWSER --incognito
+
+super + i
+    $TERMINAL -e htop
+
+super + e
+    $TERMINAL -e vifm
+
+XF86Calculator
+    $TERMINAL -c floatingSet -e python
+
+super + Print
+    take_screen
+
+XF86AudioMute
+    amixer sset 'Master' toggle
+
+XF86AudioLowerVolume
+    amixer sset 'Master' 1%-
+
+XF86AudioRaiseVolume
+    amixer sset 'Master' 1%+
+
+XF86AudioPlay
+    playerctl play-pause
+
+XF86AudioPause
+    playerctl play-pause
+
+XF86AudioNext
+    playerctl next
+
+XF86AudioPrev
+    playerctl previous
