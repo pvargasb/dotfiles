@@ -10,17 +10,16 @@ CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 
 # Auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # This makes repository status check for large repositories
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Custom folder
+# Variables
 ZSH_CUSTOM=~/.config/zsh
-
-# Set PATH
 PATH=$PATH:~/.scripts
+HISTFILE=~/.cache/zsh/.zsh_history
 
 # Aliases
 alias vim='nvim'
