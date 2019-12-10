@@ -37,6 +37,7 @@
     maim
     xclip
     jsoncpp
+    sxhkd
 
 # Cpu
     ucode-intel
