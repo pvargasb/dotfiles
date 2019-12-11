@@ -1,13 +1,14 @@
-#!/bin/sh
+#!/bin/bash
+
 while read file
 do
     case "$1" in
         "w")
-            [ "$(printf "No\\nYes" | dmenu -i -p "Set $file as Wallpaper?")" = "Yes" ] && feh --bg-fill "$file" & ;;
+            ~/.scripts/prompt "Set $file as Wallpaper?" && feh --bg-fill "$file" & ;;
         "x")
-            [ "$(printf "No\\nYes" | dmenu -i -p "Set $file as LockScreen?")" = "Yes" ] && betterlockscreen -u "$file" ;;
+            ~/.scripts/prompt "Set $file as LockScreen?" && betterlockscreen -u "$file" & ;;
         "d")
-		    [ "$(printf "No\\nYes" | dmenu -i -p "Delete $file?")" = "Yes" ] && rm "$file" ;;
+		    ~/.scripts/prompt "Delete $file?" && rm "$file" ;;
         "D")
             rm "$file" ;;
    esac
