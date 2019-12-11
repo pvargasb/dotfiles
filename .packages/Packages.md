@@ -18,7 +18,7 @@
 
 # Terminal
     st
-    zsh | oh-my-zsh-git
+    oh-my-zsh-git
     tmux
 
 # Text editor
