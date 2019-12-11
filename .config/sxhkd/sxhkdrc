@@ -24,7 +24,7 @@ alt   + y
     feh --randomize --bg-fill $HOME/Wallpapers/*
 
 alt   + l
-    $TERMINAL -e 'betterlockscreen -u ~/Wallpapers/'
+    $TERMINAL -e betterlockscreen -u ~/Wallpapers/
 
 alt   + s
     pavucontrol
