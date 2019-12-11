@@ -45,7 +45,7 @@
 	autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
     " Runs a script that cleans out tex build files whenever I close out of a .tex file.
-	autocmd VimLeave *.tex !texclear %
+	autocmd VimLeave *.tex !latex_clear %
 
 
 """ Byndings
@@ -77,7 +77,7 @@
         map <C-l> <C-w>l
 
         " Show output file
-        map <leader>p :!output <c-r>%<CR><CR>
+        map <leader>p :!latex_output <c-r>%<CR><CR>
 
         " Compile document, be it groff/LaTeX/markdown/etc.
         map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>
