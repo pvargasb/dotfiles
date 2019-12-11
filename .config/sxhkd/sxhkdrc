@@ -20,16 +20,16 @@ super + n
 super + shift + n
     $BROWSER --incognito
 
-alt   + y
+super + control + y
     feh --randomize --bg-fill $HOME/Wallpapers/*
 
-alt   + l
+super + control + x
     $TERMINAL -e betterlockscreen -u ~/Wallpapers/
 
-alt   + s
+super + control + s
     pavucontrol
 
-alt   + w
+super + control + w
     $TERMINAL -e nmtui
 
 super + x
