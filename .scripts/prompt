@@ -1,0 +1,3 @@
+#! /bin/bash
+
+[ "$(printf "No\\nYes" | dmenu -i -p "$1" -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826')" = "Yes" ]
