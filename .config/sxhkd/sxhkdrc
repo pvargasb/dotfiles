@@ -32,6 +32,9 @@ super + control + s
 super + control + w
     $TERMINAL -e nmtui
 
+super + control + r
+    ~/.scripts/red_light
+
 super + x
     betterlockscreen -t $(whoami) -l
 
