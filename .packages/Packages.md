@@ -8,6 +8,7 @@
     dmenu
     feh
     picom
+    redshift
     dunst
     betterlockscreen
     htop
