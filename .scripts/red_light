@@ -1,0 +1,8 @@
+#! /bin/bash
+
+VALUES=(2500 3000 3500 4000 4500 5000 5500 6000 6500)
+
+RESPONSE=$(printf "%s\n" "${VALUES[@]}" | \
+    dmenu -p "Redshift:" -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826')
+
+redshift -P -O $RESPONSE > /dev/null 2>&1
