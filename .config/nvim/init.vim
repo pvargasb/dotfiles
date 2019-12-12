@@ -53,7 +53,7 @@
     """ General
 
         " Navigating with guides
-        map ,, <Esc>/<++><Enter>c4l
+        map ,. <Esc>/<++><Enter>c4l
         " Source file
         map <leader>% :source ~/.vimrc<CR>
 
@@ -102,7 +102,7 @@
     """ Insert
 
         " Set ESC
-        inoremap jj <ESC>
+        inoremap ,, <ESC>
 
     """ Visual
 
