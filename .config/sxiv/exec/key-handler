@@ -4,11 +4,11 @@ while read file
 do
     case "$1" in
         "w")
-            ~/.scripts/prompt "Set $file as Wallpaper?" && feh --bg-fill "$file" & ;;
+            prompt "Set $file as Wallpaper?" && feh --bg-fill "$file" & ;;
         "x")
-            ~/.scripts/prompt "Set $file as LockScreen?" && betterlockscreen -u "$file" & ;;
+            prompt "Set $file as LockScreen?" && betterlockscreen -u "$file" & ;;
         "d")
-		    ~/.scripts/prompt "Delete $file?" && rm "$file" ;;
+		    prompt "Delete $file?" && rm "$file" ;;
         "D")
             rm "$file" ;;
    esac
