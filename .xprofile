@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# Initial programs
+$HOME/.fehbg &
+$COMPOSITOR &
+$MUSIC &
+sxhkd -m 1 &
+
 # Set Keyboard to la-latin1
 setxkbmap latam
 
