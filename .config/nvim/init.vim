@@ -1,6 +1,6 @@
 """ Basics
-
 set nocompatible
+set autoread
 filetype plugin on
 syntax enable
 set number
@@ -48,6 +48,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !latex_clear %
 
+" When focus gained check for changes in files
+autocmd FocusGained * :silent! !
 
 """ Byndings
 
