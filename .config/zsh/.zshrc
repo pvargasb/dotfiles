@@ -17,13 +17,14 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Variables
-ZSH_CUSTOM=~/.config/zsh
-PATH=$PATH:~/.scripts
-HISTFILE=~/.cache/zsh/.zsh_history
+ZSH_CUSTOM=$HOME/.config/zsh
+PATH=$PATH:$HOME/.scripts
+HISTFILE=$HOME/.cache/zsh/.zsh_history
 
-# Aliases
-alias vim='nvim'
-alias zshconfig="vim ~/.zshrc"
+# Load aliases
+if [[ -f $HOME/.config/zsh/.aliases ]]; then
+    source $HOME/.config/zsh/.aliases
+fi
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
