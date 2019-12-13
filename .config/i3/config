@@ -23,11 +23,7 @@ font pango:monospace 8
 
 #================Startup=======================
 #Programs startup
-exec --no-startup-id ~/.fehbg
-exec --no-startup-id $COMPOSITOR
-exec --no-startup-id $MUSIC
-exec --no-startup-id sxhkd -m 1
-exec_always --no-startup-id ~/.scripts/start_polybar
+exec_always --no-startup-id start_polybar
 
 #==============Windows manipulation============
 # kill focused window
