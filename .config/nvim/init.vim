@@ -184,7 +184,7 @@ let g:NERDTrimTrailingWhitespace = 1
 
 """ FZF
 
-map <leader>xf :Files<CR>
+map <C-x><C-f> :Files<CR>
 map <leader>m  :Map<CR>
 let $FZF_DEFAULT_COMMAND = 'find .'
 
