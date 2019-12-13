@@ -35,6 +35,11 @@
     " Spell languaje
     set spelllang=es
 
+    " Ignore case
+    set ic
+
+    " No hightlight
+    set nohlsearch
 
 """ Commands
 
@@ -163,12 +168,20 @@
         Plug 'PotatoesMaster/i3-vim-syntax'
         Plug 'morhetz/gruvbox'
         Plug 'tpope/vim-surround'
+        Plug 'scrooloose/nerdcommenter'
+        Plug 'kovetskiy/sxhkd-vim'
     call plug#end()
 
 """ NerdTree
 
 	map <leader>e :NERDTreeToggle<CR>
     autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endifautocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+""" Nerdcommenter
+
+    let g:NERDSpaceDelims = 1
+    let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+    let g:NERDTrimTrailingWhitespace = 1
 
 """ Gruvbox
 
