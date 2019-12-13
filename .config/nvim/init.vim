@@ -1,4 +1,4 @@
-""" Configs
+""" Basics
 
 set nocompatible
 filetype plugin on
@@ -9,17 +9,10 @@ set foldmethod=indent
 set clipboard=unnamedplus
 set lazyredraw
 set magic
-
-" Use spaces instead of tabs
 set expandtab
-
-" Be smart when using tabs
 set smarttab
-
-" 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
-
 set ai "Auto indent
 set si "Smart indent
 
@@ -40,6 +33,9 @@ set ic
 
 " No hightlight
 set nohlsearch
+
+" ScrollOff
+set so=4
 
 """ Commands
 
@@ -172,7 +168,7 @@ Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 call plug#end()
 
 """ NerdTree
@@ -185,6 +181,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:NERDSpaceDelims = 1
 let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDTrimTrailingWhitespace = 1
+
+""" FZF
+
+map <leader>xf :Files<CR>
+map <leader>m  :Map<CR>
+
+""" ALE
+
+map <leader>a :ALEToggle<CR>
 
 """ Gruvbox
 
