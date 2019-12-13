@@ -3,6 +3,6 @@
 VALUES=({1500..6500..500})
 
 RESPONSE=$(printf "%s\n" "${VALUES[@]}" | \
-    dmenu -p "Redshift:" -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826')
+    dmenu -b -p "Redshift:" -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826')
 
 redshift -P -O $RESPONSE > /dev/null 2>&1
