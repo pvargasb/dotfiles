@@ -8,7 +8,7 @@
     dmenu
     feh
     picom
-    redshift
+    redshift-minimal
     dunst
     betterlockscreen
     htop
@@ -20,7 +20,6 @@
 # Terminal
     st
     oh-my-zsh-git
-    tmux
 
 # Text editor
     neovim
@@ -31,21 +30,20 @@
 
 # System utilities
     networkmanager
-    zip
     unzip
     vim-plug
     imagemagick
     maim
     xclip
-    jsoncpp
     sxhkd
 
 # Cpu
-    ucode-intel
+    intel-ucode
     sysstat
 
 # Graphics card
     nvidia
+    nvidia-utils
     nvidia-settings
 
 # Sound
@@ -67,18 +65,17 @@
 
 # Entertainment
     spotify
-    google-chrome
+    brave
 
 # Fonts
     ttf-dejavu
     ttf-font-awesome
 
 # GTK theme
-    lxappearance
-    Sweet
+    Mojave Dark
 
 # Cursor
-    Bibata
+    Bibata Classic
 
 # Icons
     Zafiro
