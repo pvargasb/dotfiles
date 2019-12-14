@@ -5,6 +5,7 @@ $HOME/.fehbg &
 $COMPOSITOR &
 $MUSIC &
 sxhkd -m 1 &
+dunst &
 
 # Set Keyboard to la-latin1
 setxkbmap latam
