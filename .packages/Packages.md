@@ -6,6 +6,7 @@
     i3-gaps
     polybar
     dmenu
+    libnotify
     feh
     picom
     redshift-minimal
