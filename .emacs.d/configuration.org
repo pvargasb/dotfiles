@@ -1,0 +1,92 @@
+#+TITLE: Emacs configuration
+#+AUTHOR: Pablo Vargas Bermúdez
+#+OPTIONS: toc:nil num:nil
+
+* Configure =use-package=
+#+BEGIN_SRC emacs-lisp
+(require 'use-package-ensure)
+(setq use-package-always-ensure t)
+#+END_SRC
+
+* Backup
+
+#+BEGIN_SRC emacs-lisp
+(setq make-backup-files nil)
+(setq auto-save-default nil)
+#+END_SRC
+
+* Personal information
+
+#+BEGIN_SRC emacs-lisp
+(setq user-full-name "Pablo Vargas Bermúdez"
+ user-mail-address "pvarber@outlook.es")
+#+END_SRC
+
+* UI
+
+** Frames
+
+#+BEGIN_SRC emacs-lisp
+(tool-bar-mode 0)
+(menu-bar-mode 0)
+(toggle-scroll-bar 0)
+
+(set-window-scroll-bars (minibuffer-window) nil nil)
+#+END_SRC
+
+** Bell
+
+#+BEGIN_SRC emacs-lisp
+(setq ring-bell-function 'ignore)
+#+END_SRC
+
+** Font
+
+#+BEGIN_SRC emacs-lisp
+(set-frame-font "Monospace 10" nil t)
+#+END_SRC
+
+* Programming environments
+
+** Indentation
+
+#+BEGIN_SRC emacs-lisp
+(setq-default tab-width 4)
+#+END_SRC
+
+* Editing
+
+** Visit configuration
+
+#+BEGIN_SRC emacs-lisp
+(defun visit-emacs-config ()
+ (interactive)
+ (find-file "~/.emacs.d/configuration.org"))
+
+(global-set-key (kbd "C-c e") 'visit-emacs-config)
+#+END_SRC
+
+** Always kill current buffer
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "C-x k") 'kill-current-buffer)
+#+END_SRC
+
+** Indent with spaces
+
+#+BEGIN_SRC emacs-lisp
+(setq-default indent-tabs-mode nil)
+#+END_SRC
+
+* Themes
+
+#+BEGIN_SRC emacs-lisp
+(use-package gruvbox-theme)
+(load-theme 'gruvbox t)
+#+END_SRC
+
+* Keybindings
+
+#+BEGIN_SRC emacs-lisp
+(global-set-key (kbd "M-o") 'other-window)
+#+END_SRC
