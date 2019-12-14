@@ -75,7 +75,7 @@
     Mojave Dark
 
 # Cursor
-    Bibata Classic
+    Adwaita (Default)
 
 # Icons
     Zafiro
