@@ -5,22 +5,22 @@
 * Configure =use-package=
 
 #+BEGIN_SRC emacs-lisp
-	(require 'use-package-ensure)
-    (setq use-package-always-ensure t)
+  (require 'use-package-ensure)
+  (setq use-package-always-ensure t)
 #+END_SRC
 
 * Backup
 
 #+BEGIN_SRC emacs-lisp
-	(setq make-backup-files nil)
-    (setq auto-save-default nil)
+  (setq make-backup-files nil
+        auto-save-default nil)
 #+END_SRC
 
 * Personal information
 
 #+BEGIN_SRC emacs-lisp
-	(setq user-full-name "Pablo Vargas Bermúdez"
-    user-mail-address "pvarber@outlook.es")
+  (setq user-full-name "Pablo Vargas Bermúdez"
+        user-mail-address "pvarber@outlook.es")
 #+END_SRC
 
 * UI
@@ -28,23 +28,29 @@
 ** Frames
 
 #+BEGIN_SRC emacs-lisp
-	(tool-bar-mode 0)
-    (menu-bar-mode 0)
-    (toggle-scroll-bar 0)
+  (tool-bar-mode -1)
+  (menu-bar-mode -1)
+  (toggle-scroll-bar -1)
+  (blink-cursor-mode -1)
 
-    (set-window-scroll-bars (minibuffer-window) nil nil)
+  (line-number-mode +1)
+  (global-display-line-numbers-mode +1)
+  (column-number-mode t)
+  (size-indication-mode t)
+
+  (set-window-scroll-bars (minibuffer-window) nil nil)
 #+END_SRC
 
 ** Bell
 
 #+BEGIN_SRC emacs-lisp
-	(setq ring-bell-function 'ignore)
+  (setq ring-bell-function 'ignore)
 #+END_SRC
 
 ** Font
 
 #+BEGIN_SRC emacs-lisp
-	(set-frame-font "Monospace 10" nil t)
+  (set-frame-font "Mono 11" nil t)
 #+END_SRC
 
 * Programming environments
@@ -52,42 +58,75 @@
 ** Indentation
 
 #+BEGIN_SRC emacs-lisp
-	(setq-default tab-width 4)
+  (setq-default tab-width 4
+                indent-tabs-mode nil)
 #+END_SRC
 
 * Editing
 
+** Yes or No prompt
+
+#+BEGIN_SRC emacs-lisp
+  (fset 'yes-or-no-p 'y-or-n-p)
+#+END_SRC
+
+** Reload files
+
+#+BEGIN_SRC emacs-lisp
+  (global-auto-revert-mode t)
+#+END_SRC
+
 ** Visit configuration
 
 #+BEGIN_SRC emacs-lisp
-	(defun visit-emacs-config ()
-     (interactive)
-     (find-file "~/.emacs.d/configuration.org"))
+  (defun visit-emacs-config ()
+    (interactive)
+    (find-file "~/.emacs.d/configuration.org"))
 
-	(global-set-key (kbd "C-c e") 'visit-emacs-config)
+  (global-set-key (kbd "C-c e") 'visit-emacs-config)
 #+END_SRC
 
 ** Always kill current buffer
 
 #+BEGIN_SRC emacs-lisp
-	(global-set-key (kbd "C-x k") 'kill-current-buffer)
+  (global-set-key (kbd "C-x k") 'kill-current-buffer)
 #+END_SRC
 
-** Indent with spaces
+** Clean whitespaces
 
 #+BEGIN_SRC emacs-lisp
-	(setq-default indent-tabs-mode nil)
+  (add-hook 'before-save-hook 'whitespace-cleanup)
+#+END_SRC
+
+* Configure =Org=
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-src-fontify-natively t
+        org-src-tab-acts-natively t)
+#+END_SRC
+
+** =Org bullets=
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-bullets
+    :init
+     (add-hook 'org-mode-hook 'org-bullets-mode))
 #+END_SRC
 
 * Themes
 
 #+BEGIN_SRC emacs-lisp
-	(use-package gruvbox-theme)
-	(load-theme 'gruvbox t)
+  (use-package zenburn-theme
+    :init
+     (load-theme 'zenburn t))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (set-frame-parameter (selected-frame) 'alpha 100)
 #+END_SRC
 
 * Keybindings
 
 #+BEGIN_SRC emacs-lisp
-	(global-set-key (kbd "M-o") 'other-window)
+  (global-set-key (kbd "M-O") 'other-window)
 #+END_SRC
