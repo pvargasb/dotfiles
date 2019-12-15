@@ -13,8 +13,8 @@ set expandtab
 set smarttab
 set shiftwidth=4
 set tabstop=4
-set ai "Auto indent
-set si "Smart indent
+set autoindent
+set smartindent
 
 " Disable backups
 set nobackup
@@ -58,11 +58,13 @@ autocmd FocusGained,BufEnter * :silent! !
 
 """ Byndings
 
-""" General
+"" General
 
 " Navigating with guides
 map ,. <Esc>/<++><Enter>c4l
-" Source file
+imap ,. <Esc>/<++><Enter>c4l
+
+" Source vimrc
 map <leader>% :source ~/.vimrc<CR>
 
 " Split byndings
@@ -74,7 +76,8 @@ map <leader>+ :res +5<CR>
 map <leader>- :res -5<CR>
 
 " Buffers
-map <leader>bd :Bclose<cr>:tabclose<cr>gT
+map <leader>bn :enew<cr>
+map <leader>bc :bdelete<cr>
 map <leader>ba :bufdo bd<cr>
 map <leader>bl :bnext<cr>
 map <leader>bh :bprevious<cr>
@@ -103,12 +106,12 @@ map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>
 map <leader>s :set spell!<CR>
 
 " Highlight search
-map <leader>h :set hlsearch!<CR>
+map <leader>hl :set hlsearch!<CR>
 
 " Replace all
 map <leader>r :%s//gc<Left><Left><Left>
 
-""" Normal
+"" Normal
 
 " Leader bindings
 nmap <leader>w :w<CR>
@@ -116,12 +119,13 @@ nmap <leader>q :q<CR>
 nmap <leader>x :wq<CR>
 nmap <leader>f :q!<CR>
 
-""" Insert
+"" Insert
 
 " Set ESC
 inoremap ,, <ESC>
+vnoremap ,, <ESC>
 
-""" Visual
+"" Visual
 
 " Move indentation
 vnoremap < <gv
@@ -157,6 +161,7 @@ let g:NERDTrimTrailingWhitespace = 1
 """ FZF
 
 map <C-x><C-f> :Files<CR>
+map <C-x><C-b> :Buffers<CR>
 map <leader>m  :Map<CR>
 let $FZF_DEFAULT_COMMAND = 'find .'
 
