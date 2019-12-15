@@ -48,6 +48,9 @@ super + Print
 XF86Calculator
     $TERMINAL -c floatingSet -e python
 
+XF86Tools
+	start_spotify
+
 XF86AudioMute
     amixer sset 'Master' toggle
 
