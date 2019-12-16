@@ -113,37 +113,6 @@
      (add-hook 'org-mode-hook 'org-bullets-mode))
 #+END_SRC
 
-* Configure =Evil-mode=
-
-#+BEGIN_SRC emacs-lisp
-  (use-package evil
-    :config
-    (evil-mode t))
-#+END_SRC
-
-** Custom bindings
-
-#+BEGIN_SRC emacs-lisp
-  (define-key evil-normal-state-map (kbd "SPC") 'execute-extended-command)
-#+END_SRC
-
-** =Evil-collection=
-
-Not convinced yet
-
-#+BEGIN_SRC emacs-lisp
-  ;; (use-package evil-collection
-  ;;   :after evil))
-#+END_SRC
-
-** =Evil-surround=
-
-#+BEGIN_SRC emacs-lisp
-   (use-package evil-surround
-     :config
-     (global-evil-surround-mode 1))
-#+END_SRC
-
 * Themes
 
 #+BEGIN_SRC emacs-lisp
