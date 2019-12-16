@@ -123,7 +123,6 @@ nmap <leader>f :q!<CR>
 
 " Set ESC
 inoremap ,, <ESC>
-vnoremap ,, <ESC>
 
 "" Visual
 
