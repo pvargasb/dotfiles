@@ -19,7 +19,7 @@ set $mod Mod4
 
 #================Fonts=========================
 # Font for window titles, etc.
-font pango:monospace 8
+font pango:DejaVu Sans Mono 8
 
 #================Startup=======================
 #Programs startup
