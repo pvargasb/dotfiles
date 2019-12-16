@@ -133,16 +133,21 @@ vnoremap > >gv
 """ Vim-plug
 
 call plug#begin('~/.vim/plugged')
+" Customization
 Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
+" Search
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+" Edtit
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
+" Hightlight
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
+" Programming
 Plug 'dense-analysis/ale'
 call plug#end()
 
