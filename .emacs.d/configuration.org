@@ -50,7 +50,7 @@
 ** Font
 
 #+BEGIN_SRC emacs-lisp
-  (set-frame-font "Mono 11" nil t)
+  (set-frame-font "Hack 11" nil t)
 #+END_SRC
 
 * Programming environments
