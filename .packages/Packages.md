@@ -69,7 +69,7 @@
     brave
 
 # Fonts
-    ttf-dejavu
+    ttf-Hack
     ttf-font-awesome
 
 # GTK theme
