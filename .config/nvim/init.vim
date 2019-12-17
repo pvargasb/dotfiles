@@ -47,9 +47,6 @@ set so=4
 " Automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
 
-" Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !latex_clear %
 
@@ -97,10 +94,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " Show output file
-map <leader>p :!latex_output <c-r>%<CR><CR>
+autocmd FileType tex map <leader>p :!latex_output <c-r>%<CR><CR>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
-map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>
+autocmd FileType tex map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>
 
 " Spell checking
 map <leader>s :set spell!<CR>
