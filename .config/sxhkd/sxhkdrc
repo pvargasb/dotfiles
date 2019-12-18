@@ -48,6 +48,12 @@ super + Print
 XF86Calculator
     $TERMINAL -c floatingSet -e python
 
+XF86HomePage
+	$BROWSER
+
+XF86Mail
+	$BROWSER https://www.outlook.com
+
 XF86Tools
 	start_spotify
 
@@ -66,8 +72,11 @@ XF86AudioPlay
 XF86AudioPause
     playerctl play-pause
 
-XF86AudioNext
-    playerctl next
+XF86AudioStop
+	playerctl stop
 
 XF86AudioPrev
     playerctl previous
+
+XF86AudioNext
+    playerctl next
