@@ -9,6 +9,28 @@
   (setq use-package-always-ensure t)
 #+END_SRC
 
+* Configure =Org=
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-src-fontify-natively t
+        org-src-tab-acts-natively t)
+#+END_SRC
+
+** =Org bullets=
+
+#+BEGIN_SRC emacs-lisp
+  (use-package org-bullets
+    :init
+     (add-hook 'org-mode-hook 'org-bullets-mode))
+#+END_SRC
+* Configure =Minios=
+
+#+BEGIN_SRC emacs-lisp
+  (use-package minions
+    :config
+    (minions-mode t))
+#+END_SRC
+
 * Backup
 
 #+BEGIN_SRC emacs-lisp
@@ -101,21 +123,6 @@
 
 #+BEGIN_SRC emacs-lisp
   (add-hook 'before-save-hook 'whitespace-cleanup)
-#+END_SRC
-
-* Configure =Org=
-
-#+BEGIN_SRC emacs-lisp
-  (setq org-src-fontify-natively t
-        org-src-tab-acts-natively t)
-#+END_SRC
-
-** =Org bullets=
-
-#+BEGIN_SRC emacs-lisp
-  (use-package org-bullets
-    :init
-     (add-hook 'org-mode-hook 'org-bullets-mode))
 #+END_SRC
 
 * Themes
