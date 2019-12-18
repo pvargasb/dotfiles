@@ -5,10 +5,16 @@ super + Return
 super + shift + Return
     $TERMINAL -c floatingSet
 
+super + e
+	st -e $EDITOR
+
+super + control + e
+	emacs
+
 super + i
     $TERMINAL -e $RESOURCES
 
-super + e
+super + r
     $TERMINAL -e $FILE
 
 super + p
