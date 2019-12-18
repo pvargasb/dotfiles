@@ -12,8 +12,7 @@
 * Backup
 
 #+BEGIN_SRC emacs-lisp
-  (setq make-backup-files nil
-        auto-save-default nil)
+  (setq make-backup-files nil)
 #+END_SRC
 
 * Personal information
@@ -51,6 +50,12 @@
 
 #+BEGIN_SRC emacs-lisp
   (set-frame-font "Hack 11" nil t)
+#+END_SRC
+
+** Use fancy lambdas
+
+#+BEGIN_SRC emacs-lisp
+  (global-prettify-symbols-mode t)
 #+END_SRC
 
 * Programming environments
@@ -128,5 +133,7 @@
 * Keybindings
 
 #+BEGIN_SRC emacs-lisp
-  (global-set-key (kbd "M-O") 'other-window)
+  (global-set-key (kbd "M-o") 'other-window)
+  (global-set-key (kbd "C-+") 'text-scale-increase)
+  (global-set-key (kbd "C--") 'text-scale-decrease)
 #+END_SRC
