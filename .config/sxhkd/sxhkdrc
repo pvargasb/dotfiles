@@ -8,7 +8,7 @@ super + shift + Return
 super + e
 	st -e $EDITOR
 
-super + control + e
+super + alt + e
 	emacs
 
 super + i
