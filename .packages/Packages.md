@@ -1,8 +1,8 @@
-# Display server
+### Display server
     xorg
     xorg-xinit
 
-# Graphical environment
+### Graphical environment
     i3-gaps
     polybar
     dmenu
@@ -18,18 +18,18 @@
     zathura-pdf-mupdf
     mpv
 
-# Terminal
+### Terminal
     st
     oh-my-zsh-git
 
-# Text editor
+### Text editor
     neovim
     emacs
 
-# Security
+### Security
     ufw
 
-# System utilities
+### System utilities
     networkmanager
     unzip
     vim-plug
@@ -37,23 +37,24 @@
     maim
     xclip
     sxhkd
+    openssh
 
-# Cpu
+### Cpu
     intel-ucode
     sysstat
 
-# Graphics card
+### Graphics card
     nvidia
     nvidia-utils
     nvidia-settings
 
-# Sound
+### Sound
     pavucontrol
     alsa-utils
     pulseaudio-alsa
     playerctl
 
-# Virtualization
+### Virtualization
     virt-manager
     libvirt
     libvirtd
@@ -64,23 +65,23 @@
     bridge-utils
     openbsd-netcat
 
-# Entertainment
+### Entertainment
     spotify
     brave
 
-# Fonts
+### Fonts
     ttf-hack
     ttf-dejavu
     ttf-font-awesome
 
-# GTK theme
+### GTK theme
     Mojave Dark
 
-# Cursor
+### Cursor
     Adwaita (Default)
 
-# Icons
+### Icons
     Zafiro
 
-# AUR
+### AUR
     yay
