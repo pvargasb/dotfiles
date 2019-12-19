@@ -78,7 +78,6 @@ Not yet
 
 #+BEGIN_SRC emacs-lisp
 ;  (use-package evil-leader
-;  :before evil-mode)
 #+END_SRC
 
 * Backup
