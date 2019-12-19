@@ -137,14 +137,15 @@ Plug 'morhetz/gruvbox'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
-" Edtit
+" Edit
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
-" Hightlight
+" Highlight
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'PotatoesMaster/i3-vim-syntax'
 " Programming
+Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
 call plug#end()
 
