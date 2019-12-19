@@ -14,7 +14,7 @@ super + alt + e
 super + i
     $TERMINAL -e $RESOURCES
 
-super + r
+super + v
     $TERMINAL -e $FILE
 
 super + p
