@@ -1,8 +1,10 @@
 ### Display server
+
     xorg
     xorg-xinit
 
 ### Graphical environment
+
     i3-gaps
     polybar
     dmenu
@@ -19,17 +21,23 @@
     mpv
 
 ### Terminal
+
     st
-    oh-my-zsh-git
+    zsh
+    zsh-syntax-highlighting
 
 ### Text editor
+
     neovim
     emacs
 
 ### Security
+
     ufw
 
 ### System utilities
+
+    yay
     networkmanager
     unzip
     vim-plug
@@ -40,21 +48,25 @@
     openssh
 
 ### Cpu
+
     intel-ucode
     sysstat
 
 ### Graphics card
+
     nvidia
     nvidia-utils
     nvidia-settings
 
 ### Sound
+
     pavucontrol
     alsa-utils
     pulseaudio-alsa
     playerctl
 
 ### Virtualization
+
     virt-manager
     libvirt
     libvirtd
@@ -66,10 +78,12 @@
     openbsd-netcat
 
 ### Entertainment
+
     spotify
     brave
 
 ### Fonts
+
     ttf-hack
     ttf-dejavu
     ttf-font-awesome
@@ -82,6 +96,3 @@
 
 ### Icons
     Zafiro
-
-### AUR
-    yay
