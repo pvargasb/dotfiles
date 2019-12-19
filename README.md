@@ -1,12 +1,13 @@
-### Dot files
+# Gnu/Linux dot files
 
-Programs which dot files can be found:
+* Scripts are located in `.local/bin`
 
-* i3
-* Polybar
-* Termite
-* Sxiv
-* Vifm
-* Dunst
-* Zathura
-* NeoVim
+Programs which are installed in this configuration
+
+> [Programs](.packages/Packages.md)
+
+## Main programs
+
+* Desktop environment: `i3-gaps`
+* Terminal emulator: `st`
+* Shell: `zsh`
