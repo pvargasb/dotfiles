@@ -1,98 +1,98 @@
-### Display server
+# Display server
 
-    xorg
-    xorg-xinit
+* `xorg`
+* `xorg-xinit`
 
-### Graphical environment
+# Graphical environment
 
-    i3-gaps
-    polybar
-    dmenu
-    libnotify
-    feh
-    picom
-    redshift-minimal
-    dunst
-    betterlockscreen
-    htop
-    vifm
-    sxiv
-    zathura-pdf-mupdf
-    mpv
+* `i3-gaps`
+* `polybar`
+* `dmenu`
+* `libnotify`
+* `feh`
+* `picom`
+* `redshift-minimal`
+* `dunst`
+* `betterlockscreen`
+* `htop`
+* `vifm`
+* `sxiv`
+* `zathura-pdf-mupdf`
+* `mpv`
 
-### Terminal
+# Terminal
 
-    st
-    zsh
-    zsh-syntax-highlighting
+* `st`
+* `zsh`
+* `zsh-syntax-highlighting`
 
-### Text editor
+# Text editor
 
-    neovim
-    emacs
+* `neovim`
+* `emacs`
 
-### Security
+# Security
 
-    ufw
+* `ufw`
 
-### System utilities
+# System utilities
 
-    yay
-    networkmanager
-    unzip
-    vim-plug
-    imagemagick
-    maim
-    xclip
-    sxhkd
-    openssh
+* `yay`
+* `networkmanager`
+* `unzip`
+* `vim-plug`
+* `imagemagick`
+* `maim`
+* `xclip`
+* `sxhkd`
+* `openssh`
 
-### Cpu
+# Cpu
 
-    intel-ucode
-    sysstat
+* `intel-ucode`
+* `sysstat`
 
-### Graphics card
+# Graphics card
 
-    nvidia
-    nvidia-utils
-    nvidia-settings
+* `nvidia`
+* `nvidia-utils`
+* `nvidia-settings`
 
-### Sound
+# Sound
 
-    pavucontrol
-    alsa-utils
-    pulseaudio-alsa
-    playerctl
+* `pavucontrol`
+* `alsa-utils`
+* `pulseaudio-alsa`
+* `playerctl`
 
-### Virtualization
+# Virtualization
 
-    virt-manager
-    libvirt
-    libvirtd
-    qemu
-    vde2
-    ebtables
-    dnsmasq
-    bridge-utils
-    openbsd-netcat
+* `virt-manager`
+* `libvirt`
+* `libvirtd`
+* `qemu`
+* `vde2`
+* `ebtables`
+* `dnsmasq`
+* `bridge-utils`
+* `openbsd-netcat`
 
-### Entertainment
+# Entertainment
 
-    spotify
-    brave
+* `spotify`
+* `brave`
 
-### Fonts
+# Fonts
 
-    ttf-hack
-    ttf-dejavu
-    ttf-font-awesome
+* `ttf-hack`
+* `ttf-dejavu`
+* `ttf-font-awesome`
 
-### GTK theme
-    Mojave Dark
+# GTK theme
+* `Mojave-Dark`
 
-### Cursor
-    Adwaita (Default)
+# Cursor
+* `Adwaita` (Default)
 
-### Icons
-    Zafiro
+# Icons
+* `Zafiro`
