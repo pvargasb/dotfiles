@@ -67,7 +67,7 @@ imap ,. <Esc>/<++><Enter>c4l
 " Source vimrc
 map <leader>% :source ~/.vimrc<CR>
 
-" Split byndings
+" Split
 map <leader>vs :vsplit<CR>
 map <leader>hs :split<CR>
 map <leader>> :vertical res +5<CR>
@@ -95,6 +95,11 @@ map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
+
+" Spell
+map <leader>sl ]s
+map <leader>sh [s
+map <leader>sc z=
 
 " Show output file
 autocmd FileType tex map <leader>p :!latex_output <c-r>%<CR><CR>
