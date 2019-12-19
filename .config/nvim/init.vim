@@ -53,6 +53,9 @@ autocmd VimLeave *.tex !latex_clear %
 " When focus gained check for changes in files
 autocmd FocusGained,BufEnter * :silent! !
 
+" Disables automatic commenting on newline:
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
 """ Byndings
 
 "" General
@@ -152,7 +155,7 @@ call plug#end()
 """ NerdTree
 
 map <leader>e :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endifautocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 """ Nerdcommenter
 
