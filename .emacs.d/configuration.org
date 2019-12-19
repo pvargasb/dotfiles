@@ -66,6 +66,21 @@
   (use-package magit)
 #+END_SRC
 
+* Configure =Evil=
+
+Not yet
+
+#+BEGIN_SRC emacs-lisp
+;  (use-package evil-mode)
+#+END_SRC
+
+** Configure =Leader=
+
+#+BEGIN_SRC emacs-lisp
+;  (use-package evil-leader
+;  :before evil-mode)
+#+END_SRC
+
 * Backup
 
 #+BEGIN_SRC emacs-lisp
@@ -86,14 +101,10 @@
 #+BEGIN_SRC emacs-lisp
   (tool-bar-mode -1)
   (menu-bar-mode -1)
-  (toggle-scroll-bar -1)
+  (scroll-bar-mode -1)
   (blink-cursor-mode -1)
-
-  (line-number-mode +1)
   (global-display-line-numbers-mode +1)
   (column-number-mode t)
-  (size-indication-mode t)
-
   (set-window-scroll-bars (minibuffer-window) nil nil)
 #+END_SRC
 
@@ -185,4 +196,5 @@
   (global-set-key (kbd "C-+") 'text-scale-increase)
   (global-set-key (kbd "C--") 'text-scale-decrease)
   (global-set-key (kbd "C-x g") 'magit-status)
+  (global-set-key (kbd "C-x x") 'execute-extended-command)
 #+END_SRC
