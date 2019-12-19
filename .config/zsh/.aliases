@@ -1,3 +1,14 @@
+# Program
 alias vim='nvim'
 alias blender='/home/pablo/.packages/Blender/blender &!'
 alias godot='/home/pablo/.packages/Godot/godot &!'
+
+# Colors
+alias ls="ls -F --color=auto --group-directories-first"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ccat="highlight --out-format=ansi"
+
+# Common commands
+alias l="ls -lah"
+alias ll="ls -lh"

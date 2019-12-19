@@ -1,34 +1,58 @@
-# Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
+# Colors
+autoload -U colors && colors
 
-ZSH_THEME="mylambda"
+# Options
+setopt appendhistory autocd extendedglob
+unsetopt beep
+bindkey -e
 
-# Case-sensitive completion.
-CASE_SENSITIVE="true"
+# Completion
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
 
-# Disable bi-weekly auto-update checks.
-DISABLE_AUTO_UPDATE="true"
+# Inlude hidden files in completion
+_comp_options+=(globdots)
 
-# Auto-correction.
-# ENABLE_CORRECTION="true"
+# Use vim keys in tab complete menu:
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+bindkey -e
 
-# This makes repository status check for large repositories
-# much, much faster.
-DISABLE_UNTRACKED_FILES_DIRTY="true"
+# Edit command
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '^X^e' edit-command-line
+
+# History
+HISTSIZE=1000
+SAVEHIST=1000
 
 # Variables
 ZSH_CUSTOM=$HOME/.config/zsh
-PATH=$PATH:$HOME/.scripts
-HISTFILE=$HOME/.cache/zsh/.zsh_history
+ZSH_CACHE_DIR=$HOME/.cache/zsh
+HISTFILE=$ZSH_CACHE_DIR/.zsh_history
+ZSH_THEME=$ZSH_CUSTOM/lambda
 
-# Load aliases
-if [[ -f $HOME/.config/zsh/.aliases ]]; then
-    source $HOME/.config/zsh/.aliases
+# Load theme
+if [[ -f $ZSH_THEME ]]; then
+    source $ZSH_THEME
 fi
 
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+# Load aliases
+if [[ -f $ZSH_CUSTOM/.aliases ]]; then
+    source $ZSH_CUSTOM/.aliases
+fi
+
+# Make cache
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-source $ZSH/oh-my-zsh.sh
+# Syntax highlighting
+if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
+  . /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+fi
