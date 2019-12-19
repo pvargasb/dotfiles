@@ -1,7 +1,5 @@
-# Program
+# Programs
 alias vim='nvim'
-alias blender='/home/pablo/.packages/Blender/blender &!'
-alias godot='/home/pablo/.packages/Godot/godot &!'
 
 # Colors
 alias ls='ls --color=auto --group-directories-first'
