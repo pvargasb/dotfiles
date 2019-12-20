@@ -26,6 +26,7 @@
 * `st`
 * `zsh`
 * `zsh-syntax-highlighting`
+* `tmux`
 
 # Text editor
 
