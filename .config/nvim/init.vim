@@ -1,46 +1,34 @@
 """ Basics
-set nocompatible
+set autoindent
 set autoread
-filetype plugin on
-syntax enable
-set number
-set autoread
-set foldmethod=indent
 set clipboard=unnamedplus
+set expandtab
+set foldmethod=indent
+set hidden
 set lazyredraw
 set magic
-set expandtab
-set smarttab
-set shiftwidth=4
-set tabstop=4
-set autoindent
-set smartindent
-
-" Disable backups
 set nobackup
-set nowb
+set nocompatible
+set nohlsearch
 set noswapfile
+set nowritebackup
+set number
+set shiftwidth=4
+set smartcase
+set smartindent
+set smarttab
+set so=4
+set spelllang=es
+set spellsuggest=10
+set splitbelow splitright
+set tabstop=4
+set wildmode=longest,list,full
+
+filetype plugin on
+syntax enable
 
 " Map leader
 let mapleader = " "
-
-" Wildmode
-set wildmode=longest,list,full
-
-" Fixed split
-set splitbelow splitright
-
-" Spell languaje
-set spelllang=es
-
-" Ignore case
-set ignorecase
-
-" No hightlight
-set nohlsearch
-
-" ScrollOff
-set so=4
 
 """ Commands
 
@@ -122,7 +110,7 @@ map <leader>r :%s//gc<Left><Left><Left>
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
 nmap <leader>x :wq<CR>
-nmap <leader>f :q!<CR>
+nmap <leader>Q :q!<CR>
 
 "" Insert
 
@@ -170,8 +158,8 @@ let g:NERDTrimTrailingWhitespace = 1
 
 """ FZF
 
-map <C-x><C-f> :Files<CR>
-map <C-x><C-b> :Buffers<CR>
+map <leader>f  :Files<CR>
+map <leader>bb :Buffers<CR>
 map <leader>m  :Map<CR>
 let $FZF_DEFAULT_COMMAND = 'find .'
 
