@@ -68,8 +68,6 @@
 
 * Configure =Evil=
 
-  Not yet, but coming soon
-
   #+BEGIN_SRC emacs-lisp
     (use-package evil
       :init
@@ -88,7 +86,10 @@
        :config
        (evil-leader/set-leader "<SPC>")
        (evil-leader/set-key
-        "<SPC>" 'execute-extended-command))
+        "<SPC>" 'execute-extended-command
+        "w"     'save-buffer
+        "q"		'kill-current-buffer
+        "f"		'find-file))
    #+END_SRC
 
 * Backup
