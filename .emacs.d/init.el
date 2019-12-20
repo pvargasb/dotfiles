@@ -20,7 +20,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (zenburn-theme which-key use-package org-bullets moody minions magit ivy))))
+    (evil evil-leader evil-mode zenburn-theme which-key use-package org-bullets moody minions magit ivy))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
