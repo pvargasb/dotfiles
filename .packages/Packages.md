@@ -19,6 +19,7 @@
 * `sxiv`
 * `zathura-pdf-mupdf`
 * `mpv`
+* `lxappearance`
 
 # Terminal
 
@@ -89,10 +90,10 @@
 * `ttf-font-awesome`
 
 # GTK theme
-* `Mojave-Dark`
+* `gtk-theme-arc-gruvbox-git`
 
 # Cursor
-* `Adwaita` (Default)
+* `bibata-cursor-translucent`
 
 # Icons
-* `Zafiro`
+* `paper-icon-theme`
