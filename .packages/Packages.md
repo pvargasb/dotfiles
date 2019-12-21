@@ -93,8 +93,5 @@
 # GTK theme
 * `gtk-theme-arc-gruvbox-git`
 
-# Cursor
-* `bibata-cursor-translucent`
-
 # Icons
 * `paper-icon-theme`
