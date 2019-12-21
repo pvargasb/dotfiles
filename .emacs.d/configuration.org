@@ -60,7 +60,7 @@
       :config
       (moody-replace-mode-line-buffer-identification)
       (moody-replace-vc-mode)
-      (setq moody-mode-line-height 12
+      (setq moody-mode-line-height 16
             x-underline-at-descent-line t))
   #+END_SRC
 
@@ -95,8 +95,7 @@
       :init
       (setq evil-want-C-u-scroll t)
       :config
-      (evil-mode t)
-      (define-key evil-insert-state-map ",," 'evil-normal-state))
+      (evil-mode t))
   #+END_SRC
 
 ** Configure =Leader=
@@ -121,6 +120,15 @@
         "hs" 'split-window-below
         "bb" 'ivy-switch-buffer))
    #+END_SRC
+
+* Configure =Key Chord=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package key-chord
+      :config
+      (key-chord-mode 1)
+      (key-chord-define evil-insert-state-map ",," 'evil-normal-state))
+  #+END_SRC
 
 * Configure =Company=
 
