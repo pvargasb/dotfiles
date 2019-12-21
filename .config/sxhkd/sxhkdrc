@@ -6,10 +6,10 @@ super + shift + Return
     $TERMINAL -c floatingSet
 
 super + e
-	st -e $EDITOR
+    st -e $EDITOR
 
-super + alt + e
-	emacs
+super + control + e
+    emacs
 
 super + i
     $TERMINAL -e $RESOURCES
@@ -55,13 +55,13 @@ XF86Calculator
     $TERMINAL -c floatingSet -e python
 
 XF86HomePage
-	$BROWSER
+    $BROWSER
 
 XF86Mail
-	$BROWSER https://www.outlook.com
+    $BROWSER https://www.outlook.com
 
 XF86Tools
-	start_spotify
+    start_spotify
 
 XF86AudioMute
     amixer sset 'Master' toggle
@@ -79,7 +79,7 @@ XF86AudioPause
     playerctl play-pause
 
 XF86AudioStop
-	playerctl stop
+    playerctl stop
 
 XF86AudioPrev
     playerctl previous
