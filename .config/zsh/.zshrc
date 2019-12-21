@@ -58,9 +58,11 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 fi
 
 # Tmux
-if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ $TERM != "dumb" ]; then
+if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ $TERM != "dumb" ] && [ $DISPLAY ]; then
     tmux attach -t term || tmux new -s term && exit
 fi
 
 # Ssh agent
-ssh-add -l > /dev/null || ssh-add .ssh/github
+if [ $SSH_AGENT_PID ]; then
+    ssh-add -l > /dev/null || ssh-add .ssh/github
+fi
