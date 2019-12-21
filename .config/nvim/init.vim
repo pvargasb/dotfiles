@@ -169,7 +169,9 @@ map <leader>a :ALEToggle<CR>
 
 """ Fugitive
 
-map <leader>g :Git<CR>
+map <leader>gs :Git<CR>
+map <leader>gp :Gpush<CR>
+map <leader>gf :Gpull<CR>
 
 """ Gruvbox
 
