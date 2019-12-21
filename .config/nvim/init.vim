@@ -167,6 +167,10 @@ let $FZF_DEFAULT_COMMAND = 'find .'
 
 map <leader>a :ALEToggle<CR>
 
+""" Fugitive
+
+map <leader>g :Git<CR>
+
 """ Gruvbox
 
 set background=dark
