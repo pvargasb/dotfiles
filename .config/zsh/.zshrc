@@ -58,7 +58,7 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 fi
 
 # Tmux
-if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ $TERM != "dumb" ] && [ $DISPLAY ]; then
+if command -v tmux &> /dev/null && [ -z "$TMUX" ] && [ $TERM != "dumb" ] && [ $DISPLAY ] && [ ! $MYVIMRC ]; then
     tmux attach -t term || tmux new -s term && exit
 fi
 
