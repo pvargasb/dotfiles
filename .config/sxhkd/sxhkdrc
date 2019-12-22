@@ -50,6 +50,11 @@ super + shift + x
 super + Print
     take_screen
 
+# Environment =================================================================
+
+super + b
+	polybar-msg cmd toggle
+
 # Especial byndings ============================================================
 XF86Calculator
     $TERMINAL -c floatingSet -e python
