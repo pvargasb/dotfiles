@@ -194,7 +194,7 @@
      (set-frame-font "Hack 11" nil t)
    #+END_SRC
 
-** Use fancy lambdas
+** Prettify
 
    #+BEGIN_SRC emacs-lisp
      (global-prettify-symbols-mode t)
