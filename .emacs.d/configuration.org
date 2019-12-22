@@ -43,6 +43,21 @@
                   '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
    #+END_SRC
 
+** File paths
+
+   #+BEGIN_SRC emacs-lisp
+     (setq org-directory "~/Projects/Org"
+           org-agenda-files (list org-directory))
+   #+END_SRC
+
+** Visit todo list
+
+   #+BEGIN_SRC emacs-lisp
+     (defun visit-todo-list ()
+       (interactive)
+       (find-file "~/Projects/Org/TODO.org"))
+   #+END_SRC
+
 * Configure =Minions=
 
   #+BEGIN_SRC emacs-lisp
@@ -135,7 +150,9 @@
   #+BEGIN_SRC emacs-lisp
     (use-package company
       :config
-      (add-hook 'after-init-hook 'global-company-mode))
+      (add-hook 'after-init-hook 'global-company-mode)
+      (setq company-idle-delay 0
+            company-minimum-prefix-length 3))
   #+END_SRC
 
 * Backup
@@ -212,8 +229,6 @@
      (defun visit-emacs-config ()
        (interactive)
        (find-file "~/.emacs.d/configuration.org"))
-
-     (global-set-key (kbd "C-c e") 'visit-emacs-config)
    #+END_SRC
 
 ** Always kill current buffer
@@ -258,4 +273,6 @@
     (global-set-key (kbd "C-c l") 'org-store-link)
     (global-set-key (kbd "C-c a") 'org-agenda)
     (global-set-key (kbd "C-c c") 'org-capture)
+    (global-set-key (kbd "C-c e") 'visit-emacs-config)
+    (global-set-key (kbd "C-c i") 'visit-todo-list)
   #+END_SRC
