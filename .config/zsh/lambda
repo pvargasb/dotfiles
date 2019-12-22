@@ -1,1 +1,5 @@
-PROMPT="λ %{$fg[green]%}%1~/ %{$reset_color%}"
+if [ $DISPLAY ]; then
+    PROMPT="λ %{$fg[green]%}%1~/ %{$reset_color%}"
+else
+    PROMPT="$ %{$fg[green]%}%1~/ %{$reset_color%}"
+fi
