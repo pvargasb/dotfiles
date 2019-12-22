@@ -93,5 +93,8 @@
 # GTK theme
 * `gtk-theme-arc-gruvbox-git`
 
-# Icons
+# Icon
 * `paper-icon-theme`
+
+# Cursor
+* `posy-cursors`
