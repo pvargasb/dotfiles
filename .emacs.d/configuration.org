@@ -127,6 +127,7 @@
         "w" 'save-buffer
         "f" 'find-file
         "g" 'magit-status
+        "a" 'flycheck-mode
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
@@ -153,6 +154,12 @@
       (add-hook 'after-init-hook 'global-company-mode)
       (setq company-idle-delay 0
             company-minimum-prefix-length 3))
+  #+END_SRC
+
+* Configure =Flycheck=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package flycheck)
   #+END_SRC
 
 * Backup
