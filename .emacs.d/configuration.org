@@ -223,6 +223,13 @@
       (evil-define-key 'normal helpful-mode-map (kbd "q") 'quit-window))
   #+END_SRC
 
+* Identification
+
+  #+BEGIN_SRC emacs-lisp
+    (setq user-full-name "Pablo"
+          user-mail-address "pvarber@outlook.es")
+  #+END_SRC
+
 * Backup
 
   #+BEGIN_SRC emacs-lisp
