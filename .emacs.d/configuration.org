@@ -66,12 +66,6 @@
            org-agenda-start-on-weekday nil)
    #+END_SRC
 
-** Capture
-
-   #+BEGIN_SRC emacs-lisp
-     (setq org-default-notes-file (concat org-directory "/TODO.org"))
-   #+END_SRC
-
 * Configure =Minions=
 
   #+BEGIN_SRC emacs-lisp
@@ -340,7 +334,6 @@
     (global-set-key (kbd "C-x x") 'execute-extended-command)
     (global-set-key (kbd "C-c l") 'org-store-link)
     (global-set-key (kbd "C-c a") 'org-agenda)
-    (global-set-key (kbd "C-c c") 'org-capture)
     (global-set-key (kbd "C-c e") 'visit-emacs-config)
     (global-set-key (kbd "C-c i") 'visit-todo-list)
     (global-set-key (kbd "C-c t") 'shell)
