@@ -171,12 +171,6 @@
             company-minimum-prefix-length 3))
   #+END_SRC
 
-* Configure =Flycheck=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package flycheck)
-  #+END_SRC
-
 * Configure =Dumb jump=
 
   #+BEGIN_SRC emacs-lisp
