@@ -24,7 +24,9 @@
     (setq org-src-fontify-natively t
           org-src-tab-acts-natively t
           org-catch-invisible-edits 'show
-          org-src-window-setup 'current-window)
+          org-src-window-setup 'current-window
+          org-return-follows-link t
+          org-use-speed-commands t)
   #+END_SRC
 
 ** Bullets
