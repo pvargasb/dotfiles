@@ -58,6 +58,13 @@
        (find-file "~/Projects/Org/TODO.org"))
    #+END_SRC
 
+** Agneda
+
+   #+BEGIN_SRC emacs-lisp
+     (setq org-agenda-span 15
+           org-agenda-start-on-weekday nil)
+   #+END_SRC
+
 * Configure =Minions=
 
   #+BEGIN_SRC emacs-lisp
@@ -137,6 +144,14 @@
         "bb" 'ivy-switch-buffer))
    #+END_SRC
 
+** Surround
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-surround
+       :config
+       (global-evil-surround-mode t))
+   #+END_SRC
+
 * Configure =Key Chord=
 
   #+BEGIN_SRC emacs-lisp
@@ -160,6 +175,26 @@
 
   #+BEGIN_SRC emacs-lisp
     (use-package flycheck)
+  #+END_SRC
+
+* Configure =Dumb jump=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package dumb-jump
+      :config
+      (setq dumb-jump-selector 'ivy)
+      (define-key evil-normal-state-map (kbd "gd") 'dumb-jump-go))
+  #+END_SRC
+
+* Configure =Helpful=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package helpful
+      :config
+      (global-set-key (kbd "C-h f") #'helpful-callable)
+      (global-set-key (kbd "C-h v") #'helpful-variable)
+      (global-set-key (kbd "C-h k") #'helpful-key)
+      (evil-define-key 'normal helpful-mode-map (kbd "q") 'quit-window))
   #+END_SRC
 
 * Backup
@@ -282,4 +317,5 @@
     (global-set-key (kbd "C-c c") 'org-capture)
     (global-set-key (kbd "C-c e") 'visit-emacs-config)
     (global-set-key (kbd "C-c i") 'visit-todo-list)
+    (global-set-key (kbd "C-c t") 'shell)
   #+END_SRC
