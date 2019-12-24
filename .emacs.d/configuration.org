@@ -110,7 +110,10 @@
   #+BEGIN_SRC emacs-lisp
     (use-package magit
       :bind
-      ("C-x g" . magit-status))
+      ("C-x g" . magit-status)
+      :config
+      (use-package evil-magit)
+      (add-hook 'with-editor-mode-hook 'evil-insert-state))
   #+END_SRC
 
 * Configure =Evil=
@@ -352,12 +355,15 @@
            show-paren-when-point-inside-paren nil)
 
      (show-paren-mode 1)
-   #+END_SRC
-
-   #+BEGIN_SRC emacs-lisp
      (electric-indent-mode 1)
      (electric-pair-mode 1)
      (electric-quote-mode 1)
+   #+END_SRC
+
+** Highlight
+
+   #+BEGIN_SRC emacs-lisp
+     (global-hl-line-mode)
    #+END_SRC
 
 * Themes
