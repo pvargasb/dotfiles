@@ -135,7 +135,7 @@
        (evil-leader/set-key
         "<SPC>" 'execute-extended-command
         "w" 'save-buffer
-        "f" 'find-file
+        "f" 'counsel-projectile-find-file
         "g" 'magit-status
         "a" 'flycheck-mode
         "xk" 'kill-current-buffer
@@ -218,6 +218,22 @@
       (global-set-key (kbd "C-h v") #'helpful-variable)
       (global-set-key (kbd "C-h k") #'helpful-key)
       (evil-define-key 'normal helpful-mode-map (kbd "q") 'quit-window))
+  #+END_SRC
+
+* Configure =Projectile=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package projectile
+      :config
+      (projectile-mode t))
+  #+END_SRC
+
+* Configure =Counsel=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package counsel-projectile
+      :config
+      (counsel-projectile-mode t))
   #+END_SRC
 
 * Customization
