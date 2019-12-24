@@ -25,6 +25,11 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -e
 
+# Correct keys
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[3~" delete-char
+
 # Edit command
 autoload -U edit-command-line
 zle -N edit-command-line
