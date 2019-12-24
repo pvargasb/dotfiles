@@ -93,8 +93,7 @@
     (use-package ivy
       :config
       (setq ivy-re-builders-alist
-            '((execute-extended-command . ivy--regex-fuzzy)
-              (t . ivy--regex-plus)))
+            '((t . ivy--regex-plus)))
       (ivy-mode t))
   #+END_SRC
 
