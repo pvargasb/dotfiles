@@ -135,7 +135,8 @@
        (evil-leader/set-key
         "<SPC>" 'execute-extended-command
         "w" 'save-buffer
-        "f" 'counsel-projectile-find-file
+        "pf" 'counsel-projectile-find-file
+        "f" 'find-file
         "g" 'magit-status
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
@@ -192,7 +193,7 @@
   #+BEGIN_SRC emacs-lisp
     (use-package company
       :config
-      (add-hook 'after-init-hook 'global-company-mode)
+      (add-hook 'emacs-lisp-mode-hook 'company-mode)
       (setq company-idle-delay 0
             company-minimum-prefix-length 3
             company-require-match nil
