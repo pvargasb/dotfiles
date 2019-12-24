@@ -2,8 +2,11 @@
 autoload -U colors && colors
 
 # Options
-setopt appendhistory autocd extendedglob
-unsetopt beep
+setopt INCAPPENDHISTORY HIST_EXPIRE_DUPS_FIRST HIST_IGNORE_DUPS HIST_IGNORE_SPACE
+setopt AUTOCD AUTO_PUSHD
+setopt ALWAYS_TO_END
+setopt EXTENDEDGLOB
+unsetopt BEEP
 bindkey -e
 
 # Completion
