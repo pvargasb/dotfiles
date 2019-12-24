@@ -20,7 +20,8 @@ set smarttab
 set so=4
 set spelllang=es
 set spellsuggest=10
-set splitbelow splitright
+set splitbelow
+set splitright
 set tabstop=4
 set wildmode=longest,list,full
 
@@ -143,6 +144,7 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 " Programming
 Plug 'tpope/vim-fugitive'
 Plug 'dense-analysis/ale'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 """ NerdTree
@@ -172,6 +174,11 @@ map <leader>a :ALEToggle<CR>
 map <leader>gs :Git<CR>
 map <leader>gp :Gpush<CR>
 map <leader>gf :Gpull<CR>
+
+""" Easy align
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 """ Gruvbox
 
