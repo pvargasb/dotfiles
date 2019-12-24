@@ -137,14 +137,13 @@
         "w" 'save-buffer
         "f" 'counsel-projectile-find-file
         "g" 'magit-status
-        "a" 'flycheck-mode
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
         "q" 'delete-window
         "vs" 'split-window-right
         "hs" 'split-window-below
-        "bb" 'ivy-switch-buffer))
+        "bb" 'counsel-switch-buffer))
    #+END_SRC
 
 ** Surround
@@ -380,7 +379,6 @@
     (global-set-key (kbd "M-o") 'other-window)
     (global-set-key (kbd "C-+") 'text-scale-increase)
     (global-set-key (kbd "C--") 'text-scale-decrease)
-    (global-set-key (kbd "C-x x") 'execute-extended-command)
     (global-set-key (kbd "C-c l") 'org-store-link)
     (global-set-key (kbd "C-c a") 'org-agenda)
     (global-set-key (kbd "C-c e") 'visit-emacs-config)
