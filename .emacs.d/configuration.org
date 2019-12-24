@@ -366,6 +366,13 @@
      (global-hl-line-mode)
    #+END_SRC
 
+** Support for various configuration files
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package emacs
+       :mode (("sxhkdrc" . conf-mode)))
+   #+END_SRC
+
 * Themes
 
   #+BEGIN_SRC emacs-lisp
