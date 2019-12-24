@@ -53,8 +53,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 map ,. <Esc>/<++><Enter>c4l
 imap ,. <Esc>/<++><Enter>c4l
 
-" Source vimrc
-map <leader>% :source ~/.vimrc<CR>
+" Source configuration
+map <leader>% :source ~/.config/nvim/init.vim<CR>
 
 " Split
 map <leader>vs :vsplit<CR>
