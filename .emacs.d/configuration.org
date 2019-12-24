@@ -41,7 +41,7 @@
 
    #+BEGIN_SRC emacs-lisp
      (add-to-list 'org-structure-template-alist
-                  '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
+                  '("E" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
    #+END_SRC
 
 ** File paths
@@ -92,7 +92,9 @@
   #+BEGIN_SRC emacs-lisp
     (use-package ivy
       :config
-      (setq ivy-re-builders-alist '((t . ivy--regex-fuzzy)))
+      (setq ivy-re-builders-alist
+            '((execute-extended-command . ivy--regex-fuzzy)
+              (t . ivy--regex-plus)))
       (ivy-mode t))
   #+END_SRC
 
@@ -194,7 +196,9 @@
       :config
       (add-hook 'after-init-hook 'global-company-mode)
       (setq company-idle-delay 0
-            company-minimum-prefix-length 1))
+            company-minimum-prefix-length 3
+            company-require-match nil
+            company-show-numbers t))
   #+END_SRC
 
 * Configure =Dumb jump=
@@ -215,6 +219,13 @@
       (global-set-key (kbd "C-h v") #'helpful-variable)
       (global-set-key (kbd "C-h k") #'helpful-key)
       (evil-define-key 'normal helpful-mode-map (kbd "q") 'quit-window))
+  #+END_SRC
+
+* Customization
+
+  #+BEGIN_SRC emacs-lisp
+    (setq custom-file "~/.emacs.d/custom.el")
+    (load custom-file)
   #+END_SRC
 
 * Identification
@@ -309,6 +320,29 @@
 
    #+BEGIN_SRC emacs-lisp
      (setq scroll-preserve-screen-position t)
+   #+END_SRC
+
+** Point
+
+   #+BEGIN_SRC emacs-lisp
+     (setq save-place-file "~/.emacs.d/saveplace")
+     (save-place-mode 1)
+   #+END_SRC
+
+** Parentheses
+
+   #+BEGIN_SRC emacs-lisp
+     (setq show-paren-style 'mixed
+           show-paren-when-point-in-periphery t
+           show-paren-when-point-inside-paren nil)
+
+     (show-paren-mode 1)
+   #+END_SRC
+
+   #+BEGIN_SRC emacs-lisp
+     (electric-indent-mode 1)
+     (electric-pair-mode 1)
+     (electric-quote-mode 1)
    #+END_SRC
 
 * Themes
