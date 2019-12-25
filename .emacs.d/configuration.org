@@ -196,8 +196,9 @@
 
   #+BEGIN_SRC emacs-lisp
     (use-package company
+      :hook
+      (emacs-lisp-mode . company-mode)
       :config
-      (add-hook 'emacs-lisp-mode-hook 'company-mode)
       (setq company-idle-delay 0
             company-minimum-prefix-length 3
             company-require-match nil
