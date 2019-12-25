@@ -171,7 +171,7 @@
        "cp" 'evilnc-comment-or-uncomment-paragraphs
        "cr" 'comment-or-uncomment-region
        "cv" 'evilnc-toggle-invert-comment-line-by-line
-       "."  'evilnc-copy-and-comment-operator))
+       "c."  'evilnc-copy-and-comment-operator))
    #+END_SRC
 
 ** Folding
@@ -236,7 +236,8 @@
   #+BEGIN_SRC emacs-lisp
     (use-package counsel-projectile
       :config
-      (counsel-projectile-mode t))
+      (counsel-projectile-mode t)
+      (define-key evil-normal-state-map (kbd "/") 'swiper))
   #+END_SRC
 
 * Customization
