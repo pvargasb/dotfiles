@@ -111,9 +111,10 @@
     (use-package magit
       :bind
       ("C-x g" . magit-status)
+      :hook
+      (with-editor-mode . evil-insert-state)
       :config
-      (use-package evil-magit)
-      (add-hook 'with-editor-mode-hook 'evil-insert-state))
+      (use-package evil-magit))
   #+END_SRC
 
 * Configure =Evil=
