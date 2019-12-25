@@ -5,7 +5,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (evil-magit counsel-projectile projectile vimish-fold evil-nerd-commenter helpful dumb-jump evil-surround key-chord moody auto-compile company evil zenburn-theme which-key use-package org-bullets minions magit ivy evil-leader))))
+    (which-key vimish-fold use-package org-bullets moody minions key-chord helpful gruvbox-theme evil-surround evil-nerd-commenter evil-magit evil-leader dumb-jump counsel-projectile company auto-compile))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
