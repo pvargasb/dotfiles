@@ -13,9 +13,9 @@
 
   #+BEGIN_SRC emacs-lisp
     (use-package auto-compile
-      :config (auto-compile-on-load-mode))
-
-    (setq load-prefer-newer t)
+      :config
+      (setq load-prefer-newer t)
+      (auto-compile-on-load-mode))
   #+END_SRC
 
 * Configure =Org=
