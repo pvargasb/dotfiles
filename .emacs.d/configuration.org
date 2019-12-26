@@ -41,6 +41,7 @@
         "w"  'save-buffer
         "q"  'delete-window
         "g"  'magit-status
+        "ot" 'shell
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
@@ -223,6 +224,7 @@
   #+BEGIN_SRC emacs-lisp
     (use-package projectile
       :config
+      (setq projectile-require-project-root nil)
       (projectile-mode t))
   #+END_SRC
 
@@ -303,7 +305,9 @@
 * Backup
 
   #+BEGIN_SRC emacs-lisp
-    (setq make-backup-files nil)
+    (setq make-backup-files nil
+          backup-inhibited t
+          auto-save-default nil)
   #+END_SRC
 
 * UI
@@ -311,12 +315,20 @@
 ** Frames
 
    #+BEGIN_SRC emacs-lisp
-     (tool-bar-mode -1)
-     (menu-bar-mode -1)
+     ;; GUI
      (scroll-bar-mode -1)
+     (tool-bar-mode   -1)
+     (tooltip-mode    -1)
+     (menu-bar-mode   -1)
+
+     ;; Cursor
      (blink-cursor-mode -1)
+
+     ;; Numbering
      (global-display-line-numbers-mode +1)
      (column-number-mode t)
+
+     ;; Minibuffer
      (set-window-scroll-bars (minibuffer-window) nil nil)
    #+END_SRC
 
@@ -329,7 +341,7 @@
 ** Font
 
    #+BEGIN_SRC emacs-lisp
-     (set-frame-font "Hack 11" nil t)
+     (set-default-font "Hack 11" nil t)
    #+END_SRC
 
 ** Prettify
