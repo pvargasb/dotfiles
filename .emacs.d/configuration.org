@@ -18,6 +18,66 @@
       (auto-compile-on-load-mode))
   #+END_SRC
 
+* Configure =Evil=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package evil
+      :init
+      (setq evil-want-C-u-scroll t)
+      :config
+      (evil-mode t))
+  #+END_SRC
+
+** Leader
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-leader
+       :after evil
+       :init
+       (global-evil-leader-mode)
+       :config
+       (evil-leader/set-leader "<SPC>")
+       (evil-leader/set-key
+        "w" 'save-buffer
+        "q" 'delete-window
+        "g" 'magit-status
+        "xk" 'kill-current-buffer
+        "xc" 'save-buffers-kill-terminal
+        "xo" 'delete-other-windows
+        "vs" 'split-window-right
+        "hs" 'split-window-below))
+   #+END_SRC
+
+** Surround
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-surround
+       :config
+       (global-evil-surround-mode t))
+   #+END_SRC
+
+** Comments
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-nerd-commenter
+       :config
+       (evil-leader/set-key
+       "cc" 'evilnc-comment-or-uncomment-lines
+       "cp" 'evilnc-comment-or-uncomment-paragraphs
+       "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
+       "ci" 'evilnc-copy-and-comment-lines
+       "cv" 'evilnc-toggle-invert-comment-line-by-line
+       "c."  'evilnc-copy-and-comment-operator))
+   #+END_SRC
+
+** Folding
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package vimish-fold
+       :config
+       (vimish-fold-global-mode 1))
+   #+END_SRC
+
 * Configure =Org=
 
   #+BEGIN_SRC emacs-lisp
@@ -117,72 +177,6 @@
       (use-package evil-magit))
   #+END_SRC
 
-* Configure =Evil=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package evil
-      :init
-      (setq evil-want-C-u-scroll t)
-      :config
-      (evil-mode t))
-  #+END_SRC
-
-** Leader
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package evil-leader
-       :after evil
-       :init
-       (global-evil-leader-mode)
-       :config
-       (evil-leader/set-leader "<SPC>")
-       (evil-leader/set-key
-        "<SPC>" 'execute-extended-command
-        "w" 'save-buffer
-        "pf" 'counsel-projectile-find-file
-        "f" 'find-file
-        "g" 'magit-status
-        "xk" 'kill-current-buffer
-        "xc" 'save-buffers-kill-terminal
-        "xo" 'delete-other-windows
-        "q" 'delete-window
-        "vs" 'split-window-right
-        "hs" 'split-window-below
-        "bb" 'counsel-switch-buffer))
-   #+END_SRC
-
-** Surround
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package evil-surround
-       :config
-       (global-evil-surround-mode t))
-   #+END_SRC
-
-** Comments
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package evil-nerd-commenter
-       :config
-       (evil-leader/set-key
-       "ci" 'evilnc-comment-or-uncomment-lines
-       "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
-       "ll" 'evilnc-quick-comment-or-uncomment-to-the-line
-       "cc" 'evilnc-copy-and-comment-lines
-       "cp" 'evilnc-comment-or-uncomment-paragraphs
-       "cr" 'comment-or-uncomment-region
-       "cv" 'evilnc-toggle-invert-comment-line-by-line
-       "c."  'evilnc-copy-and-comment-operator))
-   #+END_SRC
-
-** Folding
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package vimish-fold
-       :config
-       (vimish-fold-global-mode 1))
-   #+END_SRC
-
 * Configure =Key Chord=
 
   #+BEGIN_SRC emacs-lisp
@@ -218,10 +212,11 @@
 
   #+BEGIN_SRC emacs-lisp
     (use-package helpful
+      :bind
+      ("C-h f" . #'helpful-callable)
+      ("C-h v" . #'helpful-variable)
+      ("C-h k" . #'helpful-key)
       :config
-      (global-set-key (kbd "C-h f") #'helpful-callable)
-      (global-set-key (kbd "C-h v") #'helpful-variable)
-      (global-set-key (kbd "C-h k") #'helpful-key)
       (evil-define-key 'normal helpful-mode-map (kbd "q") 'quit-window))
   #+END_SRC
 
@@ -237,16 +232,22 @@
 
   #+BEGIN_SRC emacs-lisp
     (use-package counsel
+      :bind
+      ("C-s" . 'swiper)
+      ("M-x" . 'counsel-M-x)
+      ("C-x C-f" . 'counsel-find-file)
+      ("C-c C-r" . 'ivy-resume)
+      ("<f1> f" . 'counsel-describe-function)
+      ("<f1> v" . 'counsel-describe-variable)
+      ("<f1> l" . 'counsel-find-library)
+      ("<f2> i" . 'counsel-info-lookup-symbol)
+      ("<f2> u" . 'counsel-unicode-char)
       :config
-      (global-set-key (kbd "C-s") 'swiper)
-      (global-set-key (kbd "M-x") 'counsel-M-x)
-      (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-      (global-set-key (kbd "C-c C-r") 'ivy-resume)
-      (global-set-key (kbd "<f1> f") 'counsel-describe-function)
-      (global-set-key (kbd "<f1> v") 'counsel-describe-variable)
-      (global-set-key (kbd "<f1> l") 'counsel-find-library)
-      (global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol)
-      (global-set-key (kbd "<f2> u") 'counsel-unicode-char)
+      (evil-leader/set-key
+        "<SPC>" 'counsel-M-x
+        "f" 'counsel-find-file
+        "b" 'counsel-switch-buffer)
+      (define-key evil-normal-state-map (kbd "/") 'swiper)
       (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
   #+END_SRC
 
@@ -255,8 +256,17 @@
   #+BEGIN_SRC emacs-lisp
     (use-package counsel-projectile
       :config
-      (counsel-projectile-mode t)
-      (define-key evil-normal-state-map (kbd "/") 'swiper))
+      (evil-leader/set-key
+        "pf" 'counsel-projectile-find-file)
+      (counsel-projectile-mode t))
+  #+END_SRC
+
+* Configure =Multiple cursors=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package multiple-cursors
+      :config
+      (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this))
   #+END_SRC
 
 * Customization
@@ -398,13 +408,13 @@
   #+BEGIN_SRC emacs-lisp
     (use-package gruvbox-theme
       :init
-      (load-theme 'gruvbox-dark-hard t))
+      (load-theme 'gruvbox-dark-medium t))
   #+END_SRC
 
 ** Transparency
 
    #+BEGIN_SRC emacs-lisp
-     (set-frame-parameter (selected-frame) 'alpha 100)
+     (set-frame-parameter (selected-frame) 'alpha 90)
    #+END_SRC
 
 * Keybindings
