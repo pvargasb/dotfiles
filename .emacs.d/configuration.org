@@ -267,6 +267,25 @@
       (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this))
   #+END_SRC
 
+* Configure =Yasnippet=
+
+   #+BEGIN_SRC emacs-lisp
+     ;; (use-package yasnippet
+     ;;   :config
+     ;;   (add-to-list 'load-path
+     ;;                "~/.emacs.d/plugins/yasnippet")
+     ;;   (yas-global-mode 1))
+   #+END_SRC
+
+* Configure =Flyspell=
+
+  #+BEGIN_SRC emacs-lisp
+    ;; (use-package flyspell
+    ;;   :config
+    ;;   (evil-leader/set-key "s" 'ispell)
+    ;;   (flyspell-default-dict 'spanish))
+  #+END_SRC
+
 * Customization
 
   #+BEGIN_SRC emacs-lisp
@@ -320,6 +339,12 @@
    #+END_SRC
 
 * Programming environments
+
+** LaTex
+
+   #+BEGIN_SRC emacs-lisp
+     ;; (use-package auctex)
+   #+END_SRC
 
 ** Indentation
 
@@ -418,7 +443,7 @@
 ** Transparency
 
    #+BEGIN_SRC emacs-lisp
-     (set-frame-parameter (selected-frame) 'alpha 90)
+     (set-frame-parameter (selected-frame) 'alpha 100)
    #+END_SRC
 
 * Keybindings
