@@ -352,12 +352,6 @@
 
 * Programming environments
 
-** LaTex
-
-   #+BEGIN_SRC emacs-lisp
-     ;; (use-package auctex)
-   #+END_SRC
-
 ** Indentation
 
    #+BEGIN_SRC emacs-lisp
