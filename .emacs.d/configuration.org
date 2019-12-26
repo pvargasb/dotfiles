@@ -250,6 +250,8 @@
       (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
   #+END_SRC
 
+* Configure =Counsel Projectile=
+
   #+BEGIN_SRC emacs-lisp
     (use-package counsel-projectile
       :config
