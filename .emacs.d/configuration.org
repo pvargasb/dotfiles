@@ -38,9 +38,9 @@
        :config
        (evil-leader/set-leader "<SPC>")
        (evil-leader/set-key
-        "w" 'save-buffer
-        "q" 'delete-window
-        "g" 'magit-status
+        "w"  'save-buffer
+        "q"  'delete-window
+        "g"  'magit-status
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
@@ -67,7 +67,7 @@
        "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
        "ci" 'evilnc-copy-and-comment-lines
        "cv" 'evilnc-toggle-invert-comment-line-by-line
-       "c."  'evilnc-copy-and-comment-operator))
+       "c." 'evilnc-copy-and-comment-operator))
    #+END_SRC
 
 ** Folding
@@ -93,8 +93,8 @@
 
    #+BEGIN_SRC emacs-lisp
      (use-package org-bullets
-       :init
-       (add-hook 'org-mode-hook 'org-bullets-mode))
+       :hook
+       (org-mode . org-bullets-mode))
    #+END_SRC
 
 ** Completions
@@ -143,7 +143,7 @@
       :config
       (moody-replace-mode-line-buffer-identification)
       (moody-replace-vc-mode)
-      (setq moody-mode-line-height 16
+      (setq moody-mode-line-height 18
             x-underline-at-descent-line t))
   #+END_SRC
 
@@ -152,8 +152,6 @@
   #+BEGIN_SRC emacs-lisp
     (use-package ivy
       :config
-      (setq ivy-re-builders-alist
-            '((t . ivy--regex-plus)))
       (ivy-mode t))
   #+END_SRC
 
@@ -328,6 +326,12 @@
    #+BEGIN_SRC emacs-lisp
      (setq-default tab-width 4
                    indent-tabs-mode nil)
+   #+END_SRC
+
+** Align
+
+   #+BEGIN_SRC emacs-lisp
+     (define-key evil-normal-state-map (kbd "ga") 'align-regexp)
    #+END_SRC
 
 * Editing
