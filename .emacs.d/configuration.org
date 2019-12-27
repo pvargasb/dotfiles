@@ -450,7 +450,7 @@
 ** Transparency
 
    #+BEGIN_SRC emacs-lisp
-     (set-frame-parameter (selected-frame) 'alpha 100)
+     (set-frame-parameter (selected-frame) 'alpha 90)
    #+END_SRC
 
 * Keybindings
