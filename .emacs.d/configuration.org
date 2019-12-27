@@ -281,7 +281,9 @@
     ;;   :custom
     ;;   (ispell-dictionary "es")
     ;;   :config
-    ;;   (evil-leader/set-key "s" 'ispell))
+    ;;   (evil-leader/set-key
+    ;;     "sb" 'ispell
+    ;;     "sw" 'ispell-word))
   #+END_SRC
 
 * Customization
