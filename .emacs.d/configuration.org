@@ -370,6 +370,12 @@
      (define-key evil-normal-state-map (kbd "ga") 'align-regexp)
    #+END_SRC
 
+** Camel case
+
+   #+BEGIN_SRC emacs-lisp
+     (global-subword-mode 1)
+   #+END_SRC
+
 * Editing
 
 ** Yes or No prompt
@@ -421,6 +427,7 @@
 
    #+BEGIN_SRC emacs-lisp
      (setq show-paren-style 'mixed
+           show-paren-delay 0
            show-paren-when-point-in-periphery t
            show-paren-when-point-inside-paren nil)
 
