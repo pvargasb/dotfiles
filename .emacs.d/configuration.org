@@ -9,15 +9,6 @@
     (setq use-package-always-ensure t)
   #+END_SRC
 
-* Configure =Auto compile=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package auto-compile
-      :config
-      (setq load-prefer-newer t)
-      (auto-compile-on-load-mode))
-  #+END_SRC
-
 * Configure =Evil=
 
   #+BEGIN_SRC emacs-lisp
