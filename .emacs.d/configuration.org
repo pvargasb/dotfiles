@@ -284,9 +284,13 @@
 
   #+BEGIN_SRC emacs-lisp
     ;; (use-package flyspell
+    ;;   :hook
+    ;;   (prog-mode . flyspell-prog-mode)
+    ;;   (text-mode . flyspell-mode)
+    ;;   :custom
+    ;;   (ispell-dictionary "es")
     ;;   :config
-    ;;   (evil-leader/set-key "s" 'ispell)
-    ;;   (flyspell-default-dict 'spanish))
+    ;;   (evil-leader/set-key "s" 'ispell))
   #+END_SRC
 
 * Customization
