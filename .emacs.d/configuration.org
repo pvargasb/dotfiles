@@ -439,6 +439,12 @@
        :mode (("sxhkdrc" . conf-mode)))
    #+END_SRC
 
+** Frame title
+
+   #+BEGIN_SRC emacs-lisp
+     (setq frame-title-format '("" "%b"))
+   #+END_SRC
+
 * Themes
 
   #+BEGIN_SRC emacs-lisp
