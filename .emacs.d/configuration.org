@@ -348,11 +348,17 @@
 
 ** Java
 
-**** Configure =Meghanada=
+*** Configure =Meghanada=
 
-      #+BEGIN_SRC emacs-lisp
-        ;; (use-package meghanada)
-      #+END_SRC
+     #+BEGIN_SRC emacs-lisp
+       ;; (use-package meghanada)
+     #+END_SRC
+
+*** Hooks
+
+    #+BEGIN_SRC emacs-lisp
+      ;; (add-hook 'java-mode-hook 'meghanada-mode)
+    #+END_SRC
 
 ** Indentation
 
