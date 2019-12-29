@@ -282,12 +282,6 @@
     ;; (use-package flycheck)
   #+END_SRC
 
-* Configure =Meghanada=
-
-   #+BEGIN_SRC emacs-lisp
-     ;; (use-package meghanada)
-   #+END_SRC
-
 * Customization
 
   #+BEGIN_SRC emacs-lisp
@@ -351,6 +345,14 @@
    #+END_SRC
 
 * Programming environments
+
+** Java
+
+**** Configure =Meghanada=
+
+      #+BEGIN_SRC emacs-lisp
+        ;; (use-package meghanada)
+      #+END_SRC
 
 ** Indentation
 
