@@ -358,6 +358,16 @@
 
     #+BEGIN_SRC emacs-lisp
       ;; (add-hook 'java-mode-hook 'meghanada-mode)
+      ;; (add-hook 'java-mode-hook 'flycheck-mode)
+    #+END_SRC
+
+** LaTeX
+
+*** Configure =AucTex=
+
+    #+BEGIN_SRC emacs-lisp
+      ;; (use-package tex-site
+      ;;   :ensure auctex)
     #+END_SRC
 
 ** Indentation
