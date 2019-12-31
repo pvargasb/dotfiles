@@ -30,10 +30,11 @@
        (evil-leader/set-leader "<SPC>")
        (evil-leader/set-key
         "w"  'save-buffer
-        "q"  'delete-window
+        "q"  'kill-buffer-and-window
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
+        "x0" 'delete-window
         "vs" 'split-window-right
         "hs" 'split-window-below))
    #+END_SRC
