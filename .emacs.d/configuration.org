@@ -31,8 +31,6 @@
        (evil-leader/set-key
         "w"  'save-buffer
         "q"  'delete-window
-        "g"  'magit-status
-        "ot" 'shell
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
@@ -116,6 +114,7 @@
    #+BEGIN_SRC emacs-lisp
      (setq org-agenda-span 15
            org-agenda-start-on-weekday nil)
+     (evil-leader/set-key "oa" 'org-agenda)
    #+END_SRC
 
 ** Capture
@@ -124,6 +123,9 @@
      (setq org-capture-bookmark nil
            org-default-notes-file (concat org-directory "/TODO.org"))
      (add-hook 'org-capture-mode-hook 'evil-insert-state)
+     (evil-leader/set-key
+       "oc" 'org-capture
+       "ol" 'org-store-link)
    #+END_SRC
 
 * Configure =Minions=
@@ -173,6 +175,7 @@
       (with-editor-mode . evil-insert-state)
       :config
       (use-package evil-magit))
+    (evil-leader/set-key "og" 'magit-status)
   #+END_SRC
 
 * Configure =Key Chord=
@@ -204,7 +207,7 @@
     (use-package dumb-jump
       :config
       (setq dumb-jump-selector 'ivy)
-      (define-key evil-normal-state-map (kbd "gd") 'dumb-jump-go))
+      (define-key evil-normal-state-map (kbd "gD") 'dumb-jump-go))
   #+END_SRC
 
 * Configure =Helpful=
@@ -295,6 +298,12 @@
   #+BEGIN_SRC emacs-lisp
     (setq custom-file "~/.emacs.d/custom.el")
     (load custom-file)
+  #+END_SRC
+
+* Shell
+
+  #+BEGIN_SRC emacs-lisp
+    (evil-leader/set-key "ot" 'shell)
   #+END_SRC
 
 * Identification
@@ -417,6 +426,8 @@
      (defun visit-emacs-config ()
        (interactive)
        (find-file "~/.emacs.d/configuration.org"))
+
+     (evil-leader/set-key "oe" 'visit-emacs-config)
    #+END_SRC
 
 ** Always kill current buffer
