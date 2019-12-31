@@ -108,6 +108,8 @@
      (defun visit-todo-list ()
        (interactive)
        (find-file (concat org-directory "/TODO.org")))
+
+     (evil-leader/set-key "oi" 'visit-todo-list)
    #+END_SRC
 
 ** Agenda
