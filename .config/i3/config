@@ -48,7 +48,7 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+space floating toggle
 
 # toggle sticky
-bindsym $mod+Shift+s sticky toggle
+bindsym $mod+Shift+p sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
@@ -169,8 +169,8 @@ set $white          #FFFFFF
 set $transparent    #00000000
 
 #                       BORDER		BACKGROUND	TEXT		INDICATOR
-client.focused		    $white      $black		$white		$yellow
-client.unfocused	    $black     	$black		$white		$yellow
-client.focused_inactive	$grey     	$black		$white		$yellow
-client.urgent		    $black	    $red    	$black		$yellow
+client.focused          $white      $black		$white		$yellow
+client.unfocused        $black      $black		$white		$yellow
+client.focused_inactive	$grey       $black		$white		$yellow
+client.urgent           $black      $red        $black		$yellow
 client.background       $black
