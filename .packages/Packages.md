@@ -98,3 +98,16 @@
 
 # Cursor
 * `posy-cursors`
+
+# Extra ( Laptop )
+
+* `grub`
+* `efibootmgr`
+* `os-prober`
+* `sudo`
+* `git`
+* `base-devel`
+* `xf86-input-libinput`
+* `bluez`
+* `bluez-utils`
+* `pulseaudio-bluetooth`
