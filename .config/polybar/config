@@ -134,7 +134,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/wlan]
 type = internal/network
-interface = wlo1
+interface = wlp3s0
 interval = 10
 
 format-connected = <ramp-signal> <label-connected>
