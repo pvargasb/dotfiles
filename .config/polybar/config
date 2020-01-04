@@ -134,7 +134,7 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0
+interface = wlo1
 interval = 10
 
 format-connected = <ramp-signal> <label-connected>
@@ -215,31 +215,18 @@ bar-volume-empty-foreground = ${colors.foreground-alt}
 [module/battery]
 type = internal/battery
 battery = BAT0
-adapter = ADP1
-full-at = 98
-
-format-charging = <animation-charging> <label-charging>
-format-charging-underline = #00FF00
-
-format-discharging = <animation-discharging> <label-discharging>
-format-discharging-underline = #FF0000
-
-format-full-prefix = " "
-format-full-prefix-foreground = ${colors.foreground-alt}
-format-full-underline = #00FF00
+adapter = AC0
+full-at = 90
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 
 ramp-capacity-2 = 
 ramp-capacity-3 = 
-ramp-capacity-foreground = ${colors.foreground-alt}
+ramp-capacity-4 = 
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-foreground = ${colors.foreground-alt}
-animation-charging-framerate = 1000
+format-charging = <label-charging> <ramp-capacity>
+format-discharging = <label-discharging> <ramp-capacity>
+format-full-underline = #00FF00
 
 [module/xwindow]
 type = internal/xwindow
