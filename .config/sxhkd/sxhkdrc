@@ -53,7 +53,7 @@ super + Print
 # Environment =================================================================
 
 super + b
-	polybar-msg cmd toggle
+    polybar-msg cmd toggle
 
 # Especial byndings ============================================================
 XF86Calculator
@@ -91,3 +91,12 @@ XF86AudioPrev
 
 XF86AudioNext
     playerctl next
+
+XF86MonBrightnessDown
+    xbacklight -dec 2
+
+XF86MonBrightnessUp
+    xbacklight -inc 2
+
+XF86TouchpadToggle
+    toggle_touchpad
