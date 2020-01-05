@@ -23,8 +23,20 @@ super + p
 super + n
     $BROWSER
 
+super + comma
+    playerctl previous
+
+super + period
+    playerctl next
+
+super + apostrophe
+    playerctl play-pause
+
 super + shift + n
     $BROWSER --incognito
+
+super + shift + m
+    amixer sset 'Master' toggle
 
 super + control + y
     feh --randomize --bg-fill $HOME/Wallpapers/*
