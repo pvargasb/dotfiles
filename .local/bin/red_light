@@ -1,6 +1,6 @@
 #! /bin/bash
 
-VALUES=({1500..6500..500})
+VALUES=({1000..6500..250})
 
 RESPONSE=$(printf "%s\n" "${VALUES[@]}" | \
     dmenu -b -p "Redshift:" -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826')
