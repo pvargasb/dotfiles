@@ -31,6 +31,7 @@
        (evil-leader/set-key
         "w"  'save-buffer
         "q"  'kill-buffer-and-window
+        "r"  'query-replace
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
