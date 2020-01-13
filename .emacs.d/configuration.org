@@ -57,11 +57,10 @@
        :config
        (evil-leader/set-key
        "cc" 'evilnc-comment-or-uncomment-lines
+       "cb" 'comment-box
        "cp" 'evilnc-comment-or-uncomment-paragraphs
        "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
-       "ci" 'evilnc-copy-and-comment-lines
-       "cv" 'evilnc-toggle-invert-comment-line-by-line
-       "c." 'evilnc-copy-and-comment-operator))
+       "ci" 'evilnc-copy-and-comment-lines))
    #+END_SRC
 
 ** Folding
