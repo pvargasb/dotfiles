@@ -266,7 +266,8 @@
     (use-package counsel-projectile
       :config
       (evil-leader/set-key
-        "pf" 'counsel-projectile-find-file)
+        "pf" 'counsel-projectile-find-file
+        "pp" 'counsel-projectile-switch-project)
       (counsel-projectile-mode t))
   #+END_SRC
 
