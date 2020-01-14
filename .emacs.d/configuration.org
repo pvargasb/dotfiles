@@ -341,20 +341,16 @@
 ** Frames
 
    #+BEGIN_SRC emacs-lisp
-     ;; GUI
      (scroll-bar-mode -1)
      (tool-bar-mode   -1)
      (tooltip-mode    -1)
      (menu-bar-mode   -1)
 
-     ;; Cursor
      (blink-cursor-mode -1)
 
-     ;; Numbering
      (global-display-line-numbers-mode +1)
      (column-number-mode t)
 
-     ;; Minibuffer
      (set-window-scroll-bars (minibuffer-window) nil nil)
    #+END_SRC
 
@@ -391,15 +387,6 @@
     #+BEGIN_SRC emacs-lisp
       ;; (add-hook 'java-mode-hook 'meghanada-mode)
       ;; (add-hook 'java-mode-hook 'flycheck-mode)
-    #+END_SRC
-
-** LaTeX
-
-*** Configure =AucTex=
-
-    #+BEGIN_SRC emacs-lisp
-      ;; (use-package tex-site
-      ;;   :ensure auctex)
     #+END_SRC
 
 ** Indentation
