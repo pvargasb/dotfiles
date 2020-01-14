@@ -299,6 +299,15 @@
     ;; (use-package flycheck)
   #+END_SRC
 
+* Configure =Yasnippet=
+
+  #+BEGIN_SRC emacs-lisp
+    ;; (use-package yasnippet-snippets)
+    ;; (use-package yasnippet
+    ;;   :config
+    ;;   (yas-global-mode 1))
+  #+END_SRC
+
 * Customization
 
   #+BEGIN_SRC emacs-lisp
