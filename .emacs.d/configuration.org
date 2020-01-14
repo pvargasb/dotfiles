@@ -510,6 +510,8 @@
 
   #+BEGIN_SRC emacs-lisp
     (global-set-key (kbd "M-o") 'other-window)
+    (global-set-key (kbd "M-p") 'previous-buffer)
+    (global-set-key (kbd "M-n") 'next-buffer)
     (global-set-key (kbd "C-+") 'text-scale-increase)
     (global-set-key (kbd "C--") 'text-scale-decrease)
     (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
