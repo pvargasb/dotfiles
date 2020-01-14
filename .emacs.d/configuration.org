@@ -363,7 +363,7 @@
 ** Font
 
    #+BEGIN_SRC emacs-lisp
-     (set-default-font "Hack 11" nil t)
+     (set-default-font "Hack 10" nil t)
    #+END_SRC
 
 ** Prettify
