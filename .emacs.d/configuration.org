@@ -408,7 +408,8 @@
 ** Camel case
 
    #+BEGIN_SRC emacs-lisp
-     (global-subword-mode 1)
+     (use-package subword
+       :hook (prog-mode . subword-mode))
    #+END_SRC
 
 * Editing
