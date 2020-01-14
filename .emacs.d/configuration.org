@@ -256,6 +256,7 @@
         "f" 'counsel-find-file
         "b" 'counsel-switch-buffer)
       (define-key evil-normal-state-map (kbd "/") 'swiper)
+      (define-key evil-normal-state-map (kbd "*") 'swiper-thing-at-point)
       (define-key minibuffer-local-map (kbd "C-r") 'counsel-minibuffer-history))
   #+END_SRC
 
