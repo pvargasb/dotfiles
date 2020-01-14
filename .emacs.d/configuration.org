@@ -489,7 +489,7 @@
 ** Frame title
 
    #+BEGIN_SRC emacs-lisp
-     (setq frame-title-format '("" "%b"))
+     (setq frame-title-format '("" "Emacs: %b"))
    #+END_SRC
 
 * Themes
