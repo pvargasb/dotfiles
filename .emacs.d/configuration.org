@@ -364,9 +364,7 @@
 ** Font
 
    #+BEGIN_SRC emacs-lisp
-     (if (> (window-pixel-width) 1366)
-         (set-default-font "Hack 11" nil t)
-       (set-default-font "Hack 10" nil t))
+     (set-default-font "Hack 11" nil t)
    #+END_SRC
 
 ** Prettify
