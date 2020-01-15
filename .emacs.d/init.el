@@ -1,6 +1,11 @@
 ;; Configure package.el to include MELPA.
 (require 'package)
 (add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("melpa" .  "https://melpa.org/packages/") t)
+(setq package-archive-priorities
+      '(("melpa-stable" . 10)
+        ("gnu"     . 5)
+        ("melpa"        . 0)))
 (package-initialize)
 
 ;; Ensure that use-package is installed.
