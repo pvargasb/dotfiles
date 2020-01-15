@@ -9,6 +9,12 @@
     (setq use-package-always-ensure t)
   #+END_SRC
 
+* Configure =Origami=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package origami)
+  #+END_SRC
+
 * Configure =Evil=
 
   #+BEGIN_SRC emacs-lisp
@@ -77,7 +83,7 @@
    #+BEGIN_SRC emacs-lisp
      (use-package vimish-fold
        :hook
-       ('prog-mode-hook . 'hs-minor-mode)
+       ('prog-mode-hook . 'origami-mode)
        :config
        (vimish-fold-global-mode 1))
    #+END_SRC
