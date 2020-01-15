@@ -77,6 +77,8 @@
 
    #+BEGIN_SRC emacs-lisp
      (use-package vimish-fold
+       :hook
+       ('prog-mode-hook . 'hs-minor-mode)
        :config
        (vimish-fold-global-mode 1))
    #+END_SRC
@@ -86,6 +88,7 @@
   #+BEGIN_SRC emacs-lisp
     (setq org-src-fontify-natively t
           org-src-tab-acts-natively t
+          org-confirm-babel-evaluate nil
           org-catch-invisible-edits 'show
           org-src-window-setup 'current-window
           org-return-follows-link t
@@ -354,6 +357,8 @@
      (column-number-mode t)
 
      (set-window-scroll-bars (minibuffer-window) nil nil)
+
+     (setq echo-keystrokes 0.1)
    #+END_SRC
 
 ** Bell
@@ -493,6 +498,12 @@
 
    #+BEGIN_SRC emacs-lisp
      (setq frame-title-format '("" "Emacs: %b"))
+   #+END_SRC
+
+** Scratch buffer
+
+   #+BEGIN_SRC emacs-lisp
+     (setq initial-scratch-message nil)
    #+END_SRC
 
 * Themes
