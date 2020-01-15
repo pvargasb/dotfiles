@@ -9,19 +9,6 @@
     (setq use-package-always-ensure t)
   #+END_SRC
 
-* Configure =Auto update=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package auto-package-update
-      :config
-      (auto-package-update-maybe)
-      :custom
-      (auto-package-update-interval 15)
-      (auto-package-update-prompt-before-update t)
-      (auto-package-update-delete-old-versions t)
-      (auto-package-update-hide-results t))
-  #+END_SRC
-
 * Configure =Evil=
 
   #+BEGIN_SRC emacs-lisp
