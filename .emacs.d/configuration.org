@@ -19,6 +19,16 @@
       (evil-mode t))
   #+END_SRC
 
+** Escape
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-escape
+       :config
+       (setq-default evil-escape-delay 0.2
+                     evil-escape-key-sequence ",,")
+       (evil-escape-mode))
+   #+END_SRC
+
 ** Leader
 
    #+BEGIN_SRC emacs-lisp
@@ -181,15 +191,6 @@
       :config
       (use-package evil-magit))
     (evil-leader/set-key "og" 'magit-status)
-  #+END_SRC
-
-* Configure =Key Chord=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package key-chord
-      :config
-      (key-chord-mode 1)
-      (key-chord-define evil-insert-state-map ",," 'evil-normal-state))
   #+END_SRC
 
 * Configure =Company=
