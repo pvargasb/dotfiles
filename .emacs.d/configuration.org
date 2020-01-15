@@ -43,7 +43,6 @@
         "q"  'kill-buffer-and-window
         "d"  'dired
         "r"  'query-replace
-        "xb" 'ibuffer
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
@@ -172,7 +171,19 @@
   #+BEGIN_SRC emacs-lisp
     (use-package ivy
       :config
-      (ivy-mode t))
+      (ivy-mode t)
+      (setq ivy-use-virtual-buffers t))
+  #+END_SRC
+
+* Configure =IBuffer=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package ibuffer
+      :bind
+      ("C-x C-b" . 'ibuffer)
+      :config
+      (evil-leader/set-key "xb" 'ibuffer)
+      (setq ibuffer-expert t))
   #+END_SRC
 
 * Configure =Which Key=
@@ -247,6 +258,7 @@
       :bind
       ("C-s" . 'swiper)
       ("M-x" . 'counsel-M-x)
+      ("M-y" . 'counsel-yank-pop)
       ("C-x C-f" . 'counsel-find-file)
       ("C-c C-r" . 'ivy-resume)
       ("<f1> f" . 'counsel-describe-function)
@@ -418,6 +430,12 @@
 
 * Editing
 
+** Save kill
+
+   #+BEGIN_SRC emacs-lisp
+     (setq save-interprogram-paste-before-kill t)
+   #+END_SRC
+
 ** Yes or No prompt
 
    #+BEGIN_SRC emacs-lisp
@@ -528,7 +546,6 @@
     (global-set-key (kbd "C-+") 'text-scale-increase)
     (global-set-key (kbd "C--") 'text-scale-decrease)
     (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
-    (global-set-key (kbd "C-x C-b") 'ibuffer)
     (global-set-key (kbd "C-c l") 'org-store-link)
     (global-set-key (kbd "C-c a") 'org-agenda)
     (global-set-key (kbd "C-c c") 'org-capture)
