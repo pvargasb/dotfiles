@@ -12,7 +12,17 @@
 * Configure =Origami=
 
   #+BEGIN_SRC emacs-lisp
-    (use-package origami)
+    (use-package origami
+      :hook
+      ('prog-mode . 'origami-mode)
+      :config
+      (define-key evil-normal-state-map (kbd "zo") 'origami-open-node)
+      (define-key evil-normal-state-map (kbd "zc") 'origami-close-node)
+      (define-key evil-normal-state-map (kbd "za") 'origami-toggle-node)
+      (define-key evil-normal-state-map (kbd "zr") 'origami-open-node-recursively)
+      (define-key evil-normal-state-map (kbd "zm") 'origami-close-node-recursively)
+      (define-key evil-normal-state-map (kbd "zR") 'origami-open-all-nodes)
+      (define-key evil-normal-state-map (kbd "zM") 'origami-close-all-nodes))
   #+END_SRC
 
 * Configure =Evil=
@@ -76,16 +86,6 @@
        "cp" 'evilnc-comment-or-uncomment-paragraphs
        "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
        "ci" 'evilnc-copy-and-comment-lines))
-   #+END_SRC
-
-** Folding
-
-   #+BEGIN_SRC emacs-lisp
-     (use-package vimish-fold
-       :hook
-       ('prog-mode-hook . 'origami-mode)
-       :config
-       (vimish-fold-global-mode 1))
    #+END_SRC
 
 * Configure =Org=
@@ -217,8 +217,6 @@
 
   #+BEGIN_SRC emacs-lisp
     (use-package company
-      :hook
-      (emacs-lisp-mode . company-mode)
       :config
       (setq company-idle-delay 0
             company-minimum-prefix-length 1
@@ -401,18 +399,21 @@
 
 ** Java
 
-*** Configure =Meghanada=
+   #+BEGIN_SRC emacs-lisp
+     ;; (use-package meghanada)
+     ;; (add-hook 'java-mode-hook 'meghanada-mode)
+     ;; (add-hook 'java-mode-hook 'flycheck-mode)
+     ;; (add-hook 'java-mode-hook 'origami-mode)
+     ;; (add-hook 'java-mode-hook 'company-mode)
+   #+END_SRC
 
-     #+BEGIN_SRC emacs-lisp
-       ;; (use-package meghanada)
-     #+END_SRC
+** Emacs lisp
 
-*** Hooks
+   #+BEGIN_SRC emacs-lisp
+     ;; (add-hook 'emacs-lisp-mode-hook 'company-mode)
+   #+END_SRC
 
-    #+BEGIN_SRC emacs-lisp
-      ;; (add-hook 'java-mode-hook 'meghanada-mode)
-      ;; (add-hook 'java-mode-hook 'flycheck-mode)
-    #+END_SRC
+* Programming configuration
 
 ** Indentation
 
