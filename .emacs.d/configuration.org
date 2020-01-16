@@ -79,13 +79,16 @@
       :hook
       ('prog-mode . 'origami-mode)
       :config
+      (define-key evil-normal-state-map (kbd "zk") 'origami-previous-fold)
+      (define-key evil-normal-state-map (kbd "zj") 'origami-next-fold)
       (define-key evil-normal-state-map (kbd "zo") 'origami-open-node)
       (define-key evil-normal-state-map (kbd "zc") 'origami-close-node)
+      (define-key evil-normal-state-map (kbd "zO") 'origami-open-node-recursively)
+      (define-key evil-normal-state-map (kbd "zC") 'origami-close-node-recursively)
       (define-key evil-normal-state-map (kbd "za") 'origami-toggle-node)
-      (define-key evil-normal-state-map (kbd "zr") 'origami-open-node-recursively)
-      (define-key evil-normal-state-map (kbd "zm") 'origami-close-node-recursively)
-      (define-key evil-normal-state-map (kbd "zR") 'origami-open-all-nodes)
-      (define-key evil-normal-state-map (kbd "zM") 'origami-close-all-nodes))
+      (define-key evil-normal-state-map (kbd "zA") 'origami-toggle-all-nodes)
+      (define-key evil-normal-state-map (kbd "zr") 'origami-open-all-nodes)
+      (define-key evil-normal-state-map (kbd "zm") 'origami-close-all-nodes))
   #+END_SRC
 
 * Configure =Org=
