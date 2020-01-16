@@ -9,22 +9,6 @@
     (setq use-package-always-ensure t)
   #+END_SRC
 
-* Configure =Origami=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package origami
-      :hook
-      ('prog-mode . 'origami-mode)
-      :config
-      (define-key evil-normal-state-map (kbd "zo") 'origami-open-node)
-      (define-key evil-normal-state-map (kbd "zc") 'origami-close-node)
-      (define-key evil-normal-state-map (kbd "za") 'origami-toggle-node)
-      (define-key evil-normal-state-map (kbd "zr") 'origami-open-node-recursively)
-      (define-key evil-normal-state-map (kbd "zm") 'origami-close-node-recursively)
-      (define-key evil-normal-state-map (kbd "zR") 'origami-open-all-nodes)
-      (define-key evil-normal-state-map (kbd "zM") 'origami-close-all-nodes))
-  #+END_SRC
-
 * Configure =Evil=
 
   #+BEGIN_SRC emacs-lisp
@@ -87,6 +71,22 @@
        "cl" 'evilnc-quick-comment-or-uncomment-to-the-line
        "ci" 'evilnc-copy-and-comment-lines))
    #+END_SRC
+
+* Configure =Origami=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package origami
+      :hook
+      ('prog-mode . 'origami-mode)
+      :config
+      (define-key evil-normal-state-map (kbd "zo") 'origami-open-node)
+      (define-key evil-normal-state-map (kbd "zc") 'origami-close-node)
+      (define-key evil-normal-state-map (kbd "za") 'origami-toggle-node)
+      (define-key evil-normal-state-map (kbd "zr") 'origami-open-node-recursively)
+      (define-key evil-normal-state-map (kbd "zm") 'origami-close-node-recursively)
+      (define-key evil-normal-state-map (kbd "zR") 'origami-open-all-nodes)
+      (define-key evil-normal-state-map (kbd "zM") 'origami-close-all-nodes))
+  #+END_SRC
 
 * Configure =Org=
 
