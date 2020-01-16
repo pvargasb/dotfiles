@@ -417,6 +417,10 @@
    #+BEGIN_SRC emacs-lisp
      ;; (use-package sql-indent)
      ;; (use-package sqlup-mode)
+     ;; (add-hook 'sql-mode-hook 'sqlind-minor-mode)
+     ;; (add-hook 'sql-interactive-mode-hook 'sqlind-minor-mode)
+     ;; (add-hook 'sql-mode-hook 'sqlup-mode)
+     ;; (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
    #+END_SRC
 
 ** Emacs lisp
