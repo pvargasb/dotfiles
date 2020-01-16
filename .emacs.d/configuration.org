@@ -79,8 +79,10 @@
       :hook
       ('prog-mode . 'origami-mode)
       :config
-      (define-key evil-normal-state-map (kbd "zk") 'origami-backward-fold-same-level)
-      (define-key evil-normal-state-map (kbd "zj") 'origami-forward-fold-same-level)
+      (define-key evil-normal-state-map (kbd "zk") 'origami-previous-fold)
+      (define-key evil-normal-state-map (kbd "zj") 'origami-forward-fold)
+      (define-key evil-normal-state-map (kbd "zh") 'origami-backward-fold-same-level)
+      (define-key evil-normal-state-map (kbd "zl") 'origami-forward-fold-same-level)
       (define-key evil-normal-state-map (kbd "zo") 'origami-open-node)
       (define-key evil-normal-state-map (kbd "zc") 'origami-close-node)
       (define-key evil-normal-state-map (kbd "zO") 'origami-open-node-recursively)
