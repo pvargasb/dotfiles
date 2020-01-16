@@ -412,6 +412,13 @@
      ;; (add-hook 'java-mode-hook 'company-mode)
    #+END_SRC
 
+** SQL
+
+   #+BEGIN_SRC emacs-lisp
+     ;; (use-package sql-indent)
+     ;; (use-package sqlup-mode)
+   #+END_SRC
+
 ** Emacs lisp
 
    #+BEGIN_SRC emacs-lisp
