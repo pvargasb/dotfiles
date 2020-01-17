@@ -511,10 +511,7 @@
 ** Parentheses
 
    #+BEGIN_SRC emacs-lisp
-     (setq show-paren-style 'mixed
-           show-paren-delay 0
-           show-paren-when-point-in-periphery t
-           show-paren-when-point-inside-paren nil)
+     (setq show-paren-delay 0)
 
      (show-paren-mode 1)
      (electric-indent-mode 1)
