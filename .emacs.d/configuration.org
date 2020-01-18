@@ -304,6 +304,14 @@
       (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this))
   #+END_SRC
 
+* Configure =Hungry delete=
+
+  #+BEGIN_SRC emacs-lisp
+    (use-package hungry-delete
+      :bind
+      ("C-c d" . 'hungry-delete-backward))
+  #+END_SRC
+
 * Configure =Flyspell=
 
   #+BEGIN_SRC emacs-lisp
