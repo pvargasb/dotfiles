@@ -111,3 +111,5 @@
 * `bluez`
 * `bluez-utils`
 * `pulseaudio-bluetooth`
+* `tlp`
+* `powertop`
