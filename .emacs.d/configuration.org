@@ -212,9 +212,7 @@
       :bind
       ("C-x g" . magit-status)
       :hook
-      (with-editor-mode . evil-insert-state)
-      :config
-      (use-package evil-magit))
+      (with-editor-mode . evil-insert-state))
     (evil-leader/set-key "og" 'magit-status)
   #+END_SRC
 
