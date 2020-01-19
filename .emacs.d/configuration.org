@@ -95,15 +95,24 @@
 
 * Configure =Org=
 
+** Settings
+
   #+BEGIN_SRC emacs-lisp
     (setq org-src-fontify-natively t
           org-src-tab-acts-natively t
+          org-src-window-setup 'current-window
           org-confirm-babel-evaluate nil
           org-catch-invisible-edits 'show
-          org-src-window-setup 'current-window
           org-return-follows-link t
           org-use-speed-commands t)
   #+END_SRC
+
+** Todo
+
+   #+BEGIN_SRC emacs-lisp
+     (setq org-todo-keywords '((sequence "TODO" "INPROGRESS" "DONE"))
+           org-todo-keyword-faces '(("INPROGRESS" . (:foreground "yellow" :weight bold))))
+   #+END_SRC
 
 ** Bullets
 
@@ -134,7 +143,7 @@
        (interactive)
        (find-file (concat org-directory "/TODO.org")))
 
-     (evil-leader/set-key "oi" 'visit-todo-list)
+     (evil-leader/set-key "ow" 'visit-todo-list)
    #+END_SRC
 
 ** Agenda
@@ -153,7 +162,8 @@
      (add-hook 'org-capture-mode-hook 'evil-insert-state)
      (evil-leader/set-key
        "oc" 'org-capture
-       "ol" 'org-store-link)
+       "ol" 'org-store-link
+       "oL" 'org-insert-last-stored-link)
    #+END_SRC
 
 * Configure =Minions=
