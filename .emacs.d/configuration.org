@@ -446,6 +446,14 @@
      (add-hook 'emacs-lisp-mode-hook 'company-mode)
    #+END_SRC
 
+** Markdown
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package markdown-mode)
+   #+END_SRC
+
+   #+RESULTS:
+
 * Programming configuration
 
 ** Indentation
