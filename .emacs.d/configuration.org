@@ -422,7 +422,7 @@
 
    #+BEGIN_SRC emacs-lisp
      ;; (use-package meghanada)
-     ;; (define-key meghanada-mode-map (kdb "C-c d") 'meghanada-jump-declaration)
+     ;; (define-key meghanada-mode-map (kbd "C-c d") 'meghanada-jump-declaration)
      ;; (add-hook 'java-mode-hook 'meghanada-mode)
      ;; (add-hook 'java-mode-hook 'flycheck-mode)
      ;; (add-hook 'java-mode-hook 'origami-mode)
