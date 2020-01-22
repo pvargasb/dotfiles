@@ -46,7 +46,7 @@
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
-        "x0" 'delete-window
+        "xt" 'delete-window
         "vs" 'split-window-right
         "hs" 'split-window-below))
    #+END_SRC
