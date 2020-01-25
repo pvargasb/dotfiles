@@ -113,3 +113,5 @@
 * `pulseaudio-bluetooth`
 * `tlp`
 * `powertop`
+* `cups`
+* `samsung-printers`
