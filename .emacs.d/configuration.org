@@ -43,6 +43,7 @@
         "q"  'kill-buffer-and-window
         "d"  'dired
         "r"  'query-replace
+        "R"  'query-replace-regexp
         "xk" 'kill-current-buffer
         "xc" 'save-buffers-kill-terminal
         "xo" 'delete-other-windows
