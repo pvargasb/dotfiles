@@ -158,7 +158,15 @@
 
    #+BEGIN_SRC emacs-lisp
      (setq org-capture-bookmark nil
-           org-default-notes-file (concat org-directory "/TODO.org"))
+           org-default-notes-file (concat org-directory "/TODO.org")
+           org-default-dreams-file (concat org-directory "/Sueños.org")
+           org-capture-templates
+           '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
+              "** TODO %?\n %a")
+             ("d" "Dreams" entry (file+headline org-default-dreams-file "Dreams")
+              "** Sueño %?")
+             ("h" "Homework" entry (file+headline org-default-notes-file "Homework")
+              "** TODO Homework: %?\n %A")))
      (add-hook 'org-capture-mode-hook 'evil-insert-state)
      (evil-leader/set-key
        "oc" 'org-capture
