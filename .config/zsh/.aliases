@@ -1,5 +1,6 @@
 # Programs
 alias vim='nvim'
+alias usb='mount -o gid=users,fmask=113,dmask=002'
 
 # Colors
 alias ls='ls --color=auto --group-directories-first'
