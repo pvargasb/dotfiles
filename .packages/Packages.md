@@ -115,3 +115,5 @@
 * `powertop`
 * `cups`
 * `samsung-printers`
+* `kingsoft`
+* `jdk8-openjdk`
