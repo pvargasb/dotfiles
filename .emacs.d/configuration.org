@@ -326,7 +326,7 @@
   #+BEGIN_SRC emacs-lisp
     (use-package hungry-delete
       :bind
-      ("C-c d" . 'hungry-delete-backward))
+      ("C-c DEL" . 'hungry-delete-backward))
   #+END_SRC
 
 * Configure =Flyspell=
