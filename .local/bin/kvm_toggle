@@ -1,0 +1,7 @@
+#! /bin/bash
+
+pgrep -x libvirtd &> /dev/null \
+    && ARGS=("stop" "destroy") \
+        || ARGS=("start" "start")
+
+sudo systemctl ${ARGS[0]} libvirtd && sudo virsh net-${ARGS[1]} default
