@@ -431,6 +431,7 @@
 ** Java
 
    #+BEGIN_SRC emacs-lisp
+     ;; (use-package java-snippets)
      ;; (use-package meghanada)
      ;; (define-key meghanada-mode-map (kbd "C-c d") 'meghanada-jump-declaration)
      ;; (add-hook 'java-mode-hook 'meghanada-mode)
