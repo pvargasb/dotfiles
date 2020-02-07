@@ -117,3 +117,4 @@
 * `samsung-printers`
 * `kingsoft`
 * `jdk8-openjdk`
+* `minted`
