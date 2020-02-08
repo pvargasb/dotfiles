@@ -463,7 +463,12 @@
      (use-package markdown-mode)
    #+END_SRC
 
-   #+RESULTS:
+** LaTeX
+
+   #+BEGIN_SRC emacs-lisp
+     ;; (use-package tex
+     ;;   :ensure auctex)
+   #+END_SRC
 
 * Programming configuration
 
