@@ -469,8 +469,8 @@
      ;; (use-package tex
      ;;   :ensure auctex
      ;;   :hook
-     ;;   (tex-mode . flycheck-mode)
-     ;;   (tex-mode . company-mode))
+     ;;   (latex-mode . flycheck-mode)
+     ;;   (latex-mode . company-mode))
    #+END_SRC
 
 * Programming configuration
