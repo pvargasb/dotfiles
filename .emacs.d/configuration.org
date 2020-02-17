@@ -332,16 +332,16 @@
 * Configure =Flyspell=
 
   #+BEGIN_SRC emacs-lisp
-    ;; (use-package flyspell
-    ;;   :hook
-    ;;   (prog-mode . flyspell-prog-mode)
-    ;;   (text-mode . flyspell-mode)
-    ;;   :custom
-    ;;   (ispell-dictionary "es")
-    ;;   :config
-    ;;   (evil-leader/set-key
-    ;;     "sb" 'ispell
-    ;;     "sw" 'ispell-word))
+    (use-package flyspell
+      :hook
+      (prog-mode . flyspell-prog-mode)
+      (text-mode . flyspell-mode)
+      :custom
+      (ispell-dictionary "es")
+      :config
+      (evil-leader/set-key
+        "sb" 'ispell
+        "sw" 'ispell-word))
   #+END_SRC
 
 * Configure =Flycheck=
@@ -417,7 +417,7 @@
 ** Font
 
    #+BEGIN_SRC emacs-lisp
-     (set-default-font "Hack 11" nil t)
+     (set-default-font "Hack 10" nil t)
    #+END_SRC
 
 ** Prettify
@@ -431,24 +431,24 @@
 ** Java
 
    #+BEGIN_SRC emacs-lisp
-     ;; (use-package java-snippets)
-     ;; (use-package meghanada)
-     ;; (define-key meghanada-mode-map (kbd "C-c d") 'meghanada-jump-declaration)
-     ;; (add-hook 'java-mode-hook 'meghanada-mode)
-     ;; (add-hook 'java-mode-hook 'flycheck-mode)
-     ;; (add-hook 'java-mode-hook 'origami-mode)
-     ;; (add-hook 'java-mode-hook 'company-mode)
+     (use-package java-snippets)
+     (use-package meghanada)
+     (define-key meghanada-mode-map (kbd "C-c d") 'meghanada-jump-declaration)
+     (add-hook 'java-mode-hook 'meghanada-mode)
+     (add-hook 'java-mode-hook 'flycheck-mode)
+     (add-hook 'java-mode-hook 'origami-mode)
+     (add-hook 'java-mode-hook 'company-mode)
    #+END_SRC
 
 ** SQL
 
    #+BEGIN_SRC emacs-lisp
-     ;; (use-package sql-indent)
-     ;; (use-package sqlup-mode)
-     ;; (add-hook 'sql-mode-hook 'sqlind-minor-mode)
-     ;; (add-hook 'sql-interactive-mode-hook 'sqlind-minor-mode)
-     ;; (add-hook 'sql-mode-hook 'sqlup-mode)
-     ;; (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
+     (use-package sql-indent)
+     (use-package sqlup-mode)
+     (add-hook 'sql-mode-hook 'sqlind-minor-mode)
+     (add-hook 'sql-interactive-mode-hook 'sqlind-minor-mode)
+     (add-hook 'sql-mode-hook 'sqlup-mode)
+     (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
    #+END_SRC
 
 ** Emacs lisp
@@ -466,11 +466,11 @@
 ** LaTeX
 
    #+BEGIN_SRC emacs-lisp
-     ;; (use-package tex
-     ;;   :ensure auctex
-     ;;   :hook
-     ;;   (latex-mode . flycheck-mode)
-     ;;   (latex-mode . company-mode))
+     (use-package tex
+       :ensure auctex
+       :hook
+       (latex-mode . flycheck-mode)
+       (latex-mode . company-mode))
    #+END_SRC
 
 * Programming configuration
