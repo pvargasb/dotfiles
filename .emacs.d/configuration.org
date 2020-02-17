@@ -428,29 +428,6 @@
 
 * Programming environments
 
-** Java
-
-   #+BEGIN_SRC emacs-lisp
-     ;; (use-package java-snippets)
-     ;; (use-package meghanada)
-     ;; (define-key meghanada-mode-map (kbd "C-c d") 'meghanada-jump-declaration)
-     ;; (add-hook 'java-mode-hook 'meghanada-mode)
-     ;; (add-hook 'java-mode-hook 'flycheck-mode)
-     ;; (add-hook 'java-mode-hook 'origami-mode)
-     ;; (add-hook 'java-mode-hook 'company-mode)
-   #+END_SRC
-
-** SQL
-
-   #+BEGIN_SRC emacs-lisp
-     ;; (use-package sql-indent)
-     ;; (use-package sqlup-mode)
-     ;; (add-hook 'sql-mode-hook 'sqlind-minor-mode)
-     ;; (add-hook 'sql-interactive-mode-hook 'sqlind-minor-mode)
-     ;; (add-hook 'sql-mode-hook 'sqlup-mode)
-     ;; (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
-   #+END_SRC
-
 ** Emacs lisp
 
    #+BEGIN_SRC emacs-lisp
@@ -461,16 +438,6 @@
 
    #+BEGIN_SRC emacs-lisp
      (use-package markdown-mode)
-   #+END_SRC
-
-** LaTeX
-
-   #+BEGIN_SRC emacs-lisp
-     ;; (use-package tex
-     ;;   :ensure auctex
-     ;;   :hook
-     ;;   (latex-mode . flycheck-mode)
-     ;;   (latex-mode . company-mode))
    #+END_SRC
 
 * Programming configuration
