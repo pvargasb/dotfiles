@@ -23,15 +23,6 @@ super + p
 super + n
     $BROWSER
 
-super + comma
-    playerctl previous
-
-super + period
-    playerctl next
-
-super + apostrophe
-    playerctl play-pause
-
 super + shift + n
     $BROWSER --incognito
 
