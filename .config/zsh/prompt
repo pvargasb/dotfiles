@@ -1,0 +1,11 @@
+if [ $DISPLAY ]; then
+    ICON="ξ"
+else
+    ICON=">"
+fi
+
+DIR="%{$fg[green]%}%1~/"
+SUFFIX="%{$reset_color%}"
+
+PROMPT="${ICON} ${DIR} ${SUFFIX}"
+RPROMPT="%(?,,%{$fg[red]%}●)"
