@@ -71,6 +71,6 @@ if command -v tmux &> /dev/null && [ -z $TMUX ]&& [ -z $INSIDE_EMACS ] && [ -z $
 fi
 
 # Ssh agent
-if command -v ssh &> /dev/null && [ $SSH_AGENT_PID ] && [ -f .ssh/github ]; then
-    ssh-add -l > /dev/null || ssh-add .ssh/github
+if command -v ssh &> /dev/null && [ $SSH_AGENT_PID ] && [ -f .ssh/id-rsa ]; then
+    ssh-add -l > /dev/null || ssh-add .ssh/id-rsa
 fi
