@@ -43,7 +43,7 @@ SAVEHIST=1000
 ZSH_CUSTOM=$HOME/.config/zsh
 ZSH_CACHE_DIR=$HOME/.cache/zsh
 HISTFILE=$ZSH_CACHE_DIR/.zsh_history
-ZSH_THEME=$ZSH_CUSTOM/lambda
+ZSH_THEME=$ZSH_CUSTOM/prompt
 
 # Load theme
 if [[ -f $ZSH_THEME ]]; then
