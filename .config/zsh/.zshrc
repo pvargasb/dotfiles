@@ -66,11 +66,11 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
 fi
 
 # Tmux
-if command -v tmux &> /dev/null && [ -z $INSIDE_EMACS ] && [ -z $VIMRUNTIME ] && [ $DISPLAY ]; then
+if command -v tmux &> /dev/null && [ -z $TMUX ]&& [ -z $INSIDE_EMACS ] && [ -z $VIMRUNTIME ] && [ $DISPLAY ]; then
     tmux attach -t term || tmux new -s term && exit
 fi
 
 # Ssh agent
-if [ $SSH_AGENT_PID ]; then
+if command -v ssh &> /dev/null && [ $SSH_AGENT_PID ]; then
     ssh-add -l > /dev/null || ssh-add .ssh/github
 fi
