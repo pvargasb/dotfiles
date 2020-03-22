@@ -8,4 +8,4 @@ DIR="%{$fg[cyan]%}%1~/"
 SUFFIX="%{$reset_color%}"
 
 PROMPT="${ICON} ${DIR} ${SUFFIX}"
-RPROMPT="%(?,,%{$fg[red]%}●)"
+RPROMPT="%(?,,%{$fg[red]%}●) ${SUFFIX}"
