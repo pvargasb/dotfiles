@@ -1,120 +1,79 @@
-# Display server
+## Display server
+* xorg-server
+* xorg-xinit
 
-* `xorg`
-* `xorg-xinit`
+## Graphical environment
+* i3-gaps
+* polybar
+* dmenu
+* libnotify
+* feh
+* picom
+* redshift-minimal
+* dunst
+* betterlockscreen
+* htop
+* vifm
+* sxiv
+* zathura-pdf-mupdf
+* mpv
+* lxappearance
 
-# Graphical environment
+## Terminal
+* st
+* zsh
+* zsh-syntax-highlighting
+* tmux
 
-* `i3-gaps`
-* `polybar`
-* `dmenu`
-* `libnotify`
-* `feh`
-* `picom`
-* `redshift-minimal`
-* `dunst`
-* `betterlockscreen`
-* `htop`
-* `vifm`
-* `sxiv`
-* `zathura-pdf-mupdf`
-* `mpv`
-* `lxappearance`
+## Text editor
+* neovim
+* emacs
 
-# Terminal
+## Security
+* ufw
 
-* `st`
-* `zsh`
-* `zsh-syntax-highlighting`
-* `tmux`
+## System utilities
+* yay
+* networkmanager
+* unzip
+* vim-plug
+* maim
+* xclip
+* sxhkd
+* openssh
 
-# Text editor
+## Cpu
+* intel-ucode
+* sysstat
 
-* `neovim`
-* `emacs`
+## Graphics card
+* nvidia
+* nvidia-utils
+* nvidia-settings
 
-# Security
+## Sound
+* pavucontrol
+* alsa-utils
+* pulseaudio-alsa
+* playerctl
 
-* `ufw`
+## Virtualization
+* virt-manager
+* libvirt
+* qemu
+* vde2
+* ebtables
+* dnsmasq
+* bridge-utils
+* openbsd-netcat
 
-# System utilities
+## Entertainment
+* spotify
+* brave-bin
 
-* `yay`
-* `networkmanager`
-* `unzip`
-* `vim-plug`
-* `imagemagick`
-* `maim`
-* `xclip`
-* `sxhkd`
-* `openssh`
+## Fonts
+* ttf-hack
+* ttf-font-awesome
 
-# Cpu
-
-* `intel-ucode`
-* `sysstat`
-
-# Graphics card
-
-* `nvidia`
-* `nvidia-utils`
-* `nvidia-settings`
-
-# Sound
-
-* `pavucontrol`
-* `alsa-utils`
-* `pulseaudio-alsa`
-* `playerctl`
-
-# Virtualization
-
-* `virt-manager`
-* `libvirt`
-* `libvirtd`
-* `qemu`
-* `vde2`
-* `ebtables`
-* `dnsmasq`
-* `bridge-utils`
-* `openbsd-netcat`
-
-# Entertainment
-
-* `spotify`
-* `brave`
-
-# Fonts
-
-* `ttf-hack`
-* `ttf-dejavu`
-* `ttf-font-awesome`
-
-# GTK theme
-* `gtk-theme-arc-gruvbox-git`
-
-# Icon
-* `paper-icon-theme`
-
-# Cursor
-* `posy-cursors`
-
-# Extra ( Laptop )
-
-* `grub`
-* `efibootmgr`
-* `os-prober`
-* `sudo`
-* `git`
-* `base-devel`
-* `xf86-input-libinput`
-* `bluez`
-* `bluez-utils`
-* `pulseaudio-bluetooth`
-* `tlp`
-* `powertop`
-* `cups`
-* `samsung-printers`
-* `kingsoft`
-* `jdk8-openjdk`
-* `minted`
+## GTK theme
+* gtk-theme-arc-gruvbox-git
