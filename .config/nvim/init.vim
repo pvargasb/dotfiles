@@ -137,13 +137,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'scrooloose/nerdcommenter'
-" Highlight
-Plug 'kovetskiy/sxhkd-vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
-" Programming
-Plug 'tpope/vim-fugitive'
-Plug 'dense-analysis/ale'
-Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 """ NerdTree
@@ -163,21 +156,6 @@ map <leader>f  :Files<CR>
 map <leader>bb :Buffers<CR>
 map <leader>m  :Map<CR>
 let $FZF_DEFAULT_COMMAND = 'find .'
-
-""" ALE
-
-map <leader>a :ALEToggle<CR>
-
-""" Fugitive
-
-map <leader>gs :Git<CR>
-map <leader>gp :Gpush<CR>
-map <leader>gf :Gpull<CR>
-
-""" Easy align
-
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
 
 """ Gruvbox
 
