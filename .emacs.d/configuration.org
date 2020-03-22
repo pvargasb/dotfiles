@@ -329,21 +329,6 @@
       ("C-c DEL" . 'hungry-delete-backward))
   #+END_SRC
 
-* Configure =Flyspell=
-
-  #+BEGIN_SRC emacs-lisp
-    ;; (use-package flyspell
-    ;;   :hook
-    ;;   (prog-mode . flyspell-prog-mode)
-    ;;   (text-mode . flyspell-mode)
-    ;;   :custom
-    ;;   (ispell-dictionary "es")
-    ;;   :config
-    ;;   (evil-leader/set-key
-    ;;     "sb" 'ispell
-    ;;     "sw" 'ispell-word))
-  #+END_SRC
-
 * Configure =Flycheck=
 
   #+BEGIN_SRC emacs-lisp
