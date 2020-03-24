@@ -11,7 +11,7 @@ export COMPOSITOR="picom"
 export RESOURCES="htop"
 export MUSIC="spotify"
 export READER="zathura"
-export FILE="lf"
+export FILE="vifm"
 
 # Clean
 export ZDOTDIR="$HOME/.config/zsh"
