@@ -18,7 +18,7 @@ map <C-l> <C-w>l
 
 " Quit bindings
 map <SPACE>q :q<CR>
-map <SPACE>f :q!<CR>
+map <SPACE>Q :q!<CR>
 
 " ------------------------------------------------------------------------------
 
@@ -212,7 +212,7 @@ fileviewer *.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 " Web
 filextype *.html,*.htm
         \ {Open with chrome}
-        \ google-chrome-stable %f 2>/dev/null &
+        \ $BROWSER %f 2>/dev/null &
 
 filetype *.html,*.htm links, lynx
 
@@ -220,8 +220,8 @@ filetype *.html,*.htm links, lynx
 filetype *.o nm %f | less
 
 " Man page
-filetype *.[1-8] man ./%c
-fileviewer *.[1-8] man ./%c | col -b
+filetype *.[1-8] info ./%c
+fileviewer *.[1-8] info ./%c | col -b
 
 " Images
 filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
@@ -229,7 +229,7 @@ filextype *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
         \ sxiv %f 2>/dev/null &
 
 fileviewer *.bmp,*.jpg,*.jpeg,*.png,*.gif,*.xpm
-         \ convert -identify %f -verbose /dev/null
+        \ sxiv %f 2>/dev/null &
 
 " OpenRaster
 filextype *.ora
@@ -418,7 +418,7 @@ nnoremap cc cw<c-u>
 nnoremap A cw
 
 " Open console in current directory
-nnoremap ,t :!xterm &<cr>
+nnoremap ,t :!st &<cr>
 
 " Open editor to edit vifmrc and apply settings after returning to vifm
 nnoremap ,c :write | edit $MYVIFMRC | restart<cr>
