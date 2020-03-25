@@ -30,7 +30,7 @@
    #+BEGIN_SRC emacs-lisp
      (use-package evil-escape
        :config
-       (setq-default evil-escape-delay 0.2
+       (setq-default evil-escape-delay 1
                      evil-escape-key-sequence ",,")
        (evil-escape-mode))
    #+END_SRC
