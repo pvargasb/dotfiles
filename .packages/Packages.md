@@ -7,7 +7,7 @@
 * polybar
 * dmenu
 * libnotify
-* feh
+* xwallpaper
 * picom
 * redshift-minimal
 * dunst

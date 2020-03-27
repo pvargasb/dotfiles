@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Initial programs
-$HOME/.fehbg &
+setbg &
 $COMPOSITOR &
 $MUSIC &
 sxhkd -m 1 &

@@ -30,7 +30,7 @@ super + shift + m
     amixer sset 'Master' toggle
 
 super + control + y
-    feh --randomize --bg-fill $HOME/Wallpapers/*
+    setbg "$HOME/Wallpapers/" &
 
 super + control + x
     $TERMINAL -e betterlockscreen -u ~/Wallpapers/
@@ -94,12 +94,3 @@ XF86AudioPrev
 
 XF86AudioNext
     playerctl next
-
-XF86MonBrightnessDown
-    xbacklight -dec 2
-
-XF86MonBrightnessUp
-    xbacklight -inc 2
-
-XF86TouchpadToggle
-    toggle_touchpad
