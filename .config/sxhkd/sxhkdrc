@@ -72,13 +72,13 @@ XF86Tools
     start_spotify
 
 XF86AudioMute
-    amixer sset 'Master' toggle
+    change_volume toggle
 
 XF86AudioLowerVolume
-    amixer sset 'Master' 1%-
+    change_volume down 1
 
 XF86AudioRaiseVolume
-    amixer sset 'Master' 1%+
+    change_volume up 1
 
 XF86AudioPlay
     playerctl play-pause

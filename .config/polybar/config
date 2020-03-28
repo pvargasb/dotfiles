@@ -50,7 +50,7 @@ font-2 = "Font Awesome 5 Brands:pixelsize=9;1"
 
 modules-left = date xwindow
 modules-center = i3
-modules-right = alsa filesystem wlan eth
+modules-right = filesystem wlan eth
 
 tray-position = right
 tray-padding = 3
