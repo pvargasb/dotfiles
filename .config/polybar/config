@@ -17,8 +17,8 @@
 ;==========================================================
 
 [colors]
-background = #d0000000
-background-alt = #d0000000
+background = #b0000000
+background-alt = #b0000000
 foreground = #dfdfdf
 foreground-alt = #555
 primary = #CB4335
