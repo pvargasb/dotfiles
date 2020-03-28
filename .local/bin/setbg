@@ -1,10 +1,11 @@
 #! /bin/bash
 
 DEST="$XDG_CACHE_HOME/xwallpaper/wallpaper"
+msgId="991048"
 
-[ -f "$1" ] && cp "$1" $DEST && notify-send -i $DEST "Wallpaper changed."
+[ -f "$1" ] && cp "$1" $DEST && dunstify -r $msgId -i $DEST "Wallpaper changed."
 
 [ -d "$1" ] && cp "$(find "$1" -name "*.jpg" -o -name "*.jpeg" -o -name "*.png" -type f | shuf -n 1)" \
-                  $DEST && notify-send -i $DEST "Random Wallpaper chosen."
+                  $DEST && dunstify -r $msgId -i $DEST "Random Wallpaper chosen."
 
 xwallpaper --zoom $DEST
