@@ -1,9 +1,9 @@
 #!/bin/bash
 msgId="991049"
 
-toggle() { amixer sset Master toggle ;}
-up() { amixer sset Master "$1"%+ ;}
-down() { amixer sset Master "$1"%- ;}
+toggle() { amixer sset Master toggle; }
+up() { amixer sset Master "$1"%+; }
+down() { amixer sset Master "$1"%-; }
 
 case "$1" in
     toggle) toggle ;;
@@ -12,10 +12,12 @@ case "$1" in
 esac >/dev/null
 
 volume="$(amixer | grep % | head -1 | awk '{print $5}' | sed 's/[^0-9]*//g')"
+bar="$(seq -s '─' 0 $((volume / 4)) | sed 's/[0-9]//g')"
+space="$(seq -s ' ' 0 $((100 / 4 - volume / 4)) | sed 's/[0-9]//g')"
 mute="$(amixer | grep % | head -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
 
 if [[ $volume == 0 || "$mute" == "off" ]]; then
     dunstify -r $msgId " muted"
 else
-    dunstify -r $msgId " ${volume}%"
+    dunstify -r $msgId " ${bar} ${space} ${volume}%"
 fi
