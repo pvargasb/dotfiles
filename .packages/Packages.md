@@ -33,6 +33,7 @@
 * ufw
 
 ## System utilities
+* man
 * yay
 * networkmanager
 * unzip
