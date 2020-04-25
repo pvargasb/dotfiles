@@ -548,8 +548,9 @@
 * Themes
 
   #+BEGIN_SRC emacs-lisp
-    (use-package zenburn-theme)
-    (load-theme 'zenburn t)
+    (use-package solarized-theme)
+    (use-package color-theme-sanityinc-tomorrow)
+    (load-theme 'sanityinc-tomorrow-night t)
   #+END_SRC
 
 ** Transparency
