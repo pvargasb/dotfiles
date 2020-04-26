@@ -11,5 +11,7 @@ do
             prompt "Delete $file?" && rm "$file" ;;
         "D")
             rm "$file" ;;
+        "m")
+            mv "$file" "$(prompt_open 'New name' $file)"
    esac
 done
