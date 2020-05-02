@@ -315,7 +315,11 @@
       :config
       (evil-leader/set-key
         "pf" 'counsel-projectile-find-file
-        "pp" 'counsel-projectile-switch-project)
+        "pp" 'counsel-projectile-switch-project
+        "pc" 'counsel-compile
+        "pb" 'counsel-projectile-switch-to-buffer
+        "pd" 'counsel-projectile-find-dir
+        "pg" 'counsel-projectile-grep)
       (counsel-projectile-mode t))
   #+END_SRC
 
