@@ -12,6 +12,6 @@ do
         "D")
             rm "$file" ;;
         "m")
-            mv "$file" "$(prompt_open 'New name' $file)"
+            mv "$file" "$(prompt_open 'New name' "$file")"
    esac
 done

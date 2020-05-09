@@ -1,10 +1,10 @@
 #!/bin/sh
 
-case "$(printf "a selected area (copy)\\na selected area\\ncurrent window (copy)\\ncurrent window\\nfull screen (copy)\\nfull screen" | dmenu -nf '#FFFFFF' -nb '#292826' -sb '#F9D342' -sf '#292826' -i -b -p "Screenshot which area?")" in
-	"a selected area (copy)") maim -s | xclip -selection clipboard -t image/png ;;
-	"a selected area") maim -s pic-selected-"$(date '+%y%m%d-%H%M-%S').png" ;;
-	"current window (copy)") maim -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
-	"current window") maim -i "$(xdotool getactivewindow)" pic-window-"$(date '+%y%m%d-%H%M-%S').png" ;;
-	"full screen (copy)") maim | xclip -selection clipboard -t image/png ;;
-	"full screen") maim pic-full-"$(date '+%y%m%d-%H%M-%S').png" ;;
+case "$(prompt_open "Screenshot which area?" "a selected area (copy)\na selected area\ncurrent window (copy)\ncurrent window\nfull screen (copy)\nfull screen")" in
+    "a selected area (copy)") maim -su | xclip -selection clipboard -t image/png ;;
+    "a selected area") maim -su screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
+    "current window (copy)") maim -ud .01 -i "$(xdotool getactivewindow)" | xclip -selection clipboard -t image/png ;;
+    "current window") maim -ud .01 -i "$(xdotool getactivewindow)" screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
+    "full screen (copy)") maim -ud .01 | xclip -selection clipboard -t image/png ;;
+    "full screen") maim -ud .01 screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
 esac
