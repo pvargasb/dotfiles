@@ -1,10 +1,20 @@
 #!/bin/sh
 
+
 case "$(prompt_open "Screenshot which area?" "a selected area (copy)\na selected area\ncurrent window (copy)\ncurrent window\nfull screen (copy)\nfull screen")" in
-    "a selected area (copy)") maim -su | xclip -selection clipboard -t image/png ;;
-    "a selected area") maim -su screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
-    "current window (copy)") maim -ud .01 -i "$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")" | xclip -selection clipboard -t image/png ;;
-    "current window") maim -ud .01 -i "$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")" screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
-    "full screen (copy)") maim -ud .01 | xclip -selection clipboard -t image/png ;;
-    "full screen") maim -ud .01 screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
+    "a selected area (copy)")
+        maim -su | xclip -selection clipboard -t image/png ;;
+    "a selected area")
+        [ -d $HOME/Screenshots/ ] || mkdir $HOME/Screenshots
+        maim -su $HOME/Screenshots/screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
+    "current window (copy)")
+        maim -ud .01 -i "$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")" | xclip -selection clipboard -t image/png ;;
+    "current window")
+        [ -d $HOME/Screenshots/ ] || mkdir $HOME/Screenshots
+        maim -ud .01 -i "$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")" $HOME/Screenshots/screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
+    "full screen (copy)")
+        maim -ud .01 | xclip -selection clipboard -t image/png ;;
+    "full screen")
+        [ -d $HOME/Screenshots/ ] || mkdir $HOME/Screenshots
+        maim -ud .01 Screenshots/screenshot-"$(date '+%y%m%d-%H%M-%S').png" ;;
 esac
