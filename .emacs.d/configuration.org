@@ -151,6 +151,7 @@
        (find-file (concat org-directory "/TODO.org")))
 
      (evil-leader/set-key "ow" 'visit-todo-list)
+     (global-set-key (kbd "C-c i") 'visit-todo-list)
    #+END_SRC
 
 ** Agenda
@@ -159,26 +160,29 @@
      (setq org-agenda-span 15
            org-agenda-start-on-weekday nil)
      (evil-leader/set-key "oa" 'org-agenda)
+     (global-set-key (kbd "C-c a") 'org-agenda)
    #+END_SRC
 
 ** Capture
 
    #+BEGIN_SRC emacs-lisp
-     (setq org-capture-bookmark nil
-           org-default-notes-file (concat org-directory "/TODO.org")
-           org-default-dreams-file (concat org-directory "/Sueños.org")
-           org-capture-templates
-           '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
-              "** TODO %?\n %a")
-             ("d" "Dreams" entry (file+headline org-default-dreams-file "Dreams")
-              "** Sueño %?")
-             ("h" "Homework" entry (file+headline org-default-notes-file "Homework")
-              "** TODO Homework: %?\n %A")))
-     (add-hook 'org-capture-mode-hook 'evil-insert-state)
-     (evil-leader/set-key
-       "oc" 'org-capture
-       "ol" 'org-store-link
-       "oL" 'org-insert-last-stored-link)
+      (setq org-capture-bookmark nil
+            org-default-notes-file (concat org-directory "/TODO.org")
+            org-default-dreams-file (concat org-directory "/Sueños.org")
+            org-capture-templates
+            '(("t" "Todo" entry (file+headline org-default-notes-file "Tasks")
+               "** TODO %?\n %a")
+              ("d" "Dreams" entry (file+headline org-default-dreams-file "Dreams")
+               "** Sueño %?")
+              ("h" "Homework" entry (file+headline org-default-notes-file "Homework")
+               "** TODO Homework: %?\n %A")))
+      (add-hook 'org-capture-mode-hook 'evil-insert-state)
+      (evil-leader/set-key
+        "oc" 'org-capture
+        "ol" 'org-store-link
+        "oL" 'org-insert-last-stored-link)
+     (global-set-key (kbd "C-c l") 'org-store-link)
+     (global-set-key (kbd "C-c c") 'org-capture)
    #+END_SRC
 
 * Configure =Minions=
@@ -288,16 +292,17 @@
   #+BEGIN_SRC emacs-lisp
     (use-package counsel
       :bind
-      ("C-s" . 'swiper)
-      ("M-x" . 'counsel-M-x)
-      ("M-y" . 'counsel-yank-pop)
+      ("C-s"     . 'swiper)
+      ("M-x"     . 'counsel-M-x)
+      ("M-y"     . 'counsel-yank-pop)
       ("C-x C-f" . 'counsel-find-file)
       ("C-c C-r" . 'ivy-resume)
-      ("<f1> f" . 'counsel-describe-function)
-      ("<f1> v" . 'counsel-describe-variable)
-      ("<f1> l" . 'counsel-find-library)
-      ("<f2> i" . 'counsel-info-lookup-symbol)
-      ("<f2> u" . 'counsel-unicode-char)
+      ("C-x b"   . 'counsel-switch-buffer)
+      ("<f1> f"  . 'counsel-describe-function)
+      ("<f1> v"  . 'counsel-describe-variable)
+      ("<f1> l"  . 'counsel-find-library)
+      ("<f2> i"  . 'counsel-info-lookup-symbol)
+      ("<f2> u"  . 'counsel-unicode-char)
       :config
       (evil-leader/set-key
         "<SPC>" 'counsel-M-x
@@ -365,7 +370,8 @@
 * Shell
 
   #+BEGIN_SRC emacs-lisp
-    (evil-leader/set-key "ot" 'shell)
+    (evil-leader/set-key "ot" 'eshell)
+    (global-set-key (kbd "C-c t") 'eshell)
   #+END_SRC
 
 * Identification
@@ -485,6 +491,7 @@
        (find-file "~/.emacs.d/configuration.org"))
 
      (evil-leader/set-key "oe" 'visit-emacs-config)
+     (global-set-key (kbd "C-c e") 'visit-emacs-config)
    #+END_SRC
 
 ** Always kill current buffer
@@ -571,11 +578,4 @@
     (global-set-key (kbd "M-n") 'next-buffer)
     (global-set-key (kbd "C-+") 'text-scale-increase)
     (global-set-key (kbd "C--") 'text-scale-decrease)
-    (global-set-key (kbd "C-x b") 'counsel-switch-buffer)
-    (global-set-key (kbd "C-c l") 'org-store-link)
-    (global-set-key (kbd "C-c a") 'org-agenda)
-    (global-set-key (kbd "C-c c") 'org-capture)
-    (global-set-key (kbd "C-c e") 'visit-emacs-config)
-    (global-set-key (kbd "C-c i") 'visit-todo-list)
-    (global-set-key (kbd "C-c t") 'shell)
   #+END_SRC
