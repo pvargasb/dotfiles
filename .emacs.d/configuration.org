@@ -332,7 +332,7 @@
   #+BEGIN_SRC emacs-lisp
     (use-package multiple-cursors
       :config
-      (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this))
+      (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this-word))
   #+END_SRC
 
 * Configure =Hungry delete=
