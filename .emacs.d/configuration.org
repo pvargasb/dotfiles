@@ -211,8 +211,7 @@
   #+BEGIN_SRC emacs-lisp
     (use-package ivy
       :config
-      (ivy-mode t)
-      (setq ivy-use-virtual-buffers t))
+      (ivy-mode t))
   #+END_SRC
 
 * Configure =IBuffer=
