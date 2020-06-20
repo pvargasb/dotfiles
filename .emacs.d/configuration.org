@@ -79,6 +79,15 @@
        "ci" 'evilnc-copy-and-comment-lines))
    #+END_SRC
 
+** Multiple Cursors
+
+   #+BEGIN_SRC emacs-lisp
+     (use-package evil-mc
+       :config
+       (global-evil-mc-mode 1)
+       (define-key evil-normal-state-map (kbd "C-n") 'evil-mc-make-and-goto-next-match))
+   #+END_SRC
+
 * Configure =Origami=
 
   #+BEGIN_SRC emacs-lisp
@@ -325,14 +334,6 @@
         "pd" 'counsel-projectile-find-dir
         "pg" 'counsel-projectile-grep)
       (counsel-projectile-mode t))
-  #+END_SRC
-
-* Configure =Multiple cursors=
-
-  #+BEGIN_SRC emacs-lisp
-    (use-package multiple-cursors
-      :config
-      (define-key evil-normal-state-map (kbd "C-n") 'mc/mark-next-like-this-word))
   #+END_SRC
 
 * Configure =Hungry delete=
