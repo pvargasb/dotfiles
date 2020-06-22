@@ -7,8 +7,8 @@ $MUSIC &
 sxhkd -m 1 &
 dunst &
 
-# Set Keyboard to la-latin1
-setxkbmap latam
+# Set Keyboard
+setxkbmap -layout latam,us -variant ,dvp -option grp:alts_toggle
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
