@@ -1,0 +1,7 @@
+set scrolloff 10
+
+map t toggle
+map gs glob-select
+map D delete
+
+map i push r<a-b><a-b><a-f> # before extention

@@ -13,7 +13,7 @@
 * dunst
 * betterlockscreen
 * htop
-* vifm
+* lf
 * sxiv
 * zathura-pdf-mupdf
 * mpv
