@@ -8,7 +8,8 @@ sxhkd -m 1 &
 dunst &
 
 # Set Keyboard
-setxkbmap -layout latam,us -variant ,dvp -option grp:alts_toggle
+# setxkbmap latam
+setxkbmap -layout latam,us -variant ,dvp -option grp:ctrls_toggle
 
 userresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
