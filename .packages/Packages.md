@@ -59,14 +59,8 @@
 * playerctl
 
 ## Virtualization
-* virt-manager
-* libvirt
-* qemu
-* vde2
-* ebtables
-* dnsmasq
-* bridge-utils
-* openbsd-netcat
+* virtualbox
+* virtualbox-guest-iso
 
 ## Entertainment
 * spotify
