@@ -109,6 +109,7 @@ map <leader>r :%s//gc<Left><Left><Left>
 
 " Leader bindings
 nmap <leader>w :w<CR>
+nmap <leader>W :w !sudo tee %<CR>
 nmap <leader>q :q<CR>
 nmap <leader>x :wq<CR>
 nmap <leader>Q :q!<CR>
