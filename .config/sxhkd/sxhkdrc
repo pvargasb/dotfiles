@@ -45,7 +45,7 @@ super + control + r
     red_light
 
 super + control + v
-      VirtualBox
+    VirtualBox
 
 super + x
     betterlockscreen -t $(whoami) -l
