@@ -18,7 +18,7 @@ super + v
     $TERMINAL -c floatingSet -e $FILE
 
 super + p
-    dmenu_run -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826' -b -i
+    dmenu_run -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826' -b -i -fn "Hack-10"
 
 super + n
     $BROWSER
