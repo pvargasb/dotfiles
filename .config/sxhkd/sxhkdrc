@@ -6,13 +6,13 @@ super + shift + Return
     $TERMINAL -c floatingSet
 
 super + e
+    code
+
+super + shift + e
     emacs
 
 super + control + e
     st -e $EDITOR
-
-super + control + c
-    code
 
 super + i
     $TERMINAL -c floatingSet -e $RESOURCES
