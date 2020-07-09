@@ -36,9 +36,6 @@ let mapleader = " "
 " Automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
 
-" Runs a script that cleans out tex build files whenever I close out of a .tex file.
-autocmd VimLeave *.tex !latex_clear %
-
 " When focus gained check for changes in files
 autocmd FocusGained,BufEnter * :silent! !
 
@@ -89,9 +86,6 @@ map <C-l> <C-w>l
 map <leader>sl ]s
 map <leader>sh [s
 map <leader>sc z=
-
-" Show output file
-autocmd FileType tex map <leader>p :!latex_output <c-r>%<CR><CR>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
 autocmd FileType tex map <leader>c :w! \| !pdflatex <c-r>%<CR><CR>
