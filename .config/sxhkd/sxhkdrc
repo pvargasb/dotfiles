@@ -8,9 +8,6 @@ super + shift + Return
 super + e
     code
 
-super + shift + e
-    emacs
-
 super + control + e
     st -e $EDITOR
 

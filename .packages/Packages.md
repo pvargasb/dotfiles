@@ -27,7 +27,6 @@
 
 ## Text editor
 * neovim
-* emacs
 
 ## Security
 * ufw
