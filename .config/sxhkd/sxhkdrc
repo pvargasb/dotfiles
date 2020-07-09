@@ -54,7 +54,7 @@ super + shift + x
     betterlockscreen -t $(whoami) -s
 
 super + Print
-    take_screen
+    screenshot
 
 # Environment =================================================================
 
