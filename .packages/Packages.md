@@ -66,7 +66,7 @@
 * brave-bin
 
 ## Fonts
-* ttf-hack
+* ttf-fira-code
 * ttf-font-awesome
 
 ## GTK theme
