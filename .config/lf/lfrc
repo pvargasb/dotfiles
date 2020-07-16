@@ -14,6 +14,8 @@ map gv cd ~/Videos/
 map gb cd ~/Books/
 map gd cd ~/Downloads/
 
+map L :open; quit
+
 cmd open ${{
     case $(file --mime-type $f -b) in
     image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
