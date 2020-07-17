@@ -1,5 +1,4 @@
-set statusbar-h-padding 0
-set statusbar-v-padding 0
+set guioptions ""
 set page-padding 1
 
 map u scroll half-up
