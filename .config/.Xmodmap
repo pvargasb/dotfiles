@@ -1,7 +1,5 @@
-keycode  30 = u U g G Prior Prior Prior Prior
 keycode  31 = i I c C Home Home Home Home
 keycode  32 = o O r R End End End End
-keycode  33 = p P l L Next Next Next Next
 keycode  43 = h H d D Left Left Left Left
 keycode  44 = j J h H Down Down Down Down
 keycode  45 = k K t T Up Up Up Up
