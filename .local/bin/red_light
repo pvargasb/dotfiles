@@ -2,7 +2,6 @@
 
 VALUES=({1000..6500..250})
 
-RESPONSE=$(printf "%s\n" "${VALUES[@]}" | \
-    dmenu -b -p "Redshift:" -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826')
+RESPONSE=$(prompt_open "Redshift:" "$(printf "%s\n" "${VALUES[@]}")")
 
 redshift -P -O $RESPONSE > /dev/null 2>&1
