@@ -4,11 +4,13 @@ msgId="991049"
 toggle() { amixer sset Master toggle; }
 up() { amixer sset Master "$1"%+; }
 down() { amixer sset Master "$1"%-; }
+custom() { amixer sset Master "$1"%; }
 
 case "$1" in
-    toggle) toggle ;;
+    toggle) toggle;;
     up) up $2;;
     down) down $2;;
+    custom) custom $2;;
 esac >/dev/null
 
 volume="$(amixer | grep % | head -1 | awk '{print $5}' | sed 's/[^0-9]*//g')"

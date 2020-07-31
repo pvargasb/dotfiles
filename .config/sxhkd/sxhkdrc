@@ -47,6 +47,9 @@ super + control + r
 super + control + v
     VirtualBox
 
+super + control + m
+    set_volume
+
 super + x
     betterlockscreen -t $(whoami) -l
 

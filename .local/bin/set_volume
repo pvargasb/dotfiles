@@ -1,0 +1,7 @@
+#! /bin/sh
+
+OPTIONS=({0..100..5})
+
+PERCENTAGE=$(prompt_open "Volume: " "$(printf "%s\n" "${OPTIONS[@]}")")
+
+change_volume custom $PERCENTAGE > /dev/null 2>&1
