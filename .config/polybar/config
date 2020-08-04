@@ -21,7 +21,7 @@ background = #b0000000
 background-alt = #b0000000
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #CB4335
+primary = #E41B17
 secondary = #e60053
 alert = #bd2c40
 
@@ -138,7 +138,7 @@ interface = wlp3s0
 interval = 1
 
 format-connected = <ramp-signal> <label-connected>
-format-connected-underline = #7D3C98
+format-connected-underline = #FA69D1
 label-connected = %essid%
 
 format-disconnected =
@@ -158,7 +158,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 1
 
-format-connected-underline = #229954
+format-connected-underline = #6AFB92
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
@@ -179,7 +179,7 @@ time = "%H:%M"
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #707B7C
+format-underline = #6F4E37
 
 label = %date% %time%
 
@@ -230,4 +230,4 @@ format-full-underline = #00FF00
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-format-foreground = #85C1E9
+format-foreground = #F9B7FF
