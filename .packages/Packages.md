@@ -27,6 +27,7 @@
 
 ## Text editor
 * neovim
+* visual-studio-code-bin
 
 ## Security
 * ufw
@@ -60,6 +61,7 @@
 ## Virtualization
 * virtualbox
 * virtualbox-guest-iso
+* docker
 
 ## Entertainment
 * spotify
