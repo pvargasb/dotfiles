@@ -15,8 +15,7 @@ map gv cd ~/Videos/
 map gb cd ~/Books/
 map gd cd ~/Downloads/
 
-map l :open; quit
-map L open
+map o :open; quit
 
 cmd open ${{
     case $('file' --mime-type $f -b) in
