@@ -1,4 +1,5 @@
 set scrolloff 10
+set ifs "\n"
 
 cmap <c-g> cmd-escape
 
@@ -17,7 +18,7 @@ map gd cd ~/Downloads/
 map L :open; quit
 
 cmd open ${{
-    case $(file --mime-type $f -b) in
+    case $('file' --mime-type $f -b) in
     image/vnd.djvu|application/pdf|application/octet-stream) setsid -f zathura $fx >/dev/null 2>&1 ;;
     text/*) $EDITOR $fx;;
     image/*) setsid -f sxiv $fx 2>/dev/null ;;
