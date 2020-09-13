@@ -12,7 +12,7 @@ set nocompatible
 set nohlsearch
 set noswapfile
 set nowritebackup
-set number
+set relativenumber
 set shiftwidth=4
 set smartcase
 set smartindent
