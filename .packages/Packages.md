@@ -73,3 +73,5 @@
 
 ## GTK theme
 * gtk-theme-arc-gruvbox-git
+* mcmojave-cursors
+* papirus-icon-theme
