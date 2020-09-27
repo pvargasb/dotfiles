@@ -9,7 +9,7 @@ super + e
     code
 
 super + control + e
-    st -e $EDITOR
+    $TERMINAL -e $EDITOR
 
 super + i
     $TERMINAL -c floatingSet -e $RESOURCES
