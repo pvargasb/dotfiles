@@ -4,7 +4,7 @@ alias vim='nvim'
 alias usb='sudo mount -o gid=users,fmask=113,dmask=002'
 alias ports='ss -tulanp'
 alias update='yay -Syu'
-alias clean='yay -Sc'
+alias clean='yay -Sc --noconfirm'
 
 # Colors
 alias ls='ls --color=auto --group-directories-first'
