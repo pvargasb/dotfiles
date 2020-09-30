@@ -6,14 +6,22 @@ cmap <c-g> cmd-escape
 map + push %mkdir<space>
 
 map D delete
-map gs push :glob-select<space>
-map i push r<a-b><a-b><a-f>
+
+map * push :glob-select<space>
+
+map A rename
+map r push A<c-u>
+map I push A<c-a>
+map i push A<a-b><a-b><a-f>
+map a push A<a-b>
 map V push :!nvim<space>
 
 map gw cd ~/Wallpapers/
 map gv cd ~/Videos/
 map gb cd ~/Books/
 map gd cd ~/Downloads/
+map gs cd ~/Screenshots/
+map gp cd ~/Projects/
 
 map o :open; quit
 
