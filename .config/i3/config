@@ -28,19 +28,19 @@ exec_always --no-startup-id start_polybar
 
 #==============Windows manipulation============
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+Shift+semicolon kill
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $mod+d focus left
+bindsym $mod+h focus down
+bindsym $mod+t focus up
+bindsym $mod+n focus right
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+bindsym $mod+u fullscreen toggle
 
 # Focus parent
 bindsym $mod+a focus parent
@@ -49,22 +49,22 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+space floating toggle
 
 # toggle sticky
-bindsym $mod+Shift+p sticky toggle
+bindsym $mod+Shift+l sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 #Split toogle
-bindsym $mod+t split toggle
+bindsym $mod+y split toggle
 
 # move the currently focused window to the scratchpad
 bindsym $mod+minus move scratchpad
 
 # Show the next scratchpad window or hide the focused scratchpad window.
 # If there are multiple scratchpad windows, this command cycles through them.
-bindsym $mod+plus scratchpad show
-bindsym $mod+Control+plus [class="Spotify"] scratchpad show
-bindsym $mod+Control+3 [class=".*browser"] scratchpad show
+bindsym $mod+at scratchpad show
+bindsym $mod+Control+at [class="Spotify"] scratchpad show
+bindsym $mod+Control+5 [class=".*browser"] scratchpad show
 
 #===================Workspaces====================
 set $ws1 "1"
@@ -79,28 +79,28 @@ set $ws9 "9"
 set $ws10 "10"
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+percent workspace $ws1
+bindsym $mod+7 workspace $ws2
+bindsym $mod+5 workspace $ws3
+bindsym $mod+3 workspace $ws4
+bindsym $mod+1 workspace $ws5
+bindsym $mod+9 workspace $ws6
+bindsym $mod+0 workspace $ws7
+bindsym $mod+2 workspace $ws8
+bindsym $mod+4 workspace $ws9
+bindsym $mod+6 workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace $ws1
-bindsym $mod+Shift+2 move container to workspace $ws2
-bindsym $mod+Shift+3 move container to workspace $ws3
-bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace $ws5
-bindsym $mod+Shift+6 move container to workspace $ws6
-bindsym $mod+Shift+7 move container to workspace $ws7
-bindsym $mod+Shift+8 move container to workspace $ws8
-bindsym $mod+Shift+9 move container to workspace $ws9
-bindsym $mod+Shift+0 move container to workspace $ws10
+bindsym $mod+Shift+percent move container to workspace $ws1
+bindsym $mod+Shift+7 move container to workspace $ws2
+bindsym $mod+Shift+5 move container to workspace $ws3
+bindsym $mod+Shift+3 move container to workspace $ws4
+bindsym $mod+Shift+1 move container to workspace $ws5
+bindsym $mod+Shift+9 move container to workspace $ws6
+bindsym $mod+Shift+0 move container to workspace $ws7
+bindsym $mod+Shift+2 move container to workspace $ws8
+bindsym $mod+Shift+4 move container to workspace $ws9
+bindsym $mod+Shift+6 move container to workspace $ws10
 
 #Assign Aplications certain workspaces
 for_window [class="Spotify"] move scratchpad
@@ -108,19 +108,19 @@ for_window [class="^floatingSet$"] floating enable
 
 #================i3 Functionality=============
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+j reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+p restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+period exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 #=================Modes=======================
 #Resize windows
 mode "resize" {
-    bindsym h resize shrink width 5 px or 5 ppt
-    bindsym j resize grow height 5 px or 5 ppt
-    bindsym k resize shrink height 5 px or 5 ppt
-    bindsym l resize grow width 5 px or 5 ppt
+    bindsym d resize shrink width 5 px or 5 ppt
+    bindsym h resize grow height 5 px or 5 ppt
+    bindsym t resize shrink height 5 px or 5 ppt
+    bindsym n resize grow width 5 px or 5 ppt
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -131,12 +131,12 @@ bindsym $mod+r mode "resize"
 
 #Gaps mode
 mode "gaps" {
-    bindsym l gaps outer current plus $step
-    bindsym h gaps outer current minus $step
-    bindsym k gaps inner current plus $step
-    bindsym j gaps inner current minus $step
-    bindsym t gaps inner current set $initi; gaps outer current set $inito
-    bindsym n gaps inner current set 0; gaps outer current set 0
+    bindsym n gaps outer current plus $step
+    bindsym d gaps outer current minus $step
+    bindsym t gaps inner current plus $step
+    bindsym h gaps inner current minus $step
+    bindsym y gaps inner current set $initi; gaps outer current set $inito
+    bindsym b gaps inner current set 0; gaps outer current set 0
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -147,14 +147,14 @@ bindsym $mod+g mode "gaps"
 
 #Move windows
 mode "move" {
-    bindsym h move left
-    bindsym j move down
-    bindsym k move up
-    bindsym l move right
+    bindsym d move left
+    bindsym h move down
+    bindsym t move up
+    bindsym n move right
     bindsym c move absolute position center
 
     bindsym u layout stacking
-    bindsym i layout tabbed
+    bindsym e layout tabbed
     bindsym o layout toggle split
 
     bindsym Return mode "default"
