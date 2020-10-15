@@ -11,7 +11,7 @@ super + period
 super + control + period
     $TERMINAL -e $EDITOR
 
-super + i
+super + c
     $TERMINAL -c floatingSet -e $RESOURCES
 
 super + k
