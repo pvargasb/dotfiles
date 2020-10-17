@@ -1,10 +1,25 @@
 #!/bin/bash
 msgId="991049"
 
-toggle() { amixer sset Master toggle; }
-up() { amixer sset Master "$1"%+; }
-down() { amixer sset Master "$1"%-; }
-custom() { amixer sset Master "$1"%; }
+unmute() {
+    pactl set-sink-mute @DEFAULT_SINK@ false
+}
+
+toggle() {
+    pactl set-sink-mute @DEFAULT_SINK@ toggle;
+}
+
+up() {
+    unmute && pactl set-sink-volume @DEFAULT_SINK@ +"$1"%;
+}
+
+down() {
+    unmute && pactl set-sink-volume @DEFAULT_SINK@ -"$1"%;
+}
+
+custom() {
+    unmute && pactl set-sink-volume @DEFAULT_SINK@ "$1"%;
+}
 
 case "$1" in
     toggle) toggle;;
