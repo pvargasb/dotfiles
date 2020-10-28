@@ -62,6 +62,7 @@
 * virtualbox
 * virtualbox-guest-iso
 * docker
+* docker-compose
 
 ## Entertainment
 * spotify
