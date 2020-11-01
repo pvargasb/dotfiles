@@ -1,6 +1,6 @@
 #! /bin/sh
 
-OPTIONS=({0..100..5})
+OPTIONS=({10..100..5})
 
 PERCENTAGE=$(prompt_open "Volume: " "$(printf "%s\n" "${OPTIONS[@]}")")
 
