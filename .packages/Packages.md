@@ -73,6 +73,6 @@
 * ttf-font-awesome
 
 ## GTK theme
-* gtk-theme-arc-gruvbox-git
+* vimix-gtk-themes
 * mcmojave-cursors
 * papirus-icon-theme
