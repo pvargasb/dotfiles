@@ -1,10 +1,11 @@
+ICON="%{$fg_bold[white]%}"
 if [ $DISPLAY ]; then
-    ICON="ξ"
+    ICON+="λ"
 else
-    ICON=">"
+    ICON+="->"
 fi
 
-DIR="%{$fg[cyan]%}%1~/"
+DIR="%{$fg_bold[blue]%}%1~/"
 SUFFIX="%{$reset_color%}"
 
 PROMPT="${ICON} ${DIR} ${SUFFIX}"
