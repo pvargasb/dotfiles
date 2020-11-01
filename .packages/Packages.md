@@ -34,7 +34,7 @@
 
 ## System utilities
 * man
-* yay
+* yay-bin
 * networkmanager
 * unzip
 * vim-plug
