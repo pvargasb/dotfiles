@@ -1,4 +1,5 @@
-# Basic bindings ===============================================================
+# Basic bindings
+
 super + Return
     $TERMINAL
 
@@ -59,12 +60,13 @@ super + shift + q
 super + Print
     screenshot
 
-# Environment =================================================================
+# Environment
 
 super + x
     polybar-msg cmd toggle
 
-# Especial byndings ============================================================
+# Special byndings
+
 XF86Calculator
     $TERMINAL -c floatingSet -e python
 
@@ -99,4 +101,30 @@ XF86AudioPrev
     playerctl previous
 
 XF86AudioNext
+    playerctl next
+
+# Special fn bindings
+
+super + F1
+    start spotify
+
+super + F2
+    change_volume down 1
+
+super + F3
+    change_volume up 1
+
+super + F4
+    change_volume toggle
+
+super + F5
+    playerctl stop
+
+super + F6
+    playerctl previous
+
+super + F7
+    playerctl play-pause
+
+super + F8
     playerctl next
