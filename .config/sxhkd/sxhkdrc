@@ -106,7 +106,7 @@ XF86AudioNext
 # Special fn bindings
 
 super + F1
-    start spotify
+    start_spotify
 
 super + F2
     change_volume down 1
