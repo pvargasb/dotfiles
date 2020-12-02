@@ -128,3 +128,6 @@ super + F7
 
 super + F8
     playerctl next
+
+super + F12
+    $TERMINAL -c floatingSet -e python
