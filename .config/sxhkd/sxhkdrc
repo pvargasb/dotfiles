@@ -60,6 +60,9 @@ super + shift + q
 super + Print
     screenshot
 
+Print
+    maim -su | xclip -selection clipboard -t image/png
+
 # Environment
 
 super + x
