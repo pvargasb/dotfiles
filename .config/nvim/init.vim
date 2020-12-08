@@ -1,4 +1,6 @@
 set autoindent
+set noerrorbells
+set termguicolors
 set autoread
 set clipboard=unnamedplus
 set expandtab
@@ -16,7 +18,7 @@ set shiftwidth=4
 set smartcase
 set smartindent
 set smarttab
-set scrolloff=10
+set scrolloff=8
 set spelllang=es,en
 set spellsuggest=10
 set splitbelow
@@ -77,6 +79,7 @@ map <leader>f  :Files<CR>
 map <leader>bb :Buffers<CR>
 map <leader>m  :Map<CR>
 let $FZF_DEFAULT_COMMAND = 'find .'
+let $FZF_DEFAULT_OPTS='--reverse'
 
 set background=dark
 colorscheme gruvbox
