@@ -4,8 +4,8 @@ alias vim='nvim'
 alias ports='ss -tulanp'
 alias update='yay -Syu'
 alias clean='yay -Sc --noconfirm'
-alias usb='sudo udisksctl mount -b'
-alias usbunmount='sudo udisksctl unmount -b'
+alias usb='udisksctl mount -b'
+alias usbunmount='udisksctl unmount -b'
 
 # Colors
 alias ls='ls --color=auto --group-directories-first'
