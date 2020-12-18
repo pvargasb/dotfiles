@@ -34,10 +34,10 @@ bindsym $mod+Shift+semicolon kill
 floating_modifier $mod
 
 # change focus
-bindsym $mod+d focus left
-bindsym $mod+h focus down
-bindsym $mod+t focus up
-bindsym $mod+n focus right
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
 
 # enter fullscreen mode for the focused container
 bindsym $mod+u fullscreen toggle
@@ -49,13 +49,13 @@ bindsym $mod+a focus parent
 bindsym $mod+Shift+space floating toggle
 
 # toggle sticky
-bindsym $mod+Shift+l sticky toggle
+bindsym $mod+Shift+s sticky toggle
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
 #Split toogle
-bindsym $mod+y split toggle
+bindsym $mod+t split toggle
 
 # move the currently focused window to the scratchpad
 bindsym $mod+minus move scratchpad
@@ -108,19 +108,19 @@ for_window [class="^floatingSet$"] floating enable
 
 #================i3 Functionality=============
 # reload the configuration file
-bindsym $mod+Shift+j reload
+bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+p restart
+bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+period exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 #=================Modes=======================
 #Resize windows
 mode "resize" {
-    bindsym d resize shrink width 5 px or 5 ppt
-    bindsym h resize grow height 5 px or 5 ppt
-    bindsym t resize shrink height 5 px or 5 ppt
-    bindsym n resize grow width 5 px or 5 ppt
+    bindsym h resize shrink width 5 px or 5 ppt
+    bindsym j resize grow height 5 px or 5 ppt
+    bindsym k resize shrink height 5 px or 5 ppt
+    bindsym l resize grow width 5 px or 5 ppt
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -131,12 +131,12 @@ bindsym $mod+r mode "resize"
 
 #Gaps mode
 mode "gaps" {
-    bindsym n gaps outer current plus $step
-    bindsym d gaps outer current minus $step
-    bindsym t gaps inner current plus $step
-    bindsym h gaps inner current minus $step
-    bindsym y gaps inner current set $initi; gaps outer current set $inito
-    bindsym b gaps inner current set 0; gaps outer current set 0
+    bindsym l gaps outer current plus $step
+    bindsym h gaps outer current minus $step
+    bindsym k gaps inner current plus $step
+    bindsym j gaps inner current minus $step
+    bindsym t gaps inner current set $initi; gaps outer current set $inito
+    bindsym n gaps inner current set 0; gaps outer current set 0
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
@@ -147,10 +147,10 @@ bindsym $mod+g mode "gaps"
 
 #Move windows
 mode "move" {
-    bindsym d move left
-    bindsym h move down
-    bindsym t move up
-    bindsym n move right
+    bindsym h move left
+    bindsym j move down
+    bindsym k move up
+    bindsym l move right
     bindsym c move absolute position center
 
     bindsym u layout stacking

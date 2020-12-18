@@ -6,55 +6,52 @@ super + Return
 super + shift + Return
     $TERMINAL -c floatingSet
 
-super + period
+super + e
     code
 
-super + control + period
+super + control + e
     $TERMINAL -e $EDITOR
 
-super + c
+super + i
     $TERMINAL -c floatingSet -e $RESOURCES
 
-super + k
+super + v
     $TERMINAL -c floatingSet -e $FILE
 
-super + l
+super + p
     dmenu_run -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826' -b -i -fn "FiraCode-10"
 
-super + b
+super + n
     $BROWSER
 
-super + shift + b
+super + shift + n
     $BROWSER --incognito
 
-super + shift + m
-    amixer sset 'Master' toggle
-
-super + control + f
+super + control + y
     setbg "$HOME/Wallpapers/" &
 
-super + control + q
+super + control + x
     $TERMINAL -e betterlockscreen -u ~/Wallpapers/
 
-super + control + o
+super + control + s
     pavucontrol
 
-super + control + comma
+super + control + w
     $TERMINAL -e nmtui
 
-super + control + p
+super + control + r
     red_light
 
-super + control + k
+super + control + v
     VirtualBox
 
 super + control + m
     set_volume
 
-super + q
+super + x
     betterlockscreen -t $(whoami) -l
 
-super + shift + q
+super + shift + x
     betterlockscreen -t $(whoami) -s
 
 super + Print
@@ -65,7 +62,7 @@ Print
 
 # Environment
 
-super + x
+super + b
     polybar-msg cmd toggle
 
 # Special byndings
