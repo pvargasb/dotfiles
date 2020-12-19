@@ -21,9 +21,9 @@ background = #b0000000
 background-alt = #b0000000
 foreground = #dfdfdf
 foreground-alt = #555
-primary = #E41B17
-secondary = #e60053
-alert = #bd2c40
+primary = #E74C3C
+secondary = #82E0AA
+alert = #E74C3C
 
 [bar/mybar]
 enable-ipc = true
@@ -158,7 +158,7 @@ type = internal/network
 interface = enp0s31f6
 interval = 1
 
-format-connected-underline = #6AFB92
+format-connected-underline = #85C1E9
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground}
 label-connected = %local_ip%
@@ -179,7 +179,7 @@ time = "%H:%M"
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground}
-format-underline = #6F4E37
+format-underline = #FCF3CF
 
 label = %date% %time%
 
@@ -230,4 +230,4 @@ format-full-underline = #00FF00
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-format-foreground = #F9B7FF
+format-foreground = #D5DBDB
