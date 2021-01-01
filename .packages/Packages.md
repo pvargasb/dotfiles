@@ -42,6 +42,7 @@
 * xclip
 * sxhkd
 * openssh
+* ripgrep
 
 ## Cpu
 * intel-ucode
