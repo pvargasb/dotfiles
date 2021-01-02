@@ -1,35 +1,40 @@
 set autoindent
-set noerrorbells
-set termguicolors
 set autoread
 set clipboard=unnamedplus
 set expandtab
 set foldmethod=indent
 set hidden
+set incsearch
 set lazyredraw
 set magic
+set mouse=a
 set nobackup
 set nocompatible
+set noerrorbells
 set nohlsearch
 set noswapfile
+set nowrap
 set nowritebackup
 set relativenumber
+set scrolloff=8
 set shiftwidth=4
 set smartcase
 set smartindent
 set smarttab
-set scrolloff=8
 set spelllang=es,en
 set spellsuggest=10
 set splitbelow
 set splitright
-set tabstop=4
-set wildmode=longest,list,full
+set tabstop=4 softtabstop=4
+set termguicolors
 set textwidth=70
-set mouse=a
+set wildmode=longest,list,full
 
-filetype plugin on
-syntax enable
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+syntax on
+filetype plugin indent on
 
 " Automatically deletes all trailing whitespace on save.
 autocmd BufWritePre * %s/\s\+$//e
@@ -39,47 +44,54 @@ autocmd FocusGained,BufEnter * :silent! !
 autocmd FileType * setlocal formatoptions -=r formatoptions -=o
 
 let mapleader = " "
+cmap sd cd %:p:h<CR>
 imap ., <Esc>/<++><cr>ca<
 map ., <Esc>/<++><cr>ca<
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-map <leader><leader> :
+map <C-s> z=
 map <leader>% :source ~/.config/nvim/init.vim<CR>
-map <leader>hl :set hlsearch!<CR>
-map <leader>s :split<CR>
 map <leader>r :%s//gc<Left><Left><Left>
+map <leader>s :split<CR>
+map <leader>th :set hlsearch!<CR>
 map <leader>ts :set spell!<CR>
-map <leader>S z=
 map <leader>v :vsplit<CR>
+nmap <C-x>e :
 nmap <leader>Q :q!<CR>
-nmap <leader>W :w !sudo tee %<CR>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 nmap <leader>x :wq<CR>
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
 vnoremap < <gv
 vnoremap > >gv
 
 call plug#begin('~/.vim/plugged')
-Plug 'itchyny/lightline.vim'
-Plug 'morhetz/gruvbox'
-Plug 'junegunn/fzf', { 'do': './install --bin' }
-Plug 'junegunn/fzf.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdcommenter'
+    Plug 'itchyny/lightline.vim'
+    Plug 'junegunn/fzf', { 'do': './install --bin' }
+    Plug 'junegunn/fzf.vim'
+    Plug 'mbbill/undotree'
+    Plug 'morhetz/gruvbox'
+    Plug 'preservim/nerdtree'
+    Plug 'scrooloose/nerdcommenter'
+    Plug 'terryma/vim-multiple-cursors'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
 call plug#end()
 
-let g:NERDSpaceDelims = 1
-let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
-let g:NERDTrimTrailingWhitespace = 1
+map <C-S-e> :NERDTreeToggle<CR>
 
-map <leader>f  :Files<CR>
-map <leader>bb :Buffers<CR>
-map <leader>m  :Map<CR>
-let $FZF_DEFAULT_COMMAND = 'find .'
+imap <c-f> <plug>(fzf-complete-path)
+map <C-S-f> :Rg<Space>
+map <C-h> :History:<CR>
+map <C-p> :GFiles<CR>
+map <leader>b :Buffers<CR>
+map <leader>f :Files<CR>
+let $FZF_DEFAULT_COMMAND='find .'
 let $FZF_DEFAULT_OPTS='--reverse'
+let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
+
+map <C-\> :UndotreeToggle<CR>
 
 set background=dark
 colorscheme gruvbox
