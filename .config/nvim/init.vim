@@ -74,10 +74,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'preservim/nerdtree'
     Plug 'scrooloose/nerdcommenter'
+    Plug 'stsewd/fzf-checkout.vim'
     Plug 'terryma/vim-multiple-cursors'
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
-    Plug 'stsewd/fzf-checkout.vim'
 call plug#end()
 
 " Nerd tree
