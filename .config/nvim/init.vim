@@ -59,10 +59,10 @@ nmap <leader>Q :q!<CR>
 nmap <leader>q :q<CR>
 nmap <leader>w :w<CR>
 nmap <leader>x :wq<CR>
-nnoremap <leader>h :wincmd h<CR>
-nnoremap <leader>j :wincmd j<CR>
-nnoremap <leader>k :wincmd k<CR>
-nnoremap <leader>l :wincmd l<CR>
+nnoremap <silent> <C-h> :wincmd h<CR>
+nnoremap <silent> <C-j> :wincmd j<CR>
+nnoremap <silent> <C-k> :wincmd k<CR>
+nnoremap <silent> <C-l> :wincmd l<CR>
 vnoremap < <gv
 vnoremap > >gv
 
