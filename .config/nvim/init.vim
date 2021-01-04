@@ -93,6 +93,10 @@ let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
 map <C-\> :UndotreeToggle<CR>
 
+nmap <leader>gs :G<CR>
+nmap <leader>gu :diffget //2<CR>
+nmap <leader>gh :diffget //3<CR>
+
 set background=dark
 let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
