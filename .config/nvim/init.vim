@@ -84,7 +84,7 @@ call plug#end()
 map <C-S-e> :NERDTreeToggle<CR>
 
 " Fzf
-imap <c-f> <plug>(fzf-complete-path)
+imap <C-f> <plug>(fzf-complete-path)
 map <C-S-f> :Rg<Space>
 map <C-h> :History:<CR>
 map <C-p> :GFiles<CR>
