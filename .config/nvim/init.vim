@@ -86,7 +86,7 @@ map <C-S-e> :NERDTreeToggle<CR>
 " Fzf
 imap <C-f> <plug>(fzf-complete-path)
 map <C-S-f> :Rg<Space>
-map <C-h> :History:<CR>
+map <leader>h :History:<CR>
 map <C-p> :GFiles<CR>
 map <leader>b :Buffers<CR>
 map <leader>f :Files<CR>
