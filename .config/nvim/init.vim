@@ -94,6 +94,7 @@ let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 map <C-\> :UndotreeToggle<CR>
 
 set background=dark
+let g:gruvbox_contrast_dark='hard'
 colorscheme gruvbox
 
 source $HOME/.config/nvim/expansions\.vim
