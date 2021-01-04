@@ -80,8 +80,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'stsewd/fzf-checkout.vim'
 call plug#end()
 
+" Nerd tree
 map <C-S-e> :NERDTreeToggle<CR>
 
+" Fzf
 imap <c-f> <plug>(fzf-complete-path)
 map <C-S-f> :Rg<Space>
 map <C-h> :History:<CR>
@@ -92,8 +94,10 @@ let $FZF_DEFAULT_COMMAND='find .'
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 
+" Undo tree
 map <C-\> :UndotreeToggle<CR>
 
+" Git
 nmap <leader>gs :G<CR>
 nmap <leader>gu :diffget //2<CR>
 nmap <leader>gh :diffget //3<CR>
