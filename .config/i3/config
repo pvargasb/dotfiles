@@ -65,6 +65,7 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+at scratchpad show
 bindsym $mod+Control+at [class="Spotify"] scratchpad show
 bindsym $mod+Control+5 [class=".*browser"] scratchpad show
+bindsym $mod+Control+6 [class="mpv"] scratchpad show
 
 #===================Workspaces====================
 set $ws1 "1"
