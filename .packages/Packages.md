@@ -26,7 +26,7 @@
 * tmux
 
 ## Text editor
-* neovim-nightly-bin
+* neovim
 * visual-studio-code-bin
 
 ## Security
