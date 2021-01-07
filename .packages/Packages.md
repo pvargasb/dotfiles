@@ -13,7 +13,7 @@
 * dunst
 * betterlockscreen
 * htop
-* lf
+* lf-bin
 * sxiv
 * zathura-pdf-mupdf
 * mpv
@@ -33,7 +33,9 @@
 * ufw
 
 ## System utilities
-* man
+* sudo
+* git
+* man-db
 * yay-bin
 * networkmanager
 * unzip
