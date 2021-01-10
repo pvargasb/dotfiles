@@ -46,8 +46,6 @@ autocmd FileType * setlocal formatoptions -=r formatoptions -=o
 
 let mapleader = " "
 cmap sd cd %:p:h<CR>
-imap ., <Esc>/<++><cr>ca<
-map ., <Esc>/<++><cr>ca<
 map <C-s> z=
 map <leader>% :source ~/.config/nvim/init.vim<CR>
 map <leader>r :%s//gc<Left><Left><Left>

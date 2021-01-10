@@ -1,3 +1,5 @@
+map <leader>, <Esc>/<++><cr>ca<
+
 """ LaTeX
 
 autocmd FileType tex vnoremap , <ESC>`<i\{<ESC>`>2la}<ESC>?\\{<Enter>a
