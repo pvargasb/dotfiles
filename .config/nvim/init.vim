@@ -72,7 +72,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf', { 'do': './install --bin' }
     Plug 'junegunn/fzf.vim'
     Plug 'mbbill/undotree'
-    Plug 'morhetz/gruvbox'
+    Plug 'gruvbox-community/gruvbox'
     Plug 'preservim/nerdtree'
     Plug 'scrooloose/nerdcommenter'
     Plug 'stsewd/fzf-checkout.vim'
