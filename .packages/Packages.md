@@ -35,6 +35,8 @@
 ## System utilities
 * base
 * base-devel
+* grub
+* os-prober
 * git
 * man-db
 * yay-bin
