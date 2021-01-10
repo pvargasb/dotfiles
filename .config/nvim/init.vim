@@ -4,6 +4,7 @@ set clipboard=unnamedplus
 set expandtab
 set foldmethod=indent
 set hidden
+set ignorecase
 set incsearch
 set lazyredraw
 set magic
