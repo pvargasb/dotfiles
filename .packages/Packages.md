@@ -33,7 +33,8 @@
 * ufw
 
 ## System utilities
-* sudo
+* base
+* base-devel
 * git
 * man-db
 * yay-bin
