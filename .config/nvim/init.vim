@@ -49,19 +49,19 @@ augroup base
 augroup END
 
 let mapleader = " "
-cmap sd cd %:p:h<CR>
-map <C-s> z=
-map <leader>% :source ~/.config/nvim/init.vim<CR>
-map <leader>r :%s//gc<Left><Left><Left>
-map <leader>s :split<CR>
-map <leader>th :set hlsearch!<CR>
-map <leader>ts :set spell!<CR>
-map <leader>v :vsplit<CR>
-nmap <C-x>e :
-nmap <leader>Q :q!<CR>
-nmap <leader>q :q<CR>
-nmap <leader>w :w<CR>
-nmap <leader>x :wq<CR>
+cnoremap sd cd %:p:h<CR>
+noremap <C-s> z=
+noremap <leader>% :source ~/.config/nvim/init.vim<CR>
+noremap <leader>r :%s//gc<Left><Left><Left>
+noremap <leader>s :split<CR>
+noremap <leader>th :set hlsearch!<CR>
+noremap <leader>ts :set spell!<CR>
+noremap <leader>v :vsplit<CR>
+nnoremap <C-x>e :
+nnoremap <leader>Q :q!<CR>
+nnoremap <leader>q :q<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>x :wq<CR>
 nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>

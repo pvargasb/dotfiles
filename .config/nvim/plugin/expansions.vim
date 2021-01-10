@@ -1,4 +1,4 @@
-map <leader>, <Esc>/<++><cr>ca<
+noremap <leader>, <Esc>/<++><cr>ca<
 
 """ LaTeX
 
