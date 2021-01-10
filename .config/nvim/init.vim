@@ -38,12 +38,15 @@ highlight ColorColumn guibg=lightgrey
 syntax on
 filetype plugin indent on
 
-" Automatically deletes all trailing whitespace on save.
-autocmd BufWritePre * %s/\s\+$//e
-" When focus gained check for changes in files
-autocmd FocusGained,BufEnter * :silent! !
-" Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions -=r formatoptions -=o
+augroup base
+    autocmd!
+    " Automatically deletes all trailing whitespace on save.
+    autocmd BufWritePre * %s/\s\+$//e
+    " When focus gained check for changes in files
+    autocmd FocusGained,BufEnter * :silent! !
+    " Disables automatic commenting on newline:
+    autocmd FileType * setlocal formatoptions -=r formatoptions -=o
+augroup END
 
 let mapleader = " "
 cmap sd cd %:p:h<CR>
