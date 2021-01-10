@@ -33,7 +33,7 @@ set textwidth=70
 set wildmode=longest,list,full
 
 set colorcolumn=80
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+highlight ColorColumn guibg=lightgrey
 
 syntax on
 filetype plugin indent on
