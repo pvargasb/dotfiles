@@ -66,6 +66,8 @@ nnoremap <silent> <C-k> :wincmd k<CR>
 nnoremap <silent> <C-l> :wincmd l<CR>
 vnoremap < <gv
 vnoremap > >gv
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
@@ -80,33 +82,3 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
 call plug#end()
-
-" Nerd tree
-map <C-S-e> :NERDTreeToggle<CR>
-
-" Fzf
-imap <C-f> <plug>(fzf-complete-path)
-map <leader>h :History:<CR>
-map <C-p> :GFiles<CR>
-map <leader>b :Buffers<CR>
-map <leader>f :Files<CR>
-let $FZF_DEFAULT_COMMAND='find .'
-let $FZF_DEFAULT_OPTS='--reverse'
-let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
-
-" Undo tree
-map <C-\> :UndotreeToggle<CR>
-
-" Git
-nmap <leader>gs :G<CR>
-nmap <leader>gu :diffget //2<CR>
-nmap <leader>gh :diffget //3<CR>
-nnoremap <leader>gc :GBranches<CR>
-
-" Gruvbox
-set background=dark
-let g:gruvbox_contrast_dark='hard'
-let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
-
-source $HOME/.config/nvim/expansions\.vim
