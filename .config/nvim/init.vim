@@ -15,6 +15,7 @@ set nohlsearch
 set noswapfile
 set nowrap
 set nowritebackup
+set number
 set relativenumber
 set scrolloff=8
 set shiftwidth=4
