@@ -32,7 +32,8 @@ augroup END
 """ Markdown
 
 augroup Markdown
-    autocmd Filetype markdown,rmd map <leader>l yiWi[<esc>Ea](<esc>pa)
+    autocmd!
+    autocmd Filetype markdown,rmd noremap <leader>l yiWi[<esc>Ea](<esc>pa)
     autocmd Filetype markdown,rmd inoremap ,n ---<Enter><Enter>
     autocmd Filetype markdown,rmd inoremap ,b ****<++><Esc>F*hi
     autocmd Filetype markdown,rmd inoremap ,s ~~~~<++><Esc>F~hi
