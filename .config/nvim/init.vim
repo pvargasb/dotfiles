@@ -78,9 +78,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'mbbill/undotree'
     Plug 'gruvbox-community/gruvbox'
     Plug 'preservim/nerdtree'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'tpope/vim-commentary'
     Plug 'stsewd/fzf-checkout.vim'
-    Plug 'terryma/vim-multiple-cursors'
+    Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
 call plug#end()
