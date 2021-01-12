@@ -1,4 +1,4 @@
-inoremap <C-f> <plug>(fzf-complete-path)
+imap <C-f> <plug>(fzf-complete-path)
 noremap <leader>h :History:<CR>
 noremap <C-p> :GFiles<CR>
 noremap <leader>b :Buffers<CR>
