@@ -90,4 +90,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
+    Plug 'airblade/vim-rooter'
 call plug#end()
