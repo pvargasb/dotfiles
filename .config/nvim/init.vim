@@ -12,7 +12,6 @@ augroup base
 augroup END
 
 let mapleader = " "
-cnoremap sd cd %:p:h<CR>
 noremap <C-s> z=
 noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 noremap <leader>r :%s//gc<Left><Left><Left>
