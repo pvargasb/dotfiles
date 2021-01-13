@@ -66,6 +66,10 @@ nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>
 nnoremap <silent> <C-l> :wincmd l<CR>
+nnoremap <silent> <Up>    :resize +2<CR>
+nnoremap <silent> <Down>  :resize -2<CR>
+nnoremap <silent> <Left>  :vertical resize -2<CR>
+nnoremap <silent> <Right> :vertical resize +2<CR>
 vnoremap < <gv
 vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
