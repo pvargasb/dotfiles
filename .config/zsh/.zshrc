@@ -15,6 +15,10 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 
+# Bash word style
+autoload -U select-word-style
+select-word-style bash
+
 # Inlude hidden files in completion
 _comp_options+=(globdots)
 
