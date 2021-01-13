@@ -74,6 +74,7 @@ vnoremap < <gv
 vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+tnoremap <Esc> <C-\><C-n>
 
 call plug#begin('~/.vim/plugged')
     Plug 'itchyny/lightline.vim'
