@@ -58,7 +58,7 @@ super + Print
     screenshot
 
 Print
-    maim -su | xclip -selection clipboard -t image/png
+    maim -u | xclip -selection clipboard -t image/png
 
 # Environment
 
