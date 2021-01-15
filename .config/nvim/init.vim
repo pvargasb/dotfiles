@@ -28,10 +28,10 @@ nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>
 nnoremap <silent> <C-l> :wincmd l<CR>
-nnoremap <silent> <Up>    :resize +2<CR>
-nnoremap <silent> <C-Down>  :resize -2<CR>
-nnoremap <silent> <C-Left>  :vertical resize -2<CR>
-nnoremap <silent> <C-Right> :vertical resize +2<CR>
+nnoremap <silent> <M-Up>    :resize +2<CR>
+nnoremap <silent> <M-Down>  :resize -2<CR>
+nnoremap <silent> <M-Left>  :vertical resize -2<CR>
+nnoremap <silent> <M-Right> :vertical resize +2<CR>
 vnoremap < <gv
 vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
