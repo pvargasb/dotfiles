@@ -1,4 +1,5 @@
 inoremap <expr> <C-f> fzf#vim#complete#path($FZF_DEFAULT_COMMAND)
+noremap <leader>c :Commands<CR>
 noremap <leader>h :History:<CR>
 noremap <C-p> :GFiles<CR>
 noremap <leader>b :Buffers<CR>
