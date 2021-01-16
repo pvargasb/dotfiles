@@ -18,6 +18,7 @@ noremap <leader>r :%s//gc<Left><Left><Left>
 noremap <leader>s :split<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>ts :set spell!<CR>
+noremap <leader>tt :terminal<CR>
 noremap <leader>v :vsplit<CR>
 nnoremap <C-x>e :
 nnoremap <leader>Q :q!<CR>
