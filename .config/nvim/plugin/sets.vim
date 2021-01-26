@@ -25,8 +25,8 @@ set smartindent
 set smarttab
 set spelllang=es,en
 set spellsuggest=10
-set splitbelow
-set splitright
+" set splitbelow
+" set splitright
 set tabstop=4 softtabstop=4
 set termguicolors
 set textwidth=70
