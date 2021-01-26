@@ -19,7 +19,7 @@ super + v
     $TERMINAL -c floatingSet -e $FILE
 
 super + p
-    dmenu_run -nf '#FFFFFF' -nb '#292826' -sb '#8C8C8C' -sf '#292826' -b -i -fn "FiraCode-10"
+    dmenu_run -nf '#EBDBB2' -nb '#282828' -sb '#665C54' -sf '#EBDBB2' -b -i -fn "FiraCode-10"
 
 super + n
     $BROWSER
