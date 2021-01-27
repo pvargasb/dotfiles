@@ -27,7 +27,6 @@ set spelllang=es,en
 set spellsuggest=10
 set tabstop=4 softtabstop=4
 set termguicolors
-set textwidth=70
 set wildmode=longest,list,full
 set updatetime=50
 set shortmess+=c
