@@ -1,0 +1,20 @@
+#! /bin/bash
+
+setmodmap () {
+    [[ -e "$1" ]] && xmodmap "$1"
+}
+
+dvorak () {
+    setxkbmap -layout us -variant dvp -option caps:swapescape
+    setmodmap "${XDG_CONFIG_HOME}/.Xmodmap"
+}
+
+qwerty () {
+    setxkbmap -layout latam -option caps:swapescape
+    setmodmap "${XDG_CONFIG_HOME}/.Xmodmap.qwerty"
+}
+
+case "$1" in
+    "d") dvorak ;;
+    "q") qwerty ;;
+esac

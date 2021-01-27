@@ -1,0 +1,14 @@
+keycode  26 = e E Prior Prior guillemotright U201D guillemotright
+keycode  27 = r R Next Next section paragraph
+keycode  31 = i I Home Home Ccedilla ccedilla
+keycode  32 = o O End End trademark registered
+keycode  34 = dead_acute dead_diaeresis BackSpace BackSpace questiondown U203D questiondown
+keycode  38 = a A Caps_Lock Caps_Lock Aring aring
+keycode  40 = d D Return Return AE ae
+keycode  41 = f F Multi_key Multi_key eacute Eacute eacute Eacute u U eacute Eacute
+keycode  43 = h H Left Left ETH eth
+keycode  44 = j J Down Down NoSymbol dead_acute
+keycode  45 = k K Up Up THORN thorn
+keycode  46 = l L Right Right Ntilde ntilde
+keycode  48 = braceleft bracketleft Delete Delete hyphen endash hyphen
+keycode 108 = Mode_switch Meta_R Alt_R Meta_R
