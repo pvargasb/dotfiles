@@ -51,7 +51,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     Plug 'tpope/vim-fugitive'
     Plug 'tpope/vim-surround'
-    Plug 'jiangmiao/auto-pairs'
     Plug 'alvan/vim-closetag'
     Plug 'airblade/vim-rooter'
 call plug#end()
