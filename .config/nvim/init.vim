@@ -29,15 +29,15 @@ nnoremap <silent> <M-Up>    :resize +2<CR>
 noremap <C-s> z=
 noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 noremap <leader>r :%s//gc<Left><Left><Left>
-noremap <leader>s :split<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>ts :set spell!<CR>
 noremap <leader>tt :terminal<CR>
+noremap <leader>s :split<CR>
 noremap <leader>v :vsplit<CR>
 tnoremap <C-a><Esc> <C-\><C-n>
+vnoremap <leader>p "_dP
 vnoremap < <gv
 vnoremap > >gv
-vnoremap <leader>p "_dP
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
