@@ -26,6 +26,8 @@ nnoremap <silent> <M-Down>  :resize -2<CR>
 nnoremap <silent> <M-Left>  :vertical resize -2<CR>
 nnoremap <silent> <M-Right> :vertical resize +2<CR>
 nnoremap <silent> <M-Up>    :resize +2<CR>
+nnoremap <silent> <Tab> :bnext<CR>
+nnoremap <silent> <S-Tab> :previous<CR>
 noremap <C-s> z=
 noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 noremap <leader>r :%s//gc<Left><Left><Left>
