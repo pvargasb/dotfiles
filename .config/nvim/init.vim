@@ -33,6 +33,8 @@ nnoremap <silent> <M-Up>    :resize +2<CR>
 nnoremap <silent> <M-Down>  :resize -2<CR>
 nnoremap <silent> <M-Left>  :vertical resize -2<CR>
 nnoremap <silent> <M-Right> :vertical resize +2<CR>
+nnoremap <leader>y gg"+yG
+vnoremap <leader>p "_dP
 vnoremap < <gv
 vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
