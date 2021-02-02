@@ -36,6 +36,7 @@ noremap <leader>ts :set spell!<CR>
 noremap <leader>tt :terminal<CR>
 noremap <leader>s :split<CR>
 noremap <leader>v :vsplit<CR>
+noremap <leader>z :Goyo<CR>
 tnoremap <C-a><Esc> <C-\><C-n>
 vnoremap <leader>p "_dP
 vnoremap < <gv
@@ -54,6 +55,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'stsewd/fzf-checkout.vim'
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
     Plug 'tpope/vim-fugitive'
+    Plug 'junegunn/goyo.vim'
     Plug 'tpope/vim-surround'
     Plug 'alvan/vim-closetag'
     Plug 'airblade/vim-rooter'
