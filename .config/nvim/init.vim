@@ -30,7 +30,7 @@ noremap <leader>z. z=
 noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 noremap <leader>r :%s//gc<Left><Left><Left>
 noremap <leader>th :set hlsearch!<CR>
-noremap <leader>ts :set spell!<CR>
+noremap <leader>tz :set spell!<CR>
 noremap <leader>tt :terminal<CR>
 noremap <leader>s :split<CR>
 noremap <leader>v :vsplit<CR>
