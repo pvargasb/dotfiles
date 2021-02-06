@@ -12,7 +12,6 @@ augroup base
 augroup END
 
 let mapleader = " "
-nnoremap <C-x>e :
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>w :w<CR>
@@ -26,9 +25,8 @@ nnoremap <silent> <M-Down>  :resize -2<CR>
 nnoremap <silent> <M-Left>  :vertical resize -2<CR>
 nnoremap <silent> <M-Right> :vertical resize +2<CR>
 nnoremap <silent> <M-Up>    :resize +2<CR>
-nnoremap <silent> <Tab> :bnext<CR>
-nnoremap <silent> <S-Tab> :previous<CR>
-noremap <C-s> z=
+nnoremap <silent> <Tab> <C-^>
+noremap <leader>z. z=
 noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 noremap <leader>r :%s//gc<Left><Left><Left>
 noremap <leader>th :set hlsearch!<CR>
@@ -36,8 +34,7 @@ noremap <leader>ts :set spell!<CR>
 noremap <leader>tt :terminal<CR>
 noremap <leader>s :split<CR>
 noremap <leader>v :vsplit<CR>
-noremap <leader>z :Goyo<CR>
-tnoremap <C-a><Esc> <C-\><C-n>
+tnoremap <C-s> <C-\><C-n>
 vnoremap <leader>p "_dP
 vnoremap < <gv
 vnoremap > >gv
