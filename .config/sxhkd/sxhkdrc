@@ -7,10 +7,10 @@ super + shift + Return
     $TERMINAL -c floatingSet
 
 super + e
-    code
+    $TERMINAL -e $EDITOR
 
 super + control + e
-    $TERMINAL -e $EDITOR
+    code
 
 super + i
     $TERMINAL -c floatingSet -e $RESOURCES
