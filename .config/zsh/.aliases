@@ -41,3 +41,7 @@ alias df='df -H'
 alias ports='ss -tulanp'
 alias usb='udisksctl mount -b'
 alias usbunmount='udisksctl unmount -b'
+
+# Keyboard layouts
+alias aoeu='keyboard q'
+alias asdf='keyboard d'
