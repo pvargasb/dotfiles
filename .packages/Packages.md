@@ -2,16 +2,33 @@
 * xorg-server
 * xorg-xinit
 
+## System
+* base
+* base-devel
+* grub
+* os-prober
+* git
+* man-db
+* yay-bin
+* networkmanager
+* unzip
+* maim
+* xclip
+* sxhkd
+* openssh
+* libnotify
+
 ## Graphical environment
 * i3-gaps
 * polybar
 * dmenu
-* libnotify
 * xwallpaper
 * picom
 * redshift-minimal
 * dunst
 * betterlockscreen
+
+## Utilities
 * htop
 * lf-bin
 * sxiv
@@ -27,26 +44,11 @@
 
 ## Text editor
 * neovim
+* vim-plug
 * visual-studio-code-bin
 
 ## Security
 * ufw
-
-## System utilities
-* base
-* base-devel
-* grub
-* os-prober
-* git
-* man-db
-* yay-bin
-* networkmanager
-* unzip
-* vim-plug
-* maim
-* xclip
-* sxhkd
-* openssh
 
 ## Cpu
 * intel-ucode
