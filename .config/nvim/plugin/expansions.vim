@@ -1,5 +1,5 @@
 noremap <leader>, <Esc>/<++><cr>ca<
-inoremap ,. <Esc>/<++><cr>ca<
+inoremap \, <Esc>/<++><cr>ca<
 
 """ LaTeX
 
