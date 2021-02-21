@@ -12,9 +12,9 @@ augroup base
 augroup END
 
 let mapleader = " "
+cnoremap w!! :w !sudo tee %<CR>
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
-nnoremap <leader>W :w !sudo tee %<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>y gg"+yG
