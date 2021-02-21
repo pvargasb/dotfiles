@@ -23,6 +23,7 @@ map gb cd ~/Books/
 map gd cd ~/Downloads/
 map gs cd ~/Screenshots/
 map gp cd ~/Projects/
+map gm cd /run/media/
 
 map o :open; quit
 
