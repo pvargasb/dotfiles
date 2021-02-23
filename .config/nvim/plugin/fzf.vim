@@ -1,3 +1,4 @@
+imap <C-x><C-f> <plug>(fzf-complete-path)
 inoremap <expr> <C-f> fzf#vim#complete#path($FZF_DEFAULT_COMMAND)
 noremap <leader>c :Commands<CR>
 noremap <leader>h :History:<CR>
