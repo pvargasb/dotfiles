@@ -8,7 +8,7 @@ augroup base
     " When focus gained check for changes in files
     autocmd FocusGained,BufEnter * :silent! !
     " Disables automatic commenting on newline:
-    autocmd FileType * setlocal formatoptions -=r formatoptions -=o
+    autocmd FileType * setlocal formatoptions -=ro
 augroup END
 
 let mapleader = " "
