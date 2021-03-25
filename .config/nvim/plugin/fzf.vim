@@ -2,7 +2,7 @@ imap <C-f> <plug>(fzf-complete-path)
 inoremap <expr> <C-x><C-f> fzf#vim#complete#path($FZF_DEFAULT_COMMAND)
 noremap <leader>c :Commands<CR>
 noremap <leader>h :History:<CR>
-noremap <leader>o :History<CR>
+noremap <leader>to :History<CR>
 noremap <leader>tp :GFiles<CR>
 noremap <leader>b :Buffers<CR>
 noremap <leader>f :Files<CR>
