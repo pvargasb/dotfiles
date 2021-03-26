@@ -3,7 +3,7 @@ set ifs "\n"
 
 cmap <c-g> cmd-escape
 
-map + push %mkdir<space>
+map + push %mkdir<space>''<left>
 
 map D delete
 
