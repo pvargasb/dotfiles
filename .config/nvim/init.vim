@@ -36,7 +36,7 @@ noremap <leader>tt :terminal<CR>
 noremap <leader>tz :set spell!<CR>
 noremap <leader>v :vsplit<CR>
 noremap <leader>z. z=
-tnoremap <C-s> <C-\><C-n>
+tnoremap <Esc> <C-\><C-n>
 vnoremap <leader>p "_dP
 vnoremap < <gv
 vnoremap > >gv
