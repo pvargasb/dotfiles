@@ -15,7 +15,7 @@ map I push A<c-a>
 map i push A<a-b><a-b><a-f>
 map a push A<a-b>
 
-map V push :!nvim<space>
+map V push :!nvim<space>''<left>
 
 map gw cd ~/Wallpapers/
 map gv cd ~/Videos/
