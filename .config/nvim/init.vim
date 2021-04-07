@@ -58,4 +58,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'alvan/vim-closetag'
     Plug 'airblade/vim-rooter'
+    Plug 'sheerun/vim-polyglot'
 call plug#end()
