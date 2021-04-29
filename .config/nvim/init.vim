@@ -29,7 +29,7 @@ nnoremap <silent> <M-Right> :vertical resize +2<CR>
 nnoremap <silent> <M-Up>    :resize +2<CR>
 nnoremap <silent> <Tab> <C-^>
 noremap <leader>% :source ~/.config/nvim/init.vim<CR>
-noremap <leader>r :%s//gc<Left><Left><Left>
+nnoremap <leader>r :.,$s//gc<Left><Left><Left>
 noremap <leader>s :split<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tt :terminal<CR>
