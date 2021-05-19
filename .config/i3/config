@@ -19,7 +19,7 @@ set $mod Mod4
 
 #================Fonts=========================
 # Font for window titles, etc.
-font pango:DejaVu Sans Mono 8
+font Fira Code 8
 
 #================Startup=======================
 #Programs startup
@@ -165,7 +165,7 @@ mode "move" {
 bindsym $mod+m mode "move"
 #===================Colors======================
 # Set colors
-set $red            #FF0000
+set $red            #FD0000
 set $yellow         #F9D342
 set $grey           #8C8C8C
 set $black          #292826
