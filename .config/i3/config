@@ -63,7 +63,7 @@ bindsym $mod+minus move scratchpad
 # If there are multiple scratchpad windows, this command cycles through them.
 bindsym $mod+at scratchpad show
 bindsym $mod+Control+at [class="Spotify"] scratchpad show
-bindsym $mod+Control+5 [class=".*browser"] scratchpad show
+bindsym $mod+Control+bracketright [class=".*browser"] scratchpad show
 bindsym $mod+Control+6 [class="mpv"] scratchpad show
 
 #===================Workspaces====================
