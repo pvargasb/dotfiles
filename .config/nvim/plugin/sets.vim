@@ -7,7 +7,7 @@ set ignorecase
 set incsearch
 set lazyredraw
 set magic
-set mouse=a
+set mouse=nv
 set nobackup
 set nocompatible
 set noerrorbells
