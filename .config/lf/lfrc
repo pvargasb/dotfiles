@@ -4,10 +4,9 @@ set ifs "\n"
 cmap <c-g> cmd-escape
 
 map + push %mkdir<space>''<left>
-
 map D delete
-
 map * push :glob-select<space>
+map R reload
 
 map A rename
 map r push A<c-u>
