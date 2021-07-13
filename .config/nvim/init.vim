@@ -18,6 +18,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
+nnoremap <leader>d "_d
 nnoremap <leader>y gg"+yG
 nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
@@ -37,6 +38,7 @@ noremap <leader>tz :set spell!<CR>
 noremap <leader>v :vsplit<CR>
 noremap <leader>z. z=
 tnoremap <Esc> <C-\><C-n>
+vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
 vnoremap < <gv
 vnoremap > >gv
