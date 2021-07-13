@@ -29,6 +29,3 @@ set termguicolors
 set wildmode=longest,list,full
 set updatetime=50
 set shortmess+=c
-
-set colorcolumn=80
-highlight ColorColumn guibg=grey
