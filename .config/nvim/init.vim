@@ -13,6 +13,10 @@ augroup END
 
 let mapleader = " "
 cnoremap w!! :w !sudo tee %<CR>
+nnoremap Y y$
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
@@ -20,6 +24,8 @@ nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>d "_d
 nnoremap <leader>y gg"+yG
+nnoremap <leader>j :m .+1<CR>==
+nnoremap <leader>k :m .-2<CR>==
 nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>
