@@ -13,10 +13,10 @@ augroup END
 
 let mapleader = " "
 cnoremap w!! :w !sudo tee %<CR>
-nnoremap Y y$
-nnoremap n nzzzv
-nnoremap N Nzzzv
 nnoremap J mzJ`z
+nnoremap N Nzzzv
+nnoremap n nzzzv
+nnoremap Y y$
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
@@ -35,8 +35,8 @@ nnoremap <silent> <M-Left>  :vertical resize -2<CR>
 nnoremap <silent> <M-Right> :vertical resize +2<CR>
 nnoremap <silent> <M-Up>    :resize +2<CR>
 nnoremap <silent> <Tab> <C-^>
-noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 nnoremap <leader>r :.,$s//gc<Left><Left><Left>
+noremap <leader>% :source ~/.config/nvim/init.vim<CR>
 noremap <leader>s :split<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tt :terminal<CR>
