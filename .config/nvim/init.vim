@@ -36,12 +36,12 @@ nnoremap <silent> <M-Right> :vertical resize +2<CR>
 nnoremap <silent> <M-Up>    :resize +2<CR>
 nnoremap <silent> <Tab> <C-^>
 nnoremap <leader>r :.,$s//gc<Left><Left><Left>
-noremap <leader>% :source ~/.config/nvim/init.vim<CR>
-noremap <leader>s :split<CR>
+noremap <leader>%  :source ~/.config/nvim/init.vim<CR>
+noremap <leader>s  :split<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tt :terminal<CR>
 noremap <leader>tz :set spell!<CR>
-noremap <leader>v :vsplit<CR>
+noremap <leader>v  :vsplit<CR>
 noremap <leader>z. z=
 tnoremap <Esc> <C-\><C-n>
 vnoremap <leader>d "_d
