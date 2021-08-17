@@ -33,6 +33,12 @@ bindkey -e
 bindkey "^[[1~" beginning-of-line
 bindkey "^[[4~" end-of-line
 bindkey "^[[3~" delete-char
+bindkey "2~"    delete-char
+bindkey "5~"    kill-word
+bindkey "5C"    forward-word
+bindkey "5D"    backward-word
+bindkey "2C"    forward-char
+bindkey "2D"    backward-char
 
 # Edit command
 autoload -U edit-command-line
