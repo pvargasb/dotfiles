@@ -49,10 +49,10 @@ super + control + m
     set_volume
 
 super + x
-    betterlockscreen -t $(whoami) -l
+    betterlockscreen -l
 
 super + shift + x
-    betterlockscreen -t $(whoami) -s
+    betterlockscreen -s
 
 super + Print
     screenshot
