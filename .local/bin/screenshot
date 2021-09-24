@@ -1,36 +1,73 @@
 #!/bin/sh
 
-DIR="${HOME}/Screenshots"
-DELAY=0.2
+SAVE_OPTIONS=("clipboard" "file")
+EXTENSION="png"
 
-verify_dir () {
-    [ -d $DIR ] || mkdir $DIR
+TMP_DIR="/tmp/screeshots"
+DST_DIR="${HOME}/Screenshots"
+
+TMP_FILE="${TMP_DIR}/screenshot.${EXTENSION}"
+
+create_tmp_dir () {
+    [ -d "${TMP_DIR}" ] || mkdir "${TMP_DIR}"
+}
+
+create_dst_dir () {
+    [ -d "${DST_DIR}" ] || mkdir "${DST_DIR}"
+}
+
+clean_tmp_files () {
+    rm "${TMP_FILE}"
 }
 
 ask_name () {
-    d=$(date '+%y%m%d-%H%M-%S')
-    name="$(prompt_open "File Name" "screenshot-${d}")"
+    timestamp=$(date '+%y%m%d-%H%M-%S')
+    DST_FILE="$(prompt_open "File Name" "screenshot-${timestamp}")"
 }
 
-prepare_location () {
-    verify_dir
+prepare_destination_path () {
+    create_dst_dir
     ask_name
 }
 
-case "$(prompt_open "Screenshot" "Select area (copy)\nSelect area\nCurrent window (copy)\nCurrent window\nFull screen (copy)\nFull screen")" in
-    "Select area (copy)")
-        maim -su | xclip -selection clipboard -t image/png ;;
-    "Select area")
-        prepare_location
-        maim -su "${DIR}/${name}.png" ;;
-    "Current window (copy)")
-        maim -ud $DELAY -i "$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")" | xclip -selection clipboard -t image/png ;;
-    "Current window")
-        prepare_location
-        maim -ud $DELAY -i "$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")" "${DIR}/${name}.png" ;;
-    "Full screen (copy)")
-        maim -ud $DELAY | xclip -selection clipboard -t image/png ;;
-    "Full screen")
-        prepare_location
-        maim -ud $DELAY "${DIR}/${name}.png"  ;;
-esac
+take_screenshot () {
+    create_tmp_dir
+
+    case "${1}" in
+        'area')
+            maim -su > $TMP_FILE
+            ;;
+        'current-window')
+            WINDOW="$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")"
+            maim -u -i "${WINDOW}" > $TMP_FILE
+            ;;
+        'full-screen')
+            maim -u > $TMP_FILE
+            ;;
+        *)
+            echo "sateuh"
+            exit 1
+            ;;
+    esac
+}
+
+save_screenshot () {
+    case "$(prompt_open "Action" "$(printf "%s\n" "${SAVE_OPTIONS[@]}")")" in
+        'clipboard')
+            cat "${TMP_FILE}" | xclip -selection clipboard -t "image/${EXTENSION}"
+            ;;
+        'file')
+            prepare_destination_path
+            cp "${TMP_FILE}" "${DST_DIR}/${DST_FILE}"
+            ;;
+        *)
+            echo "${action}"
+            exit 1
+            ;;
+    esac
+
+    clean_tmp_files
+}
+
+take_screenshot "${1}"
+save_screenshot
