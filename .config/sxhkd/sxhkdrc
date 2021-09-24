@@ -54,11 +54,14 @@ super + x
 super + shift + x
     betterlockscreen -s
 
-super + Print
-    screenshot
-
 Print
-    maim -u | xclip -selection clipboard -t image/png
+    screenshot area
+
+control + Print
+    screenshot full-screen
+
+alt + Print
+    screenshot current-window
 
 # Environment
 
