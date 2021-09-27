@@ -8,6 +8,7 @@ set incsearch
 set lazyredraw
 set magic
 set mouse=nv
+set cursorline
 set nobackup
 set nocompatible
 set noerrorbells
