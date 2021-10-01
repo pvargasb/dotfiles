@@ -9,7 +9,7 @@ DST_DIR="${HOME}/Screenshots"
 TMP_FILE="${TMP_DIR}/screenshot.${EXTENSION}"
 
 create_tmp_dir () {
-    [ -d "${TMP_DIR}" ] || mkdir "${TMP_DIR}"
+    [ -d "${TMP_DIR}" ] || mkdir -p "${TMP_DIR}"
 }
 
 create_dst_dir () {
