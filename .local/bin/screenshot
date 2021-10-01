@@ -3,7 +3,7 @@
 SAVE_OPTIONS=("clipboard" "file")
 EXTENSION="png"
 
-TMP_DIR="/tmp/screeshots"
+TMP_DIR="/tmp/scripts/screeshot"
 DST_DIR="${HOME}/Screenshots"
 
 TMP_FILE="${TMP_DIR}/screenshot.${EXTENSION}"
