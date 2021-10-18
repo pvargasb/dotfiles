@@ -1,3 +1,5 @@
+command! -bang Projects call fzf#vim#files('.', {'source': "find -type d -ipath '*.git' -printf '%h\\n'", 'options': ['--reverse']})
+
 imap <C-f> <plug>(fzf-complete-path)
 inoremap <expr> <C-x><C-f> fzf#vim#complete#path($FZF_DEFAULT_COMMAND)
 noremap <leader>c :Commands<CR>
@@ -12,3 +14,4 @@ let $FZF_DEFAULT_COMMAND="find
             \ \! -ipath '*.git*' -a
             \ \! -ipath '*node_modules*' -a
             \ \! -ipath '*.cache*'"
+noremap <leader>t; :Projects<CR>
