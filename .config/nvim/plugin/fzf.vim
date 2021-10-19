@@ -17,6 +17,6 @@ command! -bang -nargs=? -complete=dir Projects
             \ call fzf#vim#files(<q-args>, {'source': "find -type d \\(
             \ -name '*/\.*/*' -o
             \ -name 'node_modules' -o
-            \ -name 'bulid' -o
+            \ -name 'build' -o
             \ -name 'target' \\) -prune -o -ipath '*.git' -printf '%h\\n'"}, <bang>0)
 noremap <leader>t; :Projects<space>
