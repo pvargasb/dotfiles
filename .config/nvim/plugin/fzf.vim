@@ -13,12 +13,15 @@ let $FZF_DEFAULT_COMMAND="find -type d \\(
             \ -name 'node_modules' -o
             \ -name 'build' -o
             \ -name 'dist' -o
-            \ -name 'target' \\) -prune -o -name '*'"
+            \ -name 'target'
+            \ \\) -prune -o -name '*'"
 command! -bang -nargs=? -complete=dir Projects
             \ call fzf#vim#files(<q-args>, {'source': "find -type d \\(
-            \ -name '*/\.*/*' -o
+            \ -name '.[^g]*' -o
             \ -name 'node_modules' -o
             \ -name 'build' -o
             \ -name 'dist' -o
-            \ -name 'target' \\) -prune -o -ipath '*.git' -printf '%h\\n'"}, <bang>0)
+            \ -name 'target'
+            \ \\) -prune -o -ipath '*.git'
+            \ -printf '%h\\n'"}, <bang>0)
 noremap <leader>t; :Projects<space>
