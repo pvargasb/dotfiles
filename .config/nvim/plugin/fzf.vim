@@ -9,7 +9,7 @@ noremap <leader>f :Files<CR>
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 let $FZF_DEFAULT_OPTS='--reverse'
 let $FZF_DEFAULT_COMMAND="find -type d \\(
-            \ -name '.git' -o
+            \ -name '.[a-zA-Z]*' -o
             \ -name 'node_modules' -o
             \ -name 'build' -o
             \ -name 'dist' -o
