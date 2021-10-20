@@ -17,7 +17,7 @@ let $FZF_DEFAULT_COMMAND="find -type d \\(
             \ \\) -prune -o -name '*'"
 command! -bang -nargs=? -complete=dir Projects
             \ call fzf#vim#files(<q-args>, {'source': "find -type d \\(
-            \ -name '.[^g]*' -o
+            \ -name '.[a-zA-z]*' -a ! -name '.git' -o
             \ -name 'node_modules' -o
             \ -name 'build' -o
             \ -name 'dist' -o
