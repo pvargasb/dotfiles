@@ -1,1 +1,3 @@
-nnoremap <silent> <leader>tt :FloatermToggle<CR>
+tnoremap <C-t> <C-\><C-n>
+tnoremap <silent> <C-k> <C-\><C-n>:FloatermToggle<CR>
+nnoremap <silent> <C-k> :FloatermToggle<CR>

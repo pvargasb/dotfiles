@@ -42,7 +42,6 @@ noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tz :set spell!<CR>
 noremap <silent> <leader>v  :vsplit<CR>
 noremap <leader>z. z=
-tnoremap <C-t> <C-\><C-n>
 vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
 vnoremap < <gv
