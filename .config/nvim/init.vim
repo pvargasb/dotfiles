@@ -39,11 +39,10 @@ nnoremap <leader>r :.,$s//gc<Left><Left><Left>
 noremap <leader>%  :source ~/.config/nvim/init.vim<CR>
 noremap <leader>s  :split<CR>
 noremap <leader>th :set hlsearch!<CR>
-noremap <leader>tt :terminal<CR>
 noremap <leader>tz :set spell!<CR>
 noremap <leader>v  :vsplit<CR>
 noremap <leader>z. z=
-tnoremap <Esc> <C-\><C-n>
+tnoremap <C-t> <C-\><C-n>
 vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
 vnoremap < <gv
@@ -67,4 +66,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'alvan/vim-closetag'
     Plug 'airblade/vim-rooter'
     Plug 'sheerun/vim-polyglot'
+    Plug 'voldikss/vim-floaterm'
 call plug#end()
