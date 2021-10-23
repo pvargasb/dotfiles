@@ -68,6 +68,15 @@ alt + Print
 super + b
     polybar-msg cmd toggle
 
+ctrl + space
+    dunstctl close
+
+ctrl + shift + space
+    dunstctl close-all
+
+ctrl + period
+    dunstctl history-pop
+
 # Special byndings
 
 XF86Calculator
