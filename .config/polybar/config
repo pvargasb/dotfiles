@@ -21,7 +21,7 @@ background = #ca1d2021
 background-alt = #ca1d2021
 foreground = #ebdbb2
 foreground-alt = #ebdbb2
-primary = #fb4934
+primary = #fe8019
 secondary = #83a598
 alert = #cc241d
 
@@ -230,4 +230,4 @@ format-full-underline = #00FF00
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:30:...%
-format-foreground = #a89984
+format-foreground = #bdae93
