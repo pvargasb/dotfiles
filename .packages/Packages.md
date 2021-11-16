@@ -26,7 +26,6 @@
 * picom
 * redshift-minimal
 * dunst
-* betterlockscreen
 
 ## Utilities
 * htop

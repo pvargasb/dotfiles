@@ -30,9 +30,6 @@ super + shift + n
 super + control + y
     setbg "$HOME/Wallpapers/" &
 
-super + control + x
-    $TERMINAL -e betterlockscreen -u ~/Wallpapers/
-
 super + control + s
     pavucontrol
 
@@ -49,10 +46,10 @@ super + control + m
     set_volume
 
 super + x
-    betterlockscreen -l
+    slock
 
 super + shift + x
-    betterlockscreen -s
+    slock & systemctl suspend
 
 Print
     screenshot area
