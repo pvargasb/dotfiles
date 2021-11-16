@@ -20,7 +20,7 @@
 background = #ca1d2021
 background-alt = #ca1d2021
 foreground = #ebdbb2
-foreground-alt = #ebdbb2
+foreground-alt = #a89984
 primary = #b8bb26
 secondary = #83a598
 alert = #cc241d
