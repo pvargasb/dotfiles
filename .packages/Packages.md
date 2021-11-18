@@ -21,7 +21,6 @@
 ## Graphical environment
 * i3-gaps
 * polybar
-* dmenu
 * xwallpaper
 * picom
 * redshift-minimal
