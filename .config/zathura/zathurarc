@@ -1,4 +1,4 @@
-set guioptions ""
+set guioptions "v"
 set page-padding 1
 
 map u scroll half-up
@@ -9,6 +9,7 @@ map R rotate
 map i recolor
 map p print
 
+set window-title-basename "true"
 set selection-clipboard clipboard
 
 set font "FiraCode 10"
