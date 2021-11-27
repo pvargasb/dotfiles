@@ -6,10 +6,10 @@ cmap <c-g> cmd-escape
 map + push %mkdir<space>''<left>
 map D delete
 map * push :glob-select<space>
-map R reload
+map r reload
 
 map A rename
-map r push A<c-u>
+map R push A<c-u>
 map I push A<c-a>
 map i push A<a-b><a-b><a-f>
 map a push A<a-b>
