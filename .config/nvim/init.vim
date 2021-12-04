@@ -16,15 +16,13 @@ cnoremap w!! :w !sudo tee %<CR>
 nnoremap J mzJ`z
 nnoremap N Nzzzv
 nnoremap n nzzzv
-nnoremap Y y$
-nnoremap <leader>ae ggVG
+nnoremap z. z=
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
 nnoremap <leader>d "_d
-nnoremap <leader>y :%y+<CR>
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <silent> <C-h> :wincmd h<CR>
@@ -39,12 +37,12 @@ nnoremap <silent> <Tab> <C-^>
 nnoremap <leader>r :.,$s//gc<Left><Left><Left>
 noremap <leader>%  :source ~/.config/nvim/init.vim<CR>:runtime! plugin/**/*.vim<CR>
 noremap <silent> <leader>s  :split<CR>
+noremap <silent> <leader>v  :vsplit<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tz :set spell!<CR>
-noremap <silent> <leader>v  :vsplit<CR>
-noremap <leader>z. z=
 vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
+onoremap <silent> ae :<C-U>normal! VggoG<CR>
 vnoremap < <gv
 vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
