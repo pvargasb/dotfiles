@@ -24,4 +24,4 @@ command! -bang -nargs=? -complete=dir Projects
             \ -name 'target'
             \ \\) -prune -o -ipath '*.git'
             \ -printf '%h\\n'"}, <bang>0)
-noremap <leader>t; :Projects<space>
+noremap <leader>t; :Projects<CR>
