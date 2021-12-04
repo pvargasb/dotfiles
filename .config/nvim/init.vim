@@ -17,6 +17,7 @@ nnoremap J mzJ`z
 nnoremap N Nzzzv
 nnoremap n nzzzv
 nnoremap Y y$
+nnoremap <leader>ae ggVG
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
