@@ -65,4 +65,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-rooter'
     Plug 'sheerun/vim-polyglot'
     Plug 'voldikss/vim-floaterm'
+    Plug 'tpope/vim-repeat'
 call plug#end()
