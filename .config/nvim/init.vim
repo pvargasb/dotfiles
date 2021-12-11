@@ -16,7 +16,7 @@ cnoremap w!! :w !sudo tee %<CR>
 nnoremap J mzJ`z
 nnoremap N Nzzzv
 nnoremap n nzzzv
-nnoremap z. z=
+nnoremap z; z=
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
