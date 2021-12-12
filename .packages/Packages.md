@@ -43,7 +43,6 @@
 ## Text editor
 * neovim
 * vim-plug
-* visual-studio-code-bin
 
 ## Security
 * ufw
