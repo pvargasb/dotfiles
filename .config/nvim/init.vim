@@ -54,7 +54,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'junegunn/fzf.vim'
     Plug 'mbbill/undotree'
     Plug 'gruvbox-community/gruvbox'
-    Plug 'preservim/nerdtree'
     Plug 'tpope/vim-commentary'
     Plug 'stsewd/fzf-checkout.vim'
     Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -63,7 +62,13 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'alvan/vim-closetag'
     Plug 'airblade/vim-rooter'
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+    Plug 'honza/vim-snippets'
+    " Plug 'lervag/vimtex'
     Plug 'sheerun/vim-polyglot'
+    Plug 'junegunn/vim-easy-align'
+    Plug 'mattn/emmet-vim'
     Plug 'voldikss/vim-floaterm'
     Plug 'tpope/vim-repeat'
 call plug#end()

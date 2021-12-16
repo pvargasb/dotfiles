@@ -6,6 +6,7 @@ noremap <leader>to :History<CR>
 noremap <leader>tp :GFiles<CR>
 noremap <leader>b :Buffers<CR>
 noremap <leader>f :Files<CR>
+noremap <leader>F :Rg<space>
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 let $FZF_DEFAULT_OPTS='--reverse'
 let $FZF_DEFAULT_COMMAND="find -type d \\(

@@ -78,3 +78,8 @@
 * vimix-gtk-themes
 * mcmojave-cursors
 * papirus-icon-theme
+
+## Dev
+* yarn
+* ripgrep
+* python-pynvim
