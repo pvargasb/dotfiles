@@ -32,7 +32,6 @@ let g:coc_global_extensions = [
     \ 'coc-pairs',
     \ 'coc-explorer',
     \ 'coc-snippets',
-    \ 'coc-vimtex',
     \ 'coc-emmet'
   \ ]
 
