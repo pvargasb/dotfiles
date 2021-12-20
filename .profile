@@ -24,5 +24,5 @@ export GNUPGHOME="$XDG_DATA_HOME/gnupg"
 
 # Start graphical server
 if command -v ssh &> /dev/null && systemctl -q is-active graphical.target && [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
-  exec ssh-agent startx
+    exec ssh-agent startx -- > /dev/null 2>&1
 fi
