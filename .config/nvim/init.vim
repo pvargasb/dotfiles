@@ -43,6 +43,7 @@ noremap <leader>tz :set spell!<CR>
 vnoremap <leader>d "_d
 vnoremap <leader>p "_dP
 onoremap <silent> ae :<C-U>normal! VggoG<CR>
+xnoremap <silent> ae :<C-U>normal! VggoG<CR>
 vnoremap < <gv
 vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
