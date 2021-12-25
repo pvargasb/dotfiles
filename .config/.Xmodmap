@@ -10,6 +10,6 @@ keycode  43 = d D Left Left
 keycode  44 = h H Down Down
 keycode  45 = t T Up Up
 keycode  46 = n N Right Right
-keycode  47 = s S Super_R Super_R
+! keycode  47 = s S Super_R Super_R
 keycode  48 = minus underscore Delete Delete
 keycode 108 = Mode_switch Mode_switch Mode_switch Mode_switch
