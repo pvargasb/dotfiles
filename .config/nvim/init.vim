@@ -35,7 +35,7 @@ nnoremap <silent> <M-Right> :vertical resize +2<CR>
 nnoremap <silent> <M-Up>    :resize +2<CR>
 nnoremap <silent> <Tab> <C-^>
 nnoremap <leader>r :.,$s//gc<Left><Left><Left>
-noremap <leader>%  :source ~/.config/nvim/init.vim<CR>:runtime! plugin/**/*.vim<CR>
+noremap <leader>%  :source ~/.config/nvim/init.vim <bar> runtime! plugin/**/*.vim<CR>
 noremap <silent> <leader>s  :split<CR>
 noremap <silent> <leader>v  :vsplit<CR>
 noremap <leader>th :set hlsearch!<CR>
