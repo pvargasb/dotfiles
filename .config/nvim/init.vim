@@ -74,4 +74,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'voldikss/vim-floaterm'
     Plug 'tpope/vim-repeat'
     Plug 'vim-test/vim-test'
+    Plug 'tpope/vim-dispatch'
+    Plug 'tpope/vim-projectionist'
 call plug#end()
