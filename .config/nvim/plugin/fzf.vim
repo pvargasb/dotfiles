@@ -1,12 +1,13 @@
 imap <C-x><C-f> <plug>(fzf-complete-path)
-noremap <leader>c :Commands<CR>
 noremap <leader>h :History:<CR>
+noremap <leader>t; :Projects<CR>
+noremap <leader>tx :Commands<CR>
 noremap <leader>to :History<CR>
 noremap <leader>tp :GFiles<CR>
 noremap <leader>b :Buffers<CR>
 noremap <leader>f :Files<CR>
 noremap <leader>F :Rg<space>
-noremap <leader>t; :Projects<CR>
+
 let g:fzf_preview_window = ['right:50%:hidden', 'ctrl-/']
 let $FZF_DEFAULT_OPTS='--reverse'
 let $FZF_DEFAULT_COMMAND="find -type d \\(
