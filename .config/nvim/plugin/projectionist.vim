@@ -15,7 +15,7 @@ let g:projectionist_heuristics = {
     \           "start": "./mvnw spring-boot:run"
     \       },
     \       "src/main/java/*.java": {
-    \           "alternate": "src/test/java/{}.java"
+    \           "alternate": "src/test/java/{}Tests.java"
     \       },
     \       "src/test/java/*Tests.java": {
     \           "alternate": "src/main/java/{}.java"
