@@ -25,6 +25,8 @@ nnoremap <leader>x :wq<CR>
 nnoremap <leader>d "_d
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
+nnoremap <leader>co :copen<CR>
+nnoremap <leader>cc :cclose<CR>
 nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
 nnoremap <silent> <C-k> :wincmd k<CR>
@@ -41,7 +43,7 @@ noremap <silent> <leader>v  :vsplit<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tz :set spell!<CR>
 vnoremap <leader>d "_d
-xnoremap <leader>p "_dP
+xnoremap <leader>P "_dP
 onoremap <silent> ae :<C-U>normal! VggoG<CR>
 xnoremap <silent> ae :<C-U>normal! VggoG<CR>
 vnoremap < <gv
