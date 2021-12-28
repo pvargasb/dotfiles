@@ -73,4 +73,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'voldikss/vim-floaterm'
     Plug 'tpope/vim-repeat'
+    Plug 'vim-test/vim-test'
 call plug#end()
