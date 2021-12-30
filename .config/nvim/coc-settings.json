@@ -1,0 +1,14 @@
+{
+    "diagnostic.refreshOnInsertMode": true,
+    "diagnostic.virtualText": true,
+    "diagnostic.virtualTextCurrentLineOnly": false,
+    "diagnostic.enableMessage": "jump",
+
+    "signature.hideOnTextChange": true,
+
+    "explorer.keyMappings.global": {
+        "D": "deleteForever",
+        "[g": ["wait", "markPrev:diagnosticError:diagnosticWarning"],
+        "]g": ["wait", "markNext:diagnosticError:diagnosticWarning"]
+    }
+}
