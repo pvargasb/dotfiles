@@ -20,6 +20,7 @@ set number
 set relativenumber
 set scrolloff=8
 set shiftwidth=4
+set signcolumn=yes
 set smartcase
 set smartindent
 set smarttab
