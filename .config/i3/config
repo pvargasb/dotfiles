@@ -103,7 +103,7 @@ bindsym $mod+Shift+4 move container to workspace $ws9
 bindsym $mod+Shift+6 move container to workspace $ws10
 
 #Assign Aplications certain workspaces
-for_window [class="Spotify"] move scratchpad
+for_window [class="^Spotify$"] move scratchpad
 for_window [class="^floating$"] floating enable
 
 #================i3 Functionality=============
