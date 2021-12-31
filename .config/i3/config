@@ -54,7 +54,8 @@ bindsym $mod+Shift+s sticky toggle
 bindsym $mod+space focus mode_toggle
 
 #Split toogle
-bindsym $mod+t split toggle
+bindsym $mod+t split horizontal
+bindsym $mod+Shift+t split vertical
 
 # move the currently focused window to the scratchpad
 bindsym $mod+minus move scratchpad
