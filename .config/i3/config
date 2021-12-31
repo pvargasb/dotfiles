@@ -105,6 +105,7 @@ bindsym $mod+Shift+6 move container to workspace $ws10
 #Assign Aplications certain workspaces
 for_window [class="^Spotify$"] move scratchpad
 for_window [class="^floating$"] floating enable
+for_window [class="^VirtualBox Machine$"] move to workspace $ws8
 
 #================i3 Functionality=============
 # reload the configuration file
