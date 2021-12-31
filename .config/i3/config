@@ -111,10 +111,20 @@ for_window [class="^floating$"] floating enable
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 #=================Modes=======================
+
+#System
+mode "(Shift+e)xit" {
+    bindsym Shift+E exec --no-startup-id i3-msg exit
+
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+    bindsym $mod+Shift+e "default"
+}
+
+bindsym $mod+Shift+e mode "(Shift+e)xit"
+
 #Resize windows
 mode "resize" {
     bindsym h resize shrink width 10 px or 5 ppt
