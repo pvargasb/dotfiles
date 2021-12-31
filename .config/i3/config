@@ -153,9 +153,9 @@ mode "move" {
     bindsym l move right
     bindsym c move absolute position center
 
-    bindsym u layout stacking
-    bindsym e layout tabbed
-    bindsym o layout toggle split
+    bindsym s layout stacking
+    bindsym t layout tabbed
+    bindsym n layout toggle split
 
     bindsym Return mode "default"
     bindsym Escape mode "default"
