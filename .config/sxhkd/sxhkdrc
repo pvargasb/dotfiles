@@ -4,7 +4,7 @@ super + Return
     $TERMINAL
 
 super + shift + Return
-    $TERMINAL -c floatingSet
+    $TERMINAL -c floating
 
 super + e
     $TERMINAL -e $EDITOR
@@ -13,10 +13,10 @@ super + control + e
     code
 
 super + i
-    $TERMINAL -c floatingSet -e $RESOURCES
+    $TERMINAL -c floating -e $RESOURCES
 
 super + v
-    $TERMINAL -c floatingSet -e $FILE
+    $TERMINAL -c floating -e $FILE
 
 super + p
     dmenu_run -i -c
@@ -77,7 +77,7 @@ ctrl + period
 # Special byndings
 
 XF86Calculator
-    $TERMINAL -c floatingSet -e python
+    $TERMINAL -c floating -e python
 
 XF86HomePage
     $BROWSER
@@ -139,4 +139,4 @@ super + F8
     playerctl next
 
 super + F12
-    $TERMINAL -c floatingSet -e python
+    $TERMINAL -c floating -e python
