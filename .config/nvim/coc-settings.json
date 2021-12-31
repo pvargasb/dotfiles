@@ -5,6 +5,7 @@
     "diagnostic.enableMessage": "jump",
 
     "signature.hideOnTextChange": true,
+    "signature.preferShownAbove": false,
 
     "explorer.keyMappings.global": {
         "D": "deleteForever",
