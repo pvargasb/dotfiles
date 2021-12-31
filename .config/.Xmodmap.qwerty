@@ -10,6 +10,5 @@ keycode  43 = h H Left Left
 keycode  44 = j J Down Down
 keycode  45 = k K Up Up
 keycode  46 = l L Right Right
-keycode  47 = ñ Ñ Super_R Super_R
 keycode  48 = braceleft bracketleft Delete Delete
 keycode 108 = Mode_switch Mode_switch Mode_switch Mode_switch
