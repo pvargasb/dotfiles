@@ -1,8 +1,9 @@
 {
     "diagnostic.refreshOnInsertMode": true,
     "diagnostic.virtualText": true,
-    "diagnostic.virtualTextCurrentLineOnly": false,
     "diagnostic.enableMessage": "jump",
+
+    "suggest.defaultSortMethod": "none",
 
     "signature.hideOnTextChange": true,
     "signature.preferShownAbove": false,
