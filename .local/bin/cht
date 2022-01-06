@@ -1,3 +1,9 @@
 #! /bin/bash
 
-curl -s cht.sh/"$1" | less -R
+set -e
+
+[[ -n $1 ]] && curl -s cht.sh/"$1" | less -R && exit
+
+search="$(prompt_open "Cheat sheet:" "")"
+
+st -c floating -e cht "$search"
