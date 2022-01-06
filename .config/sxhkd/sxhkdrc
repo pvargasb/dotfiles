@@ -52,6 +52,9 @@ super + shift + x
     slock & systemctl suspend
 
 Print
+    screenshot full-screen clipboard
+
+shift + Print
     screenshot area
 
 control + Print
