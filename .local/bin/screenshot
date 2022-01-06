@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 SAVE_OPTIONS=("clipboard" "file")
 EXTENSION="png"
 
@@ -21,6 +23,8 @@ clean_tmp_files () {
 }
 
 ask_name () {
+    local timestamp
+
     timestamp=$(date '+%y%m%d-%H%M-%S')
     DST_FILE="$(prompt_open "File Name" "screenshot-${timestamp}")"
 }
@@ -31,28 +35,37 @@ prepare_destination_path () {
 }
 
 take_screenshot () {
+    local target
+    local window
+
     create_tmp_dir
 
-    case "${1}" in
+    [[ -z $1 ]] && target='full-screen' || target="$1"
+
+    case "$target" in
         'area')
             maim -su > $TMP_FILE
             ;;
         'current-window')
-            WINDOW="$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")"
-            maim -u -i "${WINDOW}" > $TMP_FILE
+            window="$(printf '%d' "$(xprop -root _NET_ACTIVE_WINDOW | cut -d ' ' -f 5)")"
+            maim -u -i "$window" > $TMP_FILE
             ;;
         'full-screen')
             maim -u > $TMP_FILE
             ;;
         *)
-            echo "sateuh"
+            echo "Invalid target $target"
             exit 1
             ;;
     esac
 }
 
 save_screenshot () {
-    case "$(prompt_open "Action" "$(printf "%s\n" "${SAVE_OPTIONS[@]}")")" in
+    declare action
+
+    [[ -z $1 ]] && action="$(prompt_open "Action" "$(printf "%s\n" "${SAVE_OPTIONS[@]}")")" || action="$1"
+
+    case "$action" in
         'clipboard')
             cat "${TMP_FILE}" | xclip -selection clipboard -t "image/${EXTENSION}"
             ;;
@@ -61,7 +74,7 @@ save_screenshot () {
             cp "${TMP_FILE}" "${DST_DIR}/${DST_FILE}"
             ;;
         *)
-            echo "${action}"
+            echo "Invalid action $action"
             exit 1
             ;;
     esac
@@ -69,5 +82,5 @@ save_screenshot () {
     clean_tmp_files
 }
 
-take_screenshot "${1}"
-save_screenshot
+take_screenshot "$1"
+save_screenshot "$2"
