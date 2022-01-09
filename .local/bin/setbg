@@ -1,7 +1,10 @@
 #! /bin/bash
 
-DEST="$XDG_CACHE_HOME/xwallpaper/wallpaper"
+DEST_DIR="${XDG_CACHE_HOME}/xwallpaper"
+DEST="${DEST_DIR}/wallpaper"
 msgId="991048"
+
+[ -d "$DEST" ] || mkdir -p "${DEST_DIR}"
 
 [ -f "$1" ] && cp "$1" $DEST && dunstify -r $msgId -i $DEST "Wallpaper changed."
 
