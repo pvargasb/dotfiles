@@ -63,8 +63,13 @@
 * playerctl
 
 ## Virtualization
-* virtualbox
-* virtualbox-guest-iso
+* virt-manager
+* qemu
+* libvirt
+* iptables -> iptables-nft
+* dnsmasq
+* bridge-utils
+* openbsd-netcat
 
 ## Entertainment
 * spotify

@@ -41,6 +41,8 @@ alias df='df -H'
 alias ports='ss -tulanp'
 alias usb='udisksctl mount -b'
 alias usbunmount='udisksctl unmount -b'
+alias vmup='sudo systemctl start libvirtd.service && sudo virsh net-start default'
+alias vmdown='sudo virsh net-destroy default && sudo systemctl stop libvirtd.service'
 
 # Keyboard layouts
 alias aoeu='keyboard q'

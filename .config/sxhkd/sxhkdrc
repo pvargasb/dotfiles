@@ -40,7 +40,7 @@ super + control + r
     red_light
 
 super + control + v
-    VirtualBox
+    virt-manager
 
 super + control + m
     set_volume
