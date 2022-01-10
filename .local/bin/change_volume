@@ -30,12 +30,10 @@ case "$1" in
 esac >/dev/null
 
 volume="$(amixer | grep % | head -1 | awk '{print $5}' | sed 's/[^0-9]*//g')"
-bar="$(seq -s '─' 0 $((volume / 4)) | sed 's/[0-9]//g')"
-space="$(seq -s ' ' 0 $((100 / 4 - volume / 4)) | sed 's/[0-9]//g')"
 mute="$(amixer | grep % | head -1 | awk '{print $6}' | sed 's/[^a-z]*//g')"
 
 if [[ $volume == 0 || "$mute" == "off" ]]; then
-    dunstify -h string:x-dunst-stack-tag:$tag " muted"
+    dunstify -h string:x-dunst-stack-tag:$tag -h int:value:0 " Muted"
 else
-    dunstify -h string:x-dunst-stack-tag:$tag " ${bar} ${space} ${volume}%"
+    dunstify -h string:x-dunst-stack-tag:$tag -h int:value:"$volume" " ${volume}%"
 fi
