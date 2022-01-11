@@ -1,10 +1,10 @@
-keycode  24 = semicolon colon Escape Escape
+keycode  24 = semicolon colon Caps_Lock Caps_Lock
 keycode  26 = period greater Prior Prior
 keycode  27 = p P Next Next
 keycode  31 = c C Home Home
 keycode  32 = r R End End
 keycode  34 = slash question BackSpace BackSpace
-keycode  38 = a A Caps_Lock Caps_Lock
+keycode  38 = a A Escape Escape
 keycode  40 = e E Return Return
 keycode  41 = u U Multi_key Multi_key
 keycode  43 = d D Left Left
