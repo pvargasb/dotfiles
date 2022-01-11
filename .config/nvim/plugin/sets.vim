@@ -18,7 +18,7 @@ set nowrap
 set nowritebackup
 set number
 set relativenumber
-set scrolloff=8
+set scrolloff=10
 set shiftwidth=4
 set signcolumn=yes
 set smartcase
