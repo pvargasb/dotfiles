@@ -1,7 +1,7 @@
 nnoremap <leader>pa :A<CR>
 nnoremap <leader>ps :Start!<CR>
 nnoremap <leader>pc :Console<CR>
-nnoremap <leader>pm :Make!<CR>
+nnoremap <leader>pm :Make<CR>
 nnoremap <leader>po :Copen<CR>
 
 let g:projectionist_heuristics = {
