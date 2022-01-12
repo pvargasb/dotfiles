@@ -60,7 +60,11 @@ key[Shift-Tab]="${terminfo[kcbt]}"
 [[ -n "${key[PageDown]}"   ]] && bindkey -- "${key[PageDown]}"   end-of-buffer-or-history
 [[ -n "${key[Shift-Tab]}"  ]] && bindkey -- "${key[Shift-Tab]}"  reverse-menu-complete
 
-bindkey '^X^e' edit-command-line
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^H"      backward-kill-word
+bindkey "^X^e"    edit-command-line
+bindkey "^R"      history-incremental-pattern-search-backward
 
 # History
 HISTSIZE=1000
