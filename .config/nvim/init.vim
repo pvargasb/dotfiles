@@ -3,16 +3,16 @@ filetype plugin indent on
 
 augroup base
     autocmd!
-    " Automatically deletes all trailing whitespace on save.
-    autocmd BufWritePre * %s/\s\+$//e
     " When focus gained check for changes in files
     autocmd FocusGained,BufEnter * :silent! !
     " Disables automatic commenting on newline:
     autocmd FileType * setlocal formatoptions -=ro
 augroup END
 
+command! -nargs=0 CleanTrailingSpaces :%s/\s\+$//e
+command! -nargs=0 SudoW :w !sudo tee %
+
 let mapleader = " "
-cnoremap w!! :w !sudo tee %<CR>
 nnoremap J mzJ`z
 nnoremap N Nzzzv
 nnoremap n nzzzv
