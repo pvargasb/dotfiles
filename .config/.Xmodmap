@@ -1,4 +1,3 @@
-keycode  24 = semicolon colon Caps_Lock Caps_Lock
 keycode  26 = period greater Prior Prior
 keycode  27 = p P Next Next
 keycode  31 = c C Home Home
@@ -11,5 +10,6 @@ keycode  43 = d D Left Left
 keycode  44 = h H Down Down
 keycode  45 = t T Up Up
 keycode  46 = n N Right Right
+keycode  47 = s S Caps_Lock Caps_Lock
 keycode  48 = minus underscore Delete Delete
 keycode 108 = Mode_switch Mode_switch Mode_switch Mode_switch
