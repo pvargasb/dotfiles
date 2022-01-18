@@ -12,4 +12,7 @@ keycode  45 = t T Up Up
 keycode  46 = n N Right Right
 keycode  47 = s S Caps_Lock Caps_Lock
 keycode  48 = minus underscore Delete Delete
+keycode  51 = Super_R NoSymbol Super_R
 keycode 108 = Mode_switch Mode_switch Mode_switch Mode_switch
+
+keycode  255 = backslash bar backslash bar

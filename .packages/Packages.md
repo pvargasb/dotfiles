@@ -17,6 +17,7 @@
 * sxhkd
 * openssh
 * libnotify
+* xcape
 
 ## Graphical environment
 * i3-gaps
