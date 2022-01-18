@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.66",
+  "settingsVersion": "1.67",
   "exclusionRules": [
     {
       "pattern": "https?://trello.com/*",
@@ -7,7 +7,7 @@
     },
     {
       "pattern": "https?://www.codewars.com/*",
-      "passKeys": ";,.pyfgcrlaoeuidhtns''qjkxbmwvz&[{}(=*)+]!#/@-?<>"
+      "passKeys": ""
     },
     {
       "pattern": "https?://mail.google.com/*",
@@ -15,21 +15,33 @@
     },
     {
       "pattern": "https?://leetcode.com/*",
-      "passKeys": ";,.pyfgcrlaoeuidhtns''qjkxbmwvz&[{}(=*)+]!#/@-?<>"
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://colab.research.google.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://www.hackerrank.com/*",
+      "passKeys": ""
+    },
+    {
+      "pattern": "https?://monkeytype.com/*",
+      "passKeys": ""
     }
   ],
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "map \\ passNextKey normal count=999999\n\nmap R reload hard\n\nmap m Marks.activateCreateMode swap\nmap ' Marks.activateGotoMode swap\n\nmap q LinkHints.activateMode action=hover\n\nmap gu goToRoot\nmap gU goUp\nmap gn createTab incognito\nmap gc createTab window",
+  "keyMappings": "map \\ passNextKey normal count=999999\n\nmap R reload hard\n\nmap m Marks.activateCreateMode swap\nmap ' Marks.activateGotoMode swap\n\nmap q LinkHints.activateMode action=hover\nmap ; LinkHints.activateModeToOpenIncognito\n\nmap gu goToRoot\nmap gU goUp\nmap gn createTab incognito\nmap gc createTab window",
   "linkHintCharacters": "snthrcgaoeu,.p",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
-  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>,siguiente,vorige",
-  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<,anterior,nächste",
+  "nextPatterns": "next,more,newer,>,›,→,»,≫,>>,siguiente,nächste",
+  "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<,anterior,vorige",
   "regexFindMode": true,
   "ignoreKeyboardLayout": false,
-  "scrollStepSize": 90,
+  "scrollStepSize": 60,
   "smoothScroll": false,
   "grabBackFocus": true,
   "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ng: https://www.google.com/search?q=%s Google\ny: https://www.youtube.com/results?search_query=%s Youtube\ngm: https://www.google.com/maps?q=%s Google maps\nd: https://duckduckgo.com/?q=%s DuckDuckGo\na: https://www.amazon.com/s/?field-keywords=%s Amazon\nq: https://www.qwant.com/?q=%s Qwant\ns: https://www.startpage.com/do/search?q=%s StartPage\nwr: https://www.wordreference.com/dees/%s WordReference",
