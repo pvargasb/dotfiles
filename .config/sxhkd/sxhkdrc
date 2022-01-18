@@ -117,29 +117,29 @@ XF86AudioNext
 
 # Special fn bindings
 
-super + F1
+super + {F1, control + ampersand}
     start_spotify
 
-super + F2
+super + {F2, control + bracketleft}
     change_volume down 1
 
-super + F3
+super + {F3, control + braceleft}
     change_volume up 1
 
-super + F4
+super + {F4, control + braceright}
     change_volume toggle
 
-super + F5
+super + {F5, control + parenleft}
     playerctl stop
 
-super + F6
+super + {F6, control + equal}
     playerctl previous
 
-super + F7
+super + {F7, control + asterisk}
     playerctl play-pause
 
-super + F8
+super + {F8, control + parenright}
     playerctl next
 
-super + F12
+super + {F12, control + plus}
     $TERMINAL -c floating -e python
