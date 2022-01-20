@@ -8,7 +8,7 @@ sxhkd -m 1 &
 dunst &
 
 # Set Keyboard
-setxkbmap -layout us -variant dvp -option caps:swapescape
+setxkbmap -layout us -variant dvp
 xset r rate 200 40
 
 userresources=$XDG_CONFIG_HOME/.Xresources
