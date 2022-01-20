@@ -141,5 +141,5 @@ super + {F7, control + asterisk}
 super + {F8, control + parenright}
     playerctl next
 
-super + {F12, control + plus}
+super + {F12, control + numbersign}
     $TERMINAL -c floating -e python
