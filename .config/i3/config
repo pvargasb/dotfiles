@@ -28,7 +28,6 @@ exec_always --no-startup-id start_polybar
 #==============Windows manipulation============
 # kill focused window
 bindsym $mod+Shift+semicolon kill
-bindsym $mod+Control+semicolon kill
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
