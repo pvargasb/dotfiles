@@ -1,6 +1,7 @@
 clear lock
 
 keycode   9 = dollar asciitilde dollar
+keycode  23 = Tab ISO_Left_Tab F4 F4
 keycode  26 = period greater Prior Prior
 keycode  27 = p P Next Next
 keycode  31 = c C Home Home

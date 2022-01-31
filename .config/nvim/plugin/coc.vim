@@ -46,7 +46,9 @@ let g:coc_global_extensions = [
     \ 'coc-emmet'
   \ ]
 
-let g:coc_snippet_next = '<S-TAB>'
+let g:coc_snippet_next = '<F4>'
+inoremap <F4> <nop>
+nnoremap <F4> <nop>
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
