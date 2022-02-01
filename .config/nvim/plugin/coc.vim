@@ -47,8 +47,11 @@ let g:coc_global_extensions = [
   \ ]
 
 let g:coc_snippet_next = '<F4>'
+let g:coc_snippet_prev = '<F16>'
 inoremap <F4> <nop>
 nnoremap <F4> <nop>
+inoremap <F16> <nop>
+nnoremap <F16> <nop>
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
