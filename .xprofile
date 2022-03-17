@@ -8,8 +8,7 @@ sxhkd -m 1 &
 dunst &
 
 # Set Keyboard
-setxkbmap -layout us -variant dvp
-xset r rate 200 40
+keyboard dvorak
 
 userresources=$XDG_CONFIG_HOME/.Xresources
 usermodmap=$XDG_CONFIG_HOME/.Xmodmap
