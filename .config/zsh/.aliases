@@ -45,5 +45,5 @@ alias vmup='sudo systemctl start libvirtd.service && sudo virsh net-start defaul
 alias vmdown='sudo virsh net-destroy default && sudo systemctl stop libvirtd.service'
 
 # Keyboard layouts
-alias aoeu='keyboard q'
-alias asdf='keyboard d'
+alias aoeu='keyboard qwerty'
+alias asdf='keyboard dvorak'
