@@ -15,6 +15,8 @@ qwerty () {
 }
 
 case "$1" in
-    "d") dvorak ;;
-    "q") qwerty ;;
+    "dvorak") dvorak ;;
+    "qwerty") qwerty ;;
 esac
+
+xset r rate 200 40
