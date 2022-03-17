@@ -11,7 +11,6 @@ dvorak () {
 
 qwerty () {
     setxkbmap -layout latam -option caps:swapescape
-    setmodmap "${XDG_CONFIG_HOME}/.Xmodmap.qwerty"
 }
 
 case "$1" in
