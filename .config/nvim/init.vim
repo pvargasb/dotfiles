@@ -43,7 +43,8 @@ noremap <silent> <leader>v  :vsplit<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tz :set spell!<CR>
 vnoremap <leader>d "_d
-xnoremap <leader>P "_dP
+xnoremap p "_dP
+xnoremap P p
 onoremap <silent> ae :<C-U>normal! VggoG<CR>
 xnoremap <silent> ae :<C-U>normal! VggoG<CR>
 vnoremap < <gv
