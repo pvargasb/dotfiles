@@ -3,6 +3,7 @@ alias _='sudo'
 alias vim='nvim'
 alias e='vim'
 alias update='yay -Syu'
+alias nvimupdate='nvim +silent +PlugUpdate +CocUpdate'
 alias clean='yay -Sc --noconfirm'
 
 # Colors
