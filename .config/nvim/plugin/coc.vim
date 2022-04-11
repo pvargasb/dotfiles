@@ -2,7 +2,7 @@ nnoremap <space>R :CocSearch<space>
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 nmap <leader>er  <Plug>(coc-rename)
 xmap <leader>e=  <Plug>(coc-format-selected)
-nmap <leader>e=  <Plug>(coc-format-selected)
+nmap <leader>e=  <Plug>(coc-format)
 nmap <leader>ea  <Plug>(coc-codeaction-cursor)
 vmap <leader>ea  <Plug>(coc-codeaction-selected)
 nmap <leader>ef  <Plug>(coc-fix-current)
