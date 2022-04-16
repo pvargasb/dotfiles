@@ -77,4 +77,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-test/vim-test'
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-projectionist'
+    Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
