@@ -13,6 +13,8 @@ command! -nargs=0 CleanTrailingSpaces :%s/\s\+$//e
 command! -nargs=0 SudoW :w !sudo tee %
 
 let mapleader = " "
+map <C-[> <Nop>
+map <C-]> <Nop>
 nnoremap J mzJ`z
 nnoremap N Nzzzv
 nnoremap n nzzzv
