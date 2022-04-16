@@ -1,12 +1,44 @@
-ICON="%{$fg_bold[white]%}"
-if [ $DISPLAY ]; then
-    ICON+="λ"
-else
-    ICON+="->"
-fi
+setopt PROMPT_SUBST
 
 DIR="%{$fg_bold[blue]%}%1~/"
 SUFFIX="%{$reset_color%}"
 
-PROMPT="${ICON} ${DIR} ${SUFFIX}"
-RPROMPT="%(?,,%{$fg[red]%}●) ${SUFFIX}"
+ICON_INS="%{$fg_bold[white]%}"
+ICON_CMD="%{$fg_bold[white]%}"
+
+if [ $DISPLAY ]; then
+    ICON_INS+="λ"
+    ICON_CMD+="•"
+else
+    ICON_INS+="Ϋ"
+    ICON_CMD+="."
+fi
+
+THEME_PROMPT_PREFIX=${THEME_PROMPT_PREFIX:-''}
+THEME_VI_INS_MODE_SYMBOL=${THEME_VI_INS_MODE_SYMBOL:-"${ICON_INS}"}
+THEME_VI_CMD_MODE_SYMBOL=${THEME_VI_CMD_MODE_SYMBOL:-"${ICON_CMD}"}
+
+THEME_VI_MODE_SYMBOL="${THEME_VI_INS_MODE_SYMBOL}"
+
+zle-keymap-select() {
+  if [ "${KEYMAP}" = 'vicmd' ]; then
+    THEME_VI_MODE_SYMBOL="${THEME_VI_CMD_MODE_SYMBOL}"
+  else
+    THEME_VI_MODE_SYMBOL="${THEME_VI_INS_MODE_SYMBOL}"
+  fi
+  zle reset-prompt
+}
+zle -N zle-keymap-select
+
+zle-line-finish() {
+  THEME_VI_MODE_SYMBOL="${THEME_VI_INS_MODE_SYMBOL}"
+}
+zle -N zle-line-finish
+
+TRAPINT() {
+  THEME_VI_MODE_SYMBOL="${THEME_VI_INS_MODE_SYMBOL}"
+  return $(( 128 + $1 ))
+}
+
+PROMPT='${THEME_VI_MODE_SYMBOL} ${DIR} ${SUFFIX}'
+RPROMPT="%(?,,%{$fg_bold[red]%}✘) ${SUFFIX}"
