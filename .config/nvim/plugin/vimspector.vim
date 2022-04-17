@@ -1,23 +1,19 @@
-nnoremap <leader>ds <Plug>VimspectorContinue<cr>
-nnoremap <leader>dn <Plug>VimspectorContinue<cr>
-nnoremap <leader>dh <Plug>VimspectorStop<cr>
-nnoremap <leader>dr <Plug>VimspectorRestart<cr>
-nnoremap <leader>dw <Plug>VimspectorPause<cr>
-nnoremap <leader>dn <Plug>VimspectorContinue<cr>
-nnoremap <leader>dx <Plug>VimspectorReset<cr>
+nmap <leader>dc <Plug>VimspectorContinue
+nmap <leader>dh <Plug>VimspectorStop
+nmap <leader>dn <Plug>VimspectorRestart
+nmap <leader>dw <Plug>VimspectorPause
 
-nnoremap <leader>dpb <Plug>VimspectorToggleBreakpoint<cr>
-nnoremap <leader>dpc <Plug>VimspectorToggleConditionalBreakpoint<cr>
-nnoremap <leader>dpf <Plug>VimspectorAddFunctionBreakpoint<cr>
-nnoremap <leader>dpb <Plug>VimspectorToggleBreakpoint<cr>
-nnoremap <leader>dpb <Plug>VimspectorToggleBreakpoint<cr>
-nnoremap <leader>dpb <Plug>VimspectorToggleBreakpoint<cr>
+nnoremap <leader>dx :VimspectorReset<cr>
 
-nnoremap <leader>drc <Plug>VimspectorRunToCursor<cr>
-nnoremap <leader>drn <Plug>VimspectorStepOver<cr>
-nnoremap <leader>dri <Plug>VimspectorStepInto<cr>
-nnoremap <leader>dro <Plug>VimspectorStepOut<cr>
+nmap <leader>tb <Plug>VimspectorToggleBreakpoint
+nmap <leader>tc <Plug>VimspectorToggleConditionalBreakpoint
+nmap <leader>dpf <Plug>VimspectorAddFunctionBreakpoint
 
-nnoremap <leader>di <Plug>VimspectorBalloonEval<cr>
-nnoremap <leader>du <Plug>VimspectorUpFrame<cr>
-nnoremap <leader>dd <Plug>VimspectorDownFrame<cr>
+nmap <leader>drc <Plug>VimspectorRunToCursor
+nmap <leader>drn <Plug>VimspectorStepOver
+nmap <leader>dri <Plug>VimspectorStepInto
+nmap <leader>dro <Plug>VimspectorStepOut
+
+nmap <leader>di <Plug>VimspectorBalloonEval
+nmap <leader>du <Plug>VimspectorUpFrame
+nmap <leader>dd <Plug>VimspectorDownFrame
