@@ -22,7 +22,7 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
 nnoremap <leader>w :w<CR>
 nnoremap <leader>x :wq<CR>
-nnoremap <leader>d "_d
+nnoremap <leader>d' "_d
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
 nnoremap <leader>co :copen<CR>
@@ -42,7 +42,7 @@ noremap <silent> <leader>s  :split<CR>
 noremap <silent> <leader>v  :vsplit<CR>
 noremap <leader>th :set hlsearch!<CR>
 noremap <leader>tz :set spell!<CR>
-vnoremap <leader>d "_d
+vnoremap <leader>d' "_d
 xnoremap p "_dP
 xnoremap P p
 onoremap <silent> ae :<C-U>normal! VggoG<CR>
@@ -78,4 +78,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-dispatch'
     Plug 'tpope/vim-projectionist'
     Plug 'christoomey/vim-tmux-navigator'
+    Plug 'puremourning/vimspector'
 call plug#end()
