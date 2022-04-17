@@ -1,8 +1,9 @@
 nnoremap <leader>pa :A<CR>
+nnoremap <leader>pv :AV<CR>
 nnoremap <leader>ps :execute 'Spawn!' get(b:, 'start', '')<CR>
 nnoremap <leader>pc :Console<CR>
 nnoremap <leader>pm :Make<CR>
-nnoremap <leader>po :Copen<CR>
+nnoremap <leader>pl :Copen<CR>
 
 let g:projectionist_heuristics = {
     \   "*": {
