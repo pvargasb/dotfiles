@@ -4,6 +4,7 @@ nnoremap <leader>dh <Plug>VimspectorStop<cr>
 nnoremap <leader>dr <Plug>VimspectorRestart<cr>
 nnoremap <leader>dw <Plug>VimspectorPause<cr>
 nnoremap <leader>dn <Plug>VimspectorContinue<cr>
+nnoremap <leader>dx <Plug>VimspectorReset<cr>
 
 nnoremap <leader>dpb <Plug>VimspectorToggleBreakpoint<cr>
 nnoremap <leader>dpc <Plug>VimspectorToggleConditionalBreakpoint<cr>
