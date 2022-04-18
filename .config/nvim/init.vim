@@ -79,4 +79,5 @@ call plug#begin('~/.vim/plugged')
     Plug 'tpope/vim-projectionist'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'puremourning/vimspector'
+    Plug 'vuciv/vim-bujo'
 call plug#end()
