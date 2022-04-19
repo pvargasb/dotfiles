@@ -100,7 +100,7 @@ fi
 
 # Tmux
 if command -v tmux &> /dev/null && [ -z $TMUX ]&& [ -z $INSIDE_EMACS ] && [ -z $VIMRUNTIME ] && [ $DISPLAY ]; then
-    tmux attach -t term || tmux new -s term && exit
+    tmux attach -t terminal || tmux new -s terminal && exit
 fi
 
 # Ssh agent
