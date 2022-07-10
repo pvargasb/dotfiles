@@ -32,3 +32,4 @@ set wildmode=longest,list,full
 set updatetime=50
 set shortmess+=c
 set pumheight=12
+set shiftround
