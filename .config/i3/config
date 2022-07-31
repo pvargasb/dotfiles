@@ -162,6 +162,9 @@ mode "move" {
     bindsym l move right
     bindsym c move absolute position center
 
+    bindsym $mod+h move workspace to output right
+    bindsym $mod+l move workspace to output left
+
     bindsym s layout stacking
     bindsym t layout tabbed
     bindsym n layout toggle split
