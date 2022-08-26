@@ -19,7 +19,7 @@ nnoremap <silent><nowait> <space>ec  :<C-u>CocList commands<cr>
 nnoremap <silent><nowait> <space>et  :<C-u>CocList outline<cr>
 nnoremap <silent><nowait> <space>es  :<C-u>CocList -I symbols<cr>
 inoremap <silent><nowait><expr> <cr> "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-inoremap <silent><nowait><expr> <TAB> pumvisible() ? coc#_select_confirm() : "\<TAB>"
+inoremap <silent><nowait><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<TAB>"
 inoremap <silent><nowait><expr> <c-space> coc#refresh()
 nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
 nnoremap <silent><nowait><expr> <C-b> coc#float#has_scroll() ? coc#float#scroll(0) : "\<C-b>"
