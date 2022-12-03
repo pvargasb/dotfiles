@@ -17,6 +17,8 @@ nnoremap J mzJ`z
 nnoremap N Nzzzv
 nnoremap n nzzzv
 nnoremap z; z=
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
 nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
