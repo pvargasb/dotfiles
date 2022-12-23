@@ -23,7 +23,8 @@ nnoremap <leader>Q :q!<CR>
 nnoremap <leader>q :q<CR>
 nnoremap <leader>W :wa<CR>
 nnoremap <leader>w :w<CR>
-nnoremap <leader>x :wq<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>X :xa<CR>
 nnoremap <leader>d' "_d
 nnoremap <leader>j :m .+1<CR>==
 nnoremap <leader>k :m .-2<CR>==
