@@ -1,5 +1,5 @@
 {
-  "settingsVersion": "1.67",
+  "settingsVersion": "1.67.4",
   "exclusionRules": [
     {
       "pattern": "https?://trello.com/*",
@@ -33,7 +33,7 @@
   "filterLinkHints": false,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
-  "keyMappings": "map \\ passNextKey normal count=999999\n\nmap R reload hard\n\nmap m Marks.activateCreateMode swap\nmap ' Marks.activateGotoMode swap\n\nmap q LinkHints.activateMode action=hover\nmap ; LinkHints.activateModeToOpenIncognito\n\nmap gu goToRoot\nmap gU goUp\nmap gn createTab incognito\nmap gc createTab window",
+  "keyMappings": "map \\ passNextKey normal count=999999\n\nmap R reload hard\n\nmap m Marks.activateCreateMode swap\nmap ' Marks.activateGotoMode swap\n\nmap q LinkHints.activateMode action=hover\nmap ; LinkHints.activateModeToOpenIncognito\n\nmap gu goToRoot\nmap gU goUp\nmap g; createTab incognito\nmap gc createTab window",
   "linkHintCharacters": "snthrcgaoeu,.p",
   "linkHintNumbers": "0123456789",
   "newTabUrl": "about:newtab",
