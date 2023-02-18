@@ -5,7 +5,7 @@ require("telescope").setup {
         },
         mappings = {
             i = {
-                ["<C-\\>"] = require("telescope.actions.layout").toggle_preview
+                ["<C-t>"] = require("telescope.actions.layout").toggle_preview
             }
         },
         preview = {
