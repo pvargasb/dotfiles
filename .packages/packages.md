@@ -43,7 +43,7 @@
 
 ## Text editor
 * neovim
-* vim-plug
+* nvim-packer-git
 
 ## Security
 * ufw
@@ -86,6 +86,7 @@
 * papirus-icon-theme
 
 ## Dev
-* yarn
+* npm
+* fd
 * ripgrep
 * python-pynvim
