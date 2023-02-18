@@ -9,7 +9,7 @@ endfunction
 local augroup = vim.api.nvim_create_augroup("markdown", {})
 
 vim.api.nvim_create_autocmd({ "Filetype" }, {
-    group = augroup,
-    pattern = "markdown",
-    command = [[noremap <leader>tv :MarkdownPreviewToggle<CR>]]
+	group = augroup,
+	pattern = "markdown",
+	command = [[noremap <leader>tv :MarkdownPreviewToggle<CR>]],
 })
