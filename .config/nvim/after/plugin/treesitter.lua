@@ -40,6 +40,14 @@ require "nvim-treesitter.configs".setup {
                 ["<leader>pp"] = "@parameter.inner"
             }
         },
+        move = {
+            enable = true,
+            goto_next = {
+                ["]d"] = "@conditional.outer",
+            },
+            goto_previous = {
+                ["[d"] = "@conditional.outer",
+            }
         }
     },
 
