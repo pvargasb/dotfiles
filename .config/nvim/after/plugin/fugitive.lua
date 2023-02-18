@@ -1,6 +1,6 @@
 local builtin = require("telescope.builtin")
 
-vim.keymap.set("n", "<leader>G<Space>", ":G<Space>")
+vim.keymap.set("n", "<leader>G", ":G<Space>")
 vim.keymap.set("n", "<leader>tg", vim.cmd.Git)
 vim.keymap.set("n", "<leader>gu", ":diffget //2<CR>")
 vim.keymap.set("n", "<leader>gh", ":diffget //3<CR>")
