@@ -33,9 +33,6 @@ vim.keymap.set("i", "<S-F4>", function() luasnip.jump( -1) end)
 lsp.on_attach(function(_, bufnr)
     local opts = { buffer = bufnr, remap = false }
 
-    vim.api.nvim_command("autocmd CursorHold <buffer> silent lua vim.lsp.buf.document_highlight()")
-    vim.api.nvim_command("autocmd CursorMoved <buffer> silent lua vim.lsp.buf.clear_references()")
-
     vim.keymap.set("n", "]g", vim.diagnostic.goto_next, opts)
     vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, opts)
     vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
