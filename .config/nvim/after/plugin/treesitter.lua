@@ -10,7 +10,6 @@ require "nvim-treesitter.configs".setup {
 
     highlight = {
         enable = true,
-        disable = {},
         additional_vim_regex_highlighting = false,
     },
 
@@ -65,9 +64,4 @@ require "nvim-treesitter.configs".setup {
     autotag = {
         enable = true
     },
-
-    matchup = {
-        enable = true,
-        disable_virtual_text = true
-    }
 }
