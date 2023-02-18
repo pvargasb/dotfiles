@@ -44,6 +44,7 @@ return require("packer").startup(function(use)
     use "nvim-treesitter/nvim-treesitter-textobjects"
     use "nvim-treesitter/nvim-treesitter-context"
     use 'nvim-treesitter/nvim-treesitter-refactor'
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
     use "andymass/vim-matchup"
     use "windwp/nvim-ts-autotag"
     use {
