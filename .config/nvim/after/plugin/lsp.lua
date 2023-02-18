@@ -50,7 +50,10 @@ lsp.on_attach(function(_, bufnr)
     vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
--- (Optional) Configure lua language server for neovim
-lsp.nvim_workspace()
-
+lsp.nvim_workspace() -- (Optional) Configure lua language server for neovim
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true,
+    update_in_insert = true
+})
