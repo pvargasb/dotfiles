@@ -14,6 +14,6 @@ vim.keymap.set("n", "<leader>dre", "<Plug>VimspectorStepOver")
 vim.keymap.set("n", "<leader>dri", "<Plug>VimspectorStepInto")
 vim.keymap.set("n", "<leader>dro", "<Plug>VimspectorStepOut")
 
-vim.keymap.set("n", "<leader>du", "<Plug>VimspectorUpFrame")
-vim.keymap.set("n", "<leader>dd", "<Plug>VimspectorDownFrame")
+vim.keymap.set("n", "<leader>dk", "<Plug>VimspectorUpFrame")
+vim.keymap.set("n", "<leader>dj", "<Plug>VimspectorDownFrame")
 vim.keymap.set({ "x", "n" }, "<leader>di", "<Plug>VimspectorBalloonEval")
