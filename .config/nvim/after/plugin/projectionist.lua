@@ -4,8 +4,8 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.AV)
 vim.g.projectionist_heuristics = {
 	["*"] = {
 		["*.cpp"] = {
-			["console"] = "g++ {}.cpp -o {} && ./{} && rm {} && read",
 			["make"] = "g++ {}.cpp -o {} && ./{} < input && rm {}",
+			["console"] = "g++ {}.cpp -o {} && ./{} && rm {} && read",
 		},
 	},
 	["pom.xml"] = {
