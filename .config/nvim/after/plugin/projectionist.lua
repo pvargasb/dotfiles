@@ -7,6 +7,10 @@ vim.g.projectionist_heuristics = {
 			["make"] = "g++ {}.cpp -o {} && ./{} < input && rm {}",
 			["console"] = "g++ {}.cpp -o {} && ./{} && rm {} && read",
 		},
+		["*.py"] = {
+			["make"] = "python {}.py",
+			["console"] = "python",
+		},
 	},
 	["pom.xml"] = {
 		["*"] = {
