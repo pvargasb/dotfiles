@@ -78,4 +78,5 @@ return require("packer").startup(function(use)
 		},
 	})
 	use("mhartington/formatter.nvim")
+	use("mfussenegger/nvim-lint")
 end)
