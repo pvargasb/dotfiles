@@ -26,4 +26,11 @@ vim.api.nvim_create_autocmd({ "TextYankPost" }, {
 	end,
 })
 
+vim.api.nvim_create_autocmd({ "VimResized" }, {
+	group = augroup,
+	callback = function()
+		vim.cmd("tabdo wincmd =")
+	end,
+})
+
 vim.api.nvim_create_user_command("SudoW", ":w !sudo tee %", {})
