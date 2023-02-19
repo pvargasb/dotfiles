@@ -1,92 +1,107 @@
 ## Display server
-* xorg-server
-* xorg-xinit
+
+- xorg-server
+- xorg-xinit
 
 ## System
-* base
-* base-devel
-* grub
-* os-prober
-* git
-* man-db
-* yay-bin
-* networkmanager
-* unzip
-* maim
-* xclip
-* sxhkd
-* openssh
-* libnotify
-* xcape
+
+- base
+- base-devel
+- grub
+- os-prober
+- git
+- man-db
+- yay-bin
+- networkmanager
+- unzip
+- maim
+- xclip
+- sxhkd
+- openssh
+- libnotify
+- xcape
 
 ## Graphical environment
-* i3-gaps
-* polybar
-* xwallpaper
-* picom
-* redshift-minimal
-* dunst
+
+- i3-gaps
+- polybar
+- xwallpaper
+- picom
+- redshift-minimal
+- dunst
 
 ## Utilities
-* htop
-* lf-bin
-* sxiv
-* zathura-pdf-mupdf
-* mpv
-* lxappearance
+
+- htop
+- lf-bin
+- sxiv
+- zathura-pdf-mupdf
+- mpv
+- lxappearance
 
 ## Terminal
-* st
-* zsh
-* zsh-syntax-highlighting
-* tmux
+
+- st
+- zsh
+- zsh-syntax-highlighting
+- tmux
 
 ## Text editor
-* neovim
-* nvim-packer-git
+
+- neovim
+- nvim-packer-git
 
 ## Security
-* ufw
+
+- ufw
 
 ## Cpu
-* intel-ucode
-* sysstat
+
+- intel-ucode
+- sysstat
 
 ## Graphics card
-* nvidia
-* nvidia-utils
-* nvidia-settings
+
+- nvidia
+- nvidia-utils
+- nvidia-settings
 
 ## Sound
-* pavucontrol
-* alsa-utils
-* pulseaudio-alsa
-* playerctl
+
+- pavucontrol
+- alsa-utils
+- pulseaudio-alsa
+- playerctl
 
 ## Virtualization
-* virt-manager
-* qemu
-* libvirt
-* iptables -> iptables-nft
-* dnsmasq
-* bridge-utils
-* openbsd-netcat
+
+- virt-manager
+- qemu
+- libvirt
+- iptables -> iptables-nft
+- dnsmasq
+- bridge-utils
+- openbsd-netcat
 
 ## Entertainment
-* spotify
-* brave-bin
+
+- spotify
+- brave-bin
 
 ## Fonts
-* ttf-fira-code
-* ttf-font-awesome
+
+- ttf-fira-code
+- ttf-font-awesome
 
 ## GTK theme
-* vimix-gtk-themes
-* mcmojave-cursors
-* papirus-icon-theme
+
+- vimix-gtk-themes
+- mcmojave-cursors
+- papirus-icon-theme
 
 ## Dev
-* npm
-* fd
-* ripgrep
-* python-pynvim
+
+- npm
+- fd
+- ripgrep
+- python-pynvim
