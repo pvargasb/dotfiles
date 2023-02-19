@@ -8,6 +8,21 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").black,
 		},
+		javascript = {
+			require("formatter.filetypes.javascript").prettier,
+		},
+		javascriptreact = {
+			require("formatter.filetypes.javascriptreact").prettier,
+		},
+		typescript = {
+			require("formatter.filetypes.typescript").prettier,
+		},
+		typescriptreact = {
+			require("formatter.filetypes.typescriptreact").prettier,
+		},
+		markdown = {
+			require("formatter.filetypes.markdown").prettier,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
