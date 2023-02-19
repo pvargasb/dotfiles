@@ -1,7 +1,9 @@
 require("telescope").setup({
 	defaults = {
+		layout_strategy = "center",
 		layout_config = {
 			width = 0.5,
+			anchor = "S",
 		},
 		mappings = {
 			i = {
