@@ -3,7 +3,7 @@ vim.keymap.set("n", "<leader>d,", "<Plug>VimspectorStop")
 vim.keymap.set("n", "<leader>d.", "<Plug>VimspectorRestart")
 vim.keymap.set("n", "<leader>dw", "<Plug>VimspectorPause")
 
-vim.keymap.set("n", "<leader>dx", ":VimspectorReset")
+vim.keymap.set("n", "<leader>dx", vim.cmd.VimspectorReset)
 
 vim.keymap.set("n", "<leader>tb", "<Plug>VimspectorToggleBreakpoint")
 vim.keymap.set("n", "<leader>tc", "<Plug>VimspectorToggleConditionalBreakpoint")
