@@ -35,6 +35,7 @@ vim.keymap.set("n", "<leader>f", function()
 	builtin.find_files({
 		find_command = {
 			"fd",
+			"--hidden",
 			"--type",
 			"f",
 			"-E",
