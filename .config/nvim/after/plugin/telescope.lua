@@ -50,6 +50,8 @@ vim.keymap.set("n", "<leader>f", function()
 			".local",
 			"-E",
 			".cache",
+			"-E",
+			".git",
 			".",
 		},
 	})
