@@ -22,6 +22,7 @@ return require("packer").startup(function(use)
 	use("mattn/emmet-vim")
 	use("folke/zen-mode.nvim")
 	use("puremourning/vimspector")
+	use("ThePrimeagen/harpoon")
 
 	use({
 		"iamcco/markdown-preview.nvim",
