@@ -12,6 +12,13 @@ vim.g.projectionist_heuristics = {
 			["console"] = "python",
 		},
 	},
+	["Cargo.toml"] = {
+		["*"] = {
+			["start"] = "cargo run",
+			["make"] = "cargo build",
+			["console"] = "cargo run && read",
+		},
+	},
 	["pom.xml"] = {
 		["*"] = {
 			["start"] = "./mvnw spring-boot =run",
