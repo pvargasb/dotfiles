@@ -26,7 +26,7 @@ ask_name () {
     local timestamp
 
     timestamp=$(date '+%y%m%d-%H%M-%S')
-    DST_FILE="$(prompt_open "File Name" "screenshot-${timestamp}")"
+    DST_FILE="$(prompt_open "File Name" "screenshot-${timestamp}").${EXTENSION}"
 }
 
 prepare_destination_path () {
