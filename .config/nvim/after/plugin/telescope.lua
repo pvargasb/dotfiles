@@ -1,3 +1,4 @@
+require("telescope").load_extension("refactoring")
 require("telescope").setup({
 	defaults = {
 		layout_strategy = "center",
