@@ -2,9 +2,7 @@
 vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
-	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
-
 	use("gruvbox-community/gruvbox")
 	use("itchyny/lightline.vim")
 	use("christoomey/vim-tmux-navigator")
@@ -22,7 +20,14 @@ return require("packer").startup(function(use)
 	use("mattn/emmet-vim")
 	use("folke/zen-mode.nvim")
 	use("puremourning/vimspector")
-	use("ThePrimeagen/harpoon")
+	use({ "ThePrimeagen/harpoon", requires = { { "nvim-lua/plenary.nvim" } } })
+
+	use({
+		"windwp/nvim-autopairs",
+		config = function()
+			require("nvim-autopairs").setup({})
+		end,
+	})
 
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -33,7 +38,7 @@ return require("packer").startup(function(use)
 
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.1",
+		branch = "0.1.x",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
 
@@ -44,16 +49,35 @@ return require("packer").startup(function(use)
 			ts_update()
 		end,
 	})
-	use("nvim-treesitter/nvim-treesitter-textobjects")
-	use("nvim-treesitter/nvim-treesitter-context")
-	use("nvim-treesitter/nvim-treesitter-refactor")
-	use("JoosepAlviste/nvim-ts-context-commentstring")
-	use("windwp/nvim-ts-autotag")
+
 	use({
-		"windwp/nvim-autopairs",
-		config = function()
-			require("nvim-autopairs").setup({})
-		end,
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
+
+	use({
+		"nvim-treesitter/nvim-treesitter-context",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
+
+	use({
+		"nvim-treesitter/nvim-treesitter-refactor",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
+
+	use({
+		"JoosepAlviste/nvim-ts-context-commentstring",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	})
+
+	use({
+		"windwp/nvim-ts-autotag",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
 	})
 
 	use({
@@ -78,6 +102,7 @@ return require("packer").startup(function(use)
 			{ "rafamadriz/friendly-snippets" }, -- Optional
 		},
 	})
-	use("mhartington/formatter.nvim")
+
 	use("mfussenegger/nvim-lint")
+	use("mhartington/formatter.nvim")
 end)
