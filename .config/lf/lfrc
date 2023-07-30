@@ -3,7 +3,7 @@ set ifs "\n"
 
 cmap <c-g> cmd-escape
 
-map + push %mkdir<space>''<left>
+map + push %mkdir<space>""<left>
 map D delete
 map * push :glob-select<space>
 map r reload
@@ -14,7 +14,7 @@ map I push A<c-a>
 map i push A<a-b><a-b><a-f>
 map a push A<a-b>
 
-map V push :!nvim<space>''<left>
+map V push !nvim<space>""<left>
 
 map gw cd ~/Wallpapers/
 map gv cd ~/Videos/
@@ -24,10 +24,10 @@ map gs cd ~/Screenshots/
 map gp cd ~/Projects/
 map gm cd /run/media/
 
-map o :open; quit
+map o push open; quit
 
 cmd open ${{
-    case $('file' --mime-type $f -b) in
+    case $("file" --mime-type $f -b) in
     image/vnd.djvu|application/pdf|application/octet-stream) setsid -f $READER $fx >/dev/null 2>&1 ;;
     text/*) $EDITOR $fx ;;
     image/*) setsid -f sxiv $fx 2>/dev/null ;;
