@@ -35,29 +35,8 @@ vim.keymap.set("n", "<leader>h", builtin.command_history)
 vim.keymap.set("n", "<leader>f", function()
 	builtin.find_files({
 		find_command = {
-			"fd",
-			"--hidden",
-			"--type",
-			"f",
-			"-E",
-			"node_modules",
-			"-E",
-			"build",
-			"-E",
-			"dist",
-			"-E",
-			"target",
-			"-E",
-			".local",
-			"-E",
-			".cache",
-			"-E",
-			".git",
-			"-E",
-			".cargo",
-			"-E",
-			".next",
-			".",
+			"find_files",
+			"any",
 		},
 	})
 end)
@@ -65,27 +44,8 @@ end)
 vim.keymap.set("n", "<leader>t;", function()
 	builtin.find_files({
 		find_command = {
-			"fd",
-			"--hidden",
-			"-E",
-			".local",
-			"-E",
-			".cache",
-			"-E",
-			".cargo",
-			"-E",
-			".next",
-			"-E",
-			"node_modules",
-			"-E",
-			"build",
-			"-E",
-			"dist",
-			"-E",
-			"target",
-			"--glob",
-			"*.git",
-			".",
+			"find_files",
+			"git",
 		},
 	})
 end)

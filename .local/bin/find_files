@@ -1,0 +1,51 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
+EXPECTED_ARGS=1
+[[ "${#}" -ne "${EXPECTED_ARGS}" ]] \
+    && echo "Wrong number of arguments" \
+    && exit
+
+
+case "${1}" in
+    "git")
+        fd \
+            --hidden \
+            --no-ignore \
+            -E .local \
+            -E .cache \
+            -E .cargo \
+            -E .rustup \
+            -E .next \
+            -E .npm \
+            -E node_modules \
+            -E buildd \
+            -E dist \
+            -E target \
+            --glob "*.git" \
+            . \
+            -x printf "{//}\n"
+    ;;
+    "any")
+        fd \
+            --hidden \
+            --no-ignore \
+            --type f \
+            -E .local \
+            -E .cache \
+            -E .cargo \
+            -E .rustup \
+            -E .next \
+            -E .npm \
+            -E .git \
+            -E .pki \
+            -E node_modules \
+            -E buildd \
+            -E dist \
+            -E target \
+            .
+    ;;
+    *)
+        echo "The given argument was not recognized"
+    ;;
+esac
