@@ -23,7 +23,7 @@ case "${1}" in
             -E dist \
             -E target \
             --glob "*.git" \
-            . \
+            "${HOME}/Projects/" \
             -x printf "{//}\n"
     ;;
     "any")
