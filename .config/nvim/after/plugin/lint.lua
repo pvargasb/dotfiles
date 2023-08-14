@@ -1,6 +1,4 @@
-require("lint").linters_by_ft = {
-	python = { "flake8" },
-}
+require("lint").linters_by_ft = {}
 
 local augroup = vim.api.nvim_create_augroup("lint", {})
 
