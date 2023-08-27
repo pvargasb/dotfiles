@@ -3,7 +3,7 @@ set ifs "\n"
 
 cmap <c-g> cmd-escape
 
-map + push %mkdir<space>""<left>
+map + push %mkdir<space>-p<space>""<left>
 map t push %touch<space>""<left>
 map D delete
 map * push :glob-select<space>
