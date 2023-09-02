@@ -9,7 +9,6 @@ return require("packer").startup(function(use)
 	use("mbbill/undotree")
 	use("tpope/vim-fugitive")
 	use("tpope/vim-commentary")
-	use("tpope/vim-surround")
 	use("tpope/vim-repeat")
 	use("tpope/vim-dispatch")
 	use("tpope/vim-projectionist")
@@ -21,6 +20,14 @@ return require("packer").startup(function(use)
 	use("folke/zen-mode.nvim")
 	use("puremourning/vimspector")
 	use({ "ThePrimeagen/harpoon", requires = { { "nvim-lua/plenary.nvim" } } })
+
+	use({
+		"kylechui/nvim-surround",
+		tag = "*",
+		config = function()
+			require("nvim-surround").setup()
+		end,
+	})
 
 	use({
 		"windwp/nvim-autopairs",
