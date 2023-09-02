@@ -23,7 +23,7 @@
 
 ## Graphical environment
 
-- i3-gaps
+- i3-wm
 - polybar
 - xwallpaper
 - picom
@@ -41,7 +41,6 @@
 
 ## Terminal
 
-- st
 - zsh
 - zsh-syntax-highlighting
 - tmux
@@ -76,9 +75,9 @@
 ## Virtualization
 
 - virt-manager
-- qemu
+- qemu-desktop
 - libvirt
-- iptables -> iptables-nft
+- iptables
 - dnsmasq
 - bridge-utils
 - openbsd-netcat
@@ -87,6 +86,7 @@
 
 - spotify
 - brave-bin
+- yt-dlp
 
 ## Fonts
 
@@ -104,4 +104,9 @@
 - npm
 - fd
 - ripgrep
-- python-pynvim
+
+## Repos
+
+- st
+- dmenu
+- slock
