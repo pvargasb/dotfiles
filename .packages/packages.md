@@ -99,7 +99,7 @@
 - mcmojave-cursors
 - papirus-icon-theme
 
-## Dev
+## Dev tools
 
 - nodejs
 - bun-bin
