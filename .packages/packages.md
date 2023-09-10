@@ -101,7 +101,8 @@
 
 ## Dev
 
-- npm
+- nodejs
+- bun-bin
 - fd
 - ripgrep
 
