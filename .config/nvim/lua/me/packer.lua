@@ -3,7 +3,7 @@ vim.cmd([[packadd packer.nvim]])
 
 return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
-	use("gruvbox-community/gruvbox")
+	use("ellisonleao/gruvbox.nvim")
 	use("itchyny/lightline.vim")
 	use("christoomey/vim-tmux-navigator")
 	use("mbbill/undotree")

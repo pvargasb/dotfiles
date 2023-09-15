@@ -1,5 +1,7 @@
-vim.g.background = "dark"
-vim.g.gruvbox_contrast_dark = "hard"
-vim.g.gruvbox_invert_selection = "0"
+require("gruvbox").setup({
+	contrast = "hard",
+	invert_selection = false,
+})
 
+vim.g.background = "dark"
 vim.cmd.colorscheme("gruvbox")
