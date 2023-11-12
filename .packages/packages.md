@@ -96,8 +96,9 @@
 ## GTK theme
 
 - vimix-gtk-themes
-- mcmojave-cursors
+- gruvbox-dark-gtk
 - papirus-icon-theme
+- vimix-cursors
 
 ## Dev tools
 
