@@ -85,7 +85,7 @@
 ## Entertainment
 
 - spotify
-- brave-bin
+- firefox
 - yt-dlp
 
 ## Fonts

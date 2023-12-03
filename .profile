@@ -4,7 +4,7 @@ export PATH="$PATH:$HOME/.local/bin"
 
 # Default programs
 export WM="i3"
-export BROWSER="brave"
+export BROWSER="firefox"
 export EDITOR="nvim"
 export TERMINAL="st"
 export COMPOSITOR="picom"
