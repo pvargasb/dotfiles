@@ -1,0 +1,10 @@
+#! /usr/bin/env bash
+
+
+set -euo pipefail
+
+
+url="${1:-$(xclip -selection clipboard -out)}"
+
+
+mpv "${url}"
