@@ -41,11 +41,20 @@ vim.keymap.set("n", "<leader>f", function()
 	})
 end)
 
+local actions = require("telescope.actions")
+local action_state = require("telescope.actions.state")
 vim.keymap.set("n", "<leader>t;", function()
 	builtin.find_files({
 		find_command = {
 			"find_files",
 			"git",
 		},
+		attach_mappings = function(prompt_bufnr, _)
+			actions.select_default:replace(function()
+				actions.close(prompt_bufnr)
+				builtin.git_files({ cwd = action_state.get_selected_entry()[1] })
+			end)
+			return true
+		end,
 	})
 end)
