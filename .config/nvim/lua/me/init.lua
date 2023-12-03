@@ -1,6 +1,6 @@
-require("me.lazy")
 require("me.remaps")
 require("me.sets")
+require("me.lazy")
 
 local augroup = vim.api.nvim_create_augroup("base", {})
 
