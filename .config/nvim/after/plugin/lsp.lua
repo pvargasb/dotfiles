@@ -1,31 +1,18 @@
+require("luasnip.loaders.from_vscode").lazy_load()
+
 local builtin = require("telescope.builtin")
-local cmp = require("cmp")
-local luasnip = require("luasnip")
-local lsp = require("lsp-zero").preset({
-	name = "minimal",
-	set_lsp_keymaps = true,
-	manage_nvim_cmp = true,
-	suggest_lsp_servers = false,
+
+vim.keymap.set({ "n", "i" }, "<F4>", "<nop>")
+vim.keymap.set({ "n", "i" }, "<S-F4>", "<nop>")
+
+vim.diagnostic.config({
+	virtual_text = true,
+	update_in_insert = true,
+	severity_sort = true,
 })
 
-lsp.ensure_installed({
-	"lua_ls",
-})
-
-lsp.setup_nvim_cmp({
-	mapping = lsp.defaults.cmp_mappings({
-		["<C-Space>"] = cmp.mapping.complete(),
-		["<Tab>"] = cmp.mapping.confirm(),
-		["<CR>"] = vim.NIL,
-		["<C-y>"] = vim.NIL,
-	}),
-})
-
-lsp.set_preferences({
-	sign_icons = {},
-})
-
-lsp.on_attach(function(_, bufnr)
+local lsp_zero = require("lsp-zero")
+lsp_zero.on_attach(function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
 	vim.keymap.set("n", "]g", vim.diagnostic.goto_next, opts)
@@ -47,20 +34,43 @@ lsp.on_attach(function(_, bufnr)
 	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
 end)
 
-lsp.nvim_workspace() -- (Optional) Configure lua language server for neovim
-lsp.setup()
-
-vim.diagnostic.config({
-	virtual_text = true,
-	update_in_insert = true,
+require("mason").setup({})
+require("mason-lspconfig").setup({
+	ensure_installed = { "lua_ls" },
+	handlers = {
+		lsp_zero.default_setup,
+		lua_ls = function()
+			local lua_opts = lsp_zero.nvim_lua_ls()
+			require("lspconfig").lua_ls.setup(lua_opts)
+		end,
+	},
 })
 
-vim.keymap.set({ "n", "i" }, "<F4>", "<nop>")
-vim.keymap.set({ "n", "i" }, "<S-F4>", "<nop>")
-
-vim.keymap.set("i", "<F4>", function()
-	luasnip.jump(1)
-end)
-vim.keymap.set("i", "<S-F4>", function()
-	luasnip.jump(-1)
-end)
+local cmp = require("cmp")
+local cmp_action = require("lsp-zero").cmp_action()
+local cmp_select = { behavior = cmp.SelectBehavior.Select }
+cmp.setup({
+	sources = {
+		{ name = "path" },
+		{ name = "nvim_lsp" },
+		{ name = "nvim_lua" },
+		{ name = "luasnip" },
+	},
+	mapping = cmp.mapping.preset.insert({
+		["<C-Space>"] = cmp.mapping.complete(),
+		["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
+		["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
+		["<Tab>"] = cmp.mapping.confirm({ select = true }),
+		["<F4>"] = cmp_action.luasnip_jump_forward(),
+		["<S-F4>"] = cmp_action.luasnip_jump_backward(),
+	}),
+	formatting = lsp_zero.cmp_format(),
+	preselect = "item",
+	completion = {
+		completeopt = "menu,menuone,noinsert",
+	},
+	window = {
+		completion = cmp.config.window.bordered(),
+		documentation = cmp.config.window.bordered(),
+	},
+})
