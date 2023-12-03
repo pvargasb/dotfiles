@@ -63,6 +63,9 @@
 - nvidia
 - nvidia-utils
 - nvidia-settings
+- libva-nvidia-driver
+- libva-utils
+- vdpauinfo
 
 ## Sound
 
