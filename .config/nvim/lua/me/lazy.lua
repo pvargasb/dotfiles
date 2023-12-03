@@ -29,6 +29,7 @@ require("lazy").setup({
 	"mattn/emmet-vim",
 	"folke/zen-mode.nvim",
 	"puremourning/vimspector",
+	"stevearc/oil.nvim",
 
 	{ "theprimeagen/harpoon", branch = "harpoon2", dependencies = { "nvim-lua/plenary.nvim" } },
 	{ "theprimeagen/refactoring.nvim", dependencies = { "nvim-lua/plenary.nvim", "nvim-treesitter/nvim-treesitter" } },
