@@ -48,7 +48,6 @@
 ## Text editor
 
 - neovim
-- nvim-packer-git
 
 ## Security
 

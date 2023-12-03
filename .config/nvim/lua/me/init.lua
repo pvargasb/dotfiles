@@ -1,4 +1,4 @@
-require("me.packer")
+require("me.lazy")
 require("me.remaps")
 require("me.sets")
 
