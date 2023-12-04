@@ -1,7 +1,7 @@
 require("oil").setup({
 	default_file_explorer = true,
 	float = {
-		padding = 20,
+		padding = 2,
 		max_width = 80,
 	},
 })
