@@ -15,6 +15,7 @@ local lsp_zero = require("lsp-zero")
 lsp_zero.on_attach(function(_, bufnr)
 	local opts = { buffer = bufnr, remap = false }
 
+	vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 	vim.keymap.set("n", "]g", vim.diagnostic.goto_next, opts)
 	vim.keymap.set("n", "[g", vim.diagnostic.goto_prev, opts)
 	vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
