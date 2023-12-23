@@ -56,7 +56,7 @@
 ## Cpu
 
 - intel-ucode
-- sysstat
+- lm_sensors
 
 ## Graphics card
 
@@ -66,6 +66,7 @@
 - libva-nvidia-driver
 - libva-utils
 - vdpauinfo
+- nvtop
 
 ## Sound
 

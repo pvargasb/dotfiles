@@ -15,6 +15,9 @@ super + control + e
 super + i
     $TERMINAL -c floating -e $RESOURCES
 
+super + shift + i
+    $TERMINAL -c floating -e $GPU_RESOURCES
+
 super + v
     $TERMINAL -c floating -e $FILE
 
