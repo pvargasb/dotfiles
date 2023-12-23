@@ -9,3 +9,6 @@ vim.keymap.set("n", "<leader>gl", builtin.git_commits)
 vim.keymap.set("n", "<leader>gf", builtin.git_bcommits)
 vim.keymap.set("n", "<leader>gs", builtin.git_status)
 vim.keymap.set("n", "<leader>gz", builtin.git_stash)
+
+vim.keymap.set("n", "<leader>gw", require("telescope").extensions.git_worktree.git_worktrees)
+vim.keymap.set("n", "<leader>gW", require("telescope").extensions.git_worktree.create_git_worktree)
