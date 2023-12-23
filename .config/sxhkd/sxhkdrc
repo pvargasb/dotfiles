@@ -143,3 +143,8 @@ super + {F8, control + parenright}
 
 super + {F12, control + numbersign}
     $TERMINAL -c floating -e python
+
+# i3
+
+super + {h, j, k, l}
+    i3-msg focus {left, down, up, right}
