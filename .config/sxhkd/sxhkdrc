@@ -27,7 +27,7 @@ super + p
 super + n
     $BROWSER
 
-super + shift + n
+super + shift + p
     $BROWSER --private-window
 
 super + control + y
