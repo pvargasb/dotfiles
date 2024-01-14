@@ -80,9 +80,8 @@
 - virt-manager
 - qemu-desktop
 - libvirt
-- iptables
+- iptables-nft
 - dnsmasq
-- bridge-utils
 - openbsd-netcat
 
 ## Entertainment
