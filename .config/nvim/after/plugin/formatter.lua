@@ -32,10 +32,4 @@ require("formatter").setup({
 	},
 })
 
-local augroup = vim.api.nvim_create_augroup("formatter", {})
-
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-	group = augroup,
-	pattern = "*",
-	command = [[FormatWrite]],
-})
+vim.keymap.set("n", "<leader>w", ":FormatWrite<CR>")
