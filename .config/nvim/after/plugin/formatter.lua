@@ -32,4 +32,7 @@ require("formatter").setup({
 	},
 })
 
-vim.keymap.set("n", "<leader>w", ":FormatWrite<CR>")
+vim.keymap.set("n", "<leader>w", function()
+	vim.cmd([[write]])
+	vim.cmd([[FormatWrite]])
+end)
