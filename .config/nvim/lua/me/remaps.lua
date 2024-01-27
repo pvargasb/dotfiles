@@ -16,9 +16,6 @@ vim.keymap.set("n", "<leader>X", ":xa<CR>")
 vim.keymap.set("n", "<leader>d", '"_d')
 vim.keymap.set("n", "<leader>j", ":m .+1<CR>==")
 vim.keymap.set("n", "<leader>k", ":m .-2<CR>==")
-vim.keymap.set("n", "<leader>co", ":copen<CR>")
-vim.keymap.set("n", "<leader>cc", ":cclose<CR>")
-vim.keymap.set("n", "<leader>cc", ":cclose<CR>")
 vim.keymap.set("n", "<C-h>", ":wincmd h<CR>", { silent = true })
 vim.keymap.set("n", "<C-j>", ":wincmd j<CR>", { silent = true })
 vim.keymap.set("n", "<C-k>", ":wincmd k<CR>", { silent = true })
@@ -28,6 +25,7 @@ vim.keymap.set("n", "<M-Left>", ":vertical resize -2<CR>", { silent = true })
 vim.keymap.set("n", "<M-Right>", ":vertical resize +2<CR>", { silent = true })
 vim.keymap.set("n", "<M-Up>", ":resize +2<CR>", { silent = true })
 vim.keymap.set("n", "<Tab>", "<C-^>", { silent = true })
+vim.keymap.set("n", "<leader>tm", ":let $VIM_DIR=expand('%:p:h')<CR>:silent !tmux split-window -vc $VIM_DIR<CR>")
 vim.keymap.set("n", "<leader>r", ":.,$s//gc<Left><Left><Left>")
 vim.keymap.set("x", "<leader>r", ":<C-u>.,$s/<C-r><C-w>/<C-r><C-w>/gc<Left><Left><Left>")
 vim.keymap.set("n", "<leader>s", ":split<CR>", { silent = true })
@@ -44,3 +42,19 @@ vim.keymap.set("v", "<", "<gv")
 vim.keymap.set("v", ">", ">gv")
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+
+vim.keymap.set("n", "tq", function()
+	local qf_exists = false
+	for _, win in pairs(vim.fn.getwininfo()) do
+		if win["quickfix"] == 1 then
+			qf_exists = true
+		end
+	end
+	if qf_exists == true then
+		vim.cmd("cclose")
+		return
+	end
+	if not vim.tbl_isempty(vim.fn.getqflist()) then
+		vim.cmd("copen")
+	end
+end)
