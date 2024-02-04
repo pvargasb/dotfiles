@@ -48,6 +48,7 @@
 ## Text editor
 
 - neovim
+- python-pynvim
 
 ## Security
 
@@ -97,7 +98,6 @@
 
 ## GTK theme
 
-- vimix-gtk-themes
 - gruvbox-dark-gtk
 - papirus-icon-theme
 - vimix-cursors
