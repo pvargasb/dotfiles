@@ -43,6 +43,7 @@ case "${1}" in
             -E buildd \
             -E dist \
             -E target \
+            -E Projects \
             .
     ;;
     *)
