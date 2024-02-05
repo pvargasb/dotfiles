@@ -104,6 +104,7 @@
 
 ## Dev tools
 
+- stow
 - nodejs
 - bun-bin
 - fd
