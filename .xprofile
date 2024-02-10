@@ -9,7 +9,6 @@ dunst &
 
 # Set Keyboard
 keyboard dvorak
-xset s off
 
 userresources=$XDG_CONFIG_HOME/.Xresources
 usermodmap=$XDG_CONFIG_HOME/.Xmodmap
