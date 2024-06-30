@@ -1,0 +1,3 @@
+--restow
+--target=$HOME
+--ignore .stowrc
