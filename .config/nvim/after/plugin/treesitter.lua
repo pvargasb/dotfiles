@@ -58,12 +58,9 @@ require("nvim-treesitter.configs").setup({
 			clear_on_cursor_move = true,
 		},
 	},
-
-	autotag = {
-		enable = true,
-	},
 })
 
+require('nvim-ts-autotag').setup()
 require("ts_context_commentstring").setup({
 	enable_autocmd = false,
 })
