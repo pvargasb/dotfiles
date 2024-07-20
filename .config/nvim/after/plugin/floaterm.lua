@@ -1,5 +1,5 @@
-vim.g.floaterm_title = "terminal"
-vim.g.floaterm_wintype = "split"
+vim.g.floaterm_title = ""
+vim.g.floaterm_wintype = "float"
 vim.g.floaterm_opener = "vsplit"
 vim.g.floaterm_height = 0.6
 vim.g.floaterm_autoclose = 2
