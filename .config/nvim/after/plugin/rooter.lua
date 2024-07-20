@@ -6,5 +6,4 @@ vim.g.rooter_patterns = {
 	"pom.xml",
 	"node_modules",
 	"Makefile",
-	"nbproject",
 }
