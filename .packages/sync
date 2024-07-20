@@ -1,0 +1,200 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
+
+base=(
+    "base"
+    "base-devel"
+    "grub"
+    "os-prober"
+    "git"
+    "man-db"
+    "yay-bin"
+    "networkmanager"
+    "unzip"
+    "maim"
+    "xclip"
+    "sxhkd"
+    "openssh"
+    "libnotify"
+    "xcape"
+    "ufw"
+    "lm_sensors"
+    "stow"
+)
+
+intel_cpu=(
+    "intel-ucode"
+)
+
+gpu=(
+    "libva-utils"
+    "vdpauinfo"
+    "nvtop"
+)
+
+nvidia=(
+    "nvidia"
+    "nvidia-utils"
+    "nvidia-settings"
+    "libva-nvidia-driver"
+)
+
+sound=(
+    "pavucontrol"
+    "alsa-utils"
+    "pulseaudio-alsa"
+    "playerctl"
+)
+
+xorg=(
+    "xorg-server"
+    "xorg-xinit"
+)
+
+gui=(
+    "i3-wm"
+    "polybar"
+    "xwallpaper"
+    "picom"
+    "redshift-minimal"
+    "dunst"
+)
+
+utilities=(
+    "htop"
+    "lf-bin"
+    "sxiv"
+    "zathura-pdf-mupdf"
+    "mpv"
+    "lxappearance"
+)
+
+terminal=(
+    "zsh"
+    "zsh-syntax-highlighting"
+    "tmux"
+)
+
+nvim=(
+    "neovim"
+    "python-pynvim"
+    "nodejs"
+    "bun-bin"
+    "fd"
+    "ripgrep"
+)
+
+qemu=(
+    "virt-manager"
+    "qemu-desktop"
+    "libvirt"
+    "iptables-nft"
+    "dnsmasq"
+    "openbsd-netcat"
+)
+
+entertainment=(
+    "spotify"
+    "firefox"
+    "yt-dlp"
+)
+
+fonts=(
+    "ttf-fira-code"
+    "ttf-font-awesome"
+)
+
+gtk_theme=(
+    "gruvbox-dark-gtk"
+    "papirus-icon-theme"
+    "vimix-cursors"
+)
+
+packages_to_install=(
+    "${base[@]}"
+    "${intel_cpu[@]}"
+    "${gpu[@]}"
+    "${nvidia[@]}"
+    "${sound[@]}"
+    "${xorg[@]}"
+    "${gui[@]}"
+    "${utilities[@]}"
+    "${terminal[@]}"
+    "${nvim[@]}"
+    "${qemu[@]}"
+    "${entertainment[@]}"
+    "${fonts[@]}"
+    "${gtk_theme[@]}"
+)
+
+packages_ensure_uninstalled=()
+
+ensure_aur_pkg_is_installed() {
+    repo_dir="${1}"
+    repo_url="${2}"
+
+    if command -v "${3}" &> /dev/null; then
+        return
+    fi
+
+    git clone "${repo_url}" "${repo_dir}"
+    (cd "${repo_dir}" && makepgk -si)
+    rm -rf "${repo_dir}"
+}
+
+ensure_suckless_pkg_is_installed() {
+    repo_dir="${1}"
+    repo_url="${2}"
+
+    if command -v "${3}" &> /dev/null; then
+        return
+    fi
+
+    [[ ! -d "${repo_dir}" ]] && git clone "${repo_url}" "${repo_dir}"
+    (cd "${repo_dir}" && sudo make install clean)
+}
+
+
+ensure_yay_is_installed() {
+    pkg_name="yay"
+    repo_dir="${SYSTEM_PROJECTS}/yay-bin"
+    repo_url="https://aur.archlinux.org/yay-bin.git"
+
+    ensure_aur_pkg_is_installed "${repo_dir}" "${repo_url}" "${pkg_name}"
+}
+
+ensure_st_is_installed() {
+    pkg_name="st"
+    repo_dir="${SYSTEM_PROJECTS}/st"
+    repo_url="https://github.com/PabloVarg/st"
+
+    ensure_suckless_pkg_is_installed "${repo_dir}" "${repo_url}" "${pkg_name}"
+}
+
+ensure_dmenu_is_installed() {
+    pkg_name="dmenu"
+    repo_dir="${SYSTEM_PROJECTS}/dmenu"
+    repo_url="https://github.com/PabloVarg/dmenu"
+
+    ensure_suckless_pkg_is_installed "${repo_dir}" "${repo_url}" "${pkg_name}"
+}
+
+ensure_slock_is_installed() {
+    pkg_name="slock"
+    repo_dir="${SYSTEM_PROJECTS}/slock"
+    repo_url="https://github.com/PabloVarg/slock"
+
+    ensure_suckless_pkg_is_installed "${repo_dir}" "${repo_url}" "${pkg_name}"
+}
+
+
+# AUR packages
+ensure_yay_is_installed
+[[ "${#packages_to_install[@]}" != "0" ]] && yay -Syy --needed "${packages_to_install[@]}"
+[[ "${#packages_ensure_uninstalled[@]}" != "0" ]] && yay -Rns "${packages_ensure_uninstalled[@]}"
+
+# Manual packages
+ensure_st_is_installed
+ensure_dmenu_is_installed
+ensure_slock_is_installed

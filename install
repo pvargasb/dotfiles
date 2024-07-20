@@ -11,7 +11,7 @@ usage() {
 
 create_bun_symlink() {
     bun_path="/usr/bin/bun"
-    npm_path="${HOME}/.local/bin/npm"
+    npm_path="${XDG_LOCAL_BIN}/npm"
 
     [[ -f "${bun_path}" ]] || return
     [[ -f "${npm_path}" ]] && sudo rm "${npm_path}"
@@ -21,7 +21,7 @@ create_bun_symlink() {
 
 create_bunx_symlink() {
     bunx_path="/usr/bin/bunx"
-    npx_path="${HOME}/.local/bin/npx"
+    npx_path="${XDG_LOCAL_BIN}/npx"
 
     [[ -f "${bunx_path}" ]] || return
     [[ -f "${npx_path}" ]] && sudo rm "${npx_path}"
@@ -43,7 +43,7 @@ stow_dotfiles() {
 while getopts "ps" flag; do
     case "${flag}" in
         p)
-            echo "Pending implementation for installing packages ..."
+            ./.packages/sync
             ;;
         s)
             stow_dotfiles
