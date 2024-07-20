@@ -29,7 +29,6 @@ lsp_zero.on_attach(function(_, bufnr)
 	vim.keymap.set("n", "<leader>et", builtin.lsp_document_symbols, opts)
 	vim.keymap.set("n", "<leader>es", builtin.lsp_dynamic_workspace_symbols, opts)
 
-	vim.keymap.set("n", "<leader>=", vim.cmd.Format, opts)
 	vim.keymap.set("n", "<leader>ea", vim.lsp.buf.code_action, opts)
 	vim.keymap.set("n", "<leader>er", vim.lsp.buf.rename, opts)
 	vim.keymap.set("i", "<C-h>", vim.lsp.buf.signature_help, opts)
