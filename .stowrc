@@ -4,4 +4,4 @@
 --ignore README.md
 --ignore .stowrc
 --ignore .packages
---ignore install.sh
+--ignore install

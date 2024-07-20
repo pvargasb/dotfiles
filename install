@@ -53,4 +53,4 @@ while getopts "ps" flag; do
             ;;
     esac
 done
-[[ $# = "0" ]] && usage
+[[ $# = "0" ]] && usage || echo "Done!"
