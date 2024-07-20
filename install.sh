@@ -1,0 +1,56 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
+
+usage() {
+    echo "Usage: ${0} [-p] [-s]"
+    echo -e "  -p\t Sync packages"
+    echo -e "  -s\t Stow dotfiles"
+    exit 1
+}
+
+create_bun_symlink() {
+    bun_path="/usr/bin/bun"
+    npm_path="${HOME}/.local/bin/npm"
+
+    [[ -f "${bun_path}" ]] || return
+    [[ -f "${npm_path}" ]] && sudo rm "${npm_path}"
+
+    sudo ln -s "${bun_path}" "${npm_path}"
+}
+
+create_bunx_symlink() {
+    bunx_path="/usr/bin/bunx"
+    npx_path="${HOME}/.local/bin/npx"
+
+    [[ -f "${bunx_path}" ]] || return
+    [[ -f "${npx_path}" ]] && sudo rm "${npx_path}"
+
+    sudo ln -s "${bunx_path}" "${npx_path}"
+}
+
+create_bun_symlinks() {
+    create_bun_symlink
+    create_bunx_symlink
+}
+
+
+stow_dotfiles() {
+    stow .
+    create_bun_symlinks
+}
+
+while getopts "ps" flag; do
+    case "${flag}" in
+        p)
+            echo "Pending implementation for installing packages ..."
+            ;;
+        s)
+            stow_dotfiles
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+[[ $# = "0" ]] && usage
