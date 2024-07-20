@@ -1,5 +1,7 @@
 --restow
 --target=$HOME
+
+--ignore README.md
 --ignore .stowrc
 --ignore .packages
 --ignore install.sh
