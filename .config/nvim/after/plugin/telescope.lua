@@ -1,3 +1,13 @@
+local actions = require("telescope.actions")
+local action_state = require("telescope.actions.state")
+
+local copy_selection = function(prompt_bufnr)
+    local entry = action_state.get_selected_entry(prompt_bufnr)
+
+    vim.fn.setreg("+", entry.value)
+    actions.close(prompt_bufnr)
+end
+
 require("telescope").load_extension("refactoring")
 require("telescope").load_extension("git_worktree")
 require("telescope").setup({
@@ -10,6 +20,7 @@ require("telescope").setup({
 		mappings = {
 			i = {
 				["<C-t>"] = require("telescope.actions.layout").toggle_preview,
+                ["<C-y><C-y>"] = copy_selection,
 			},
 		},
 		preview = {
@@ -32,7 +43,10 @@ vim.keymap.set("x", "<leader>F", builtin.grep_string)
 vim.keymap.set("n", "<leader>to", builtin.oldfiles)
 vim.keymap.set("n", "<leader>tx", builtin.commands)
 vim.keymap.set("n", "<leader>h", builtin.command_history)
-
+vim.keymap.set("n", "<leader>tm", builtin.man_pages)
+vim.keymap.set("n", "<leader>th", builtin.help_tags)
+vim.keymap.set("n", "<leader>tf", builtin.filetypes)
+vim.keymap.set("n", "<leader>tr", builtin.resume)
 vim.keymap.set("n", "<leader>f", function()
 	builtin.find_files({
 		find_command = {
@@ -41,9 +55,6 @@ vim.keymap.set("n", "<leader>f", function()
 		},
 	})
 end)
-
-local actions = require("telescope.actions")
-local action_state = require("telescope.actions.state")
 vim.keymap.set("n", "<leader>t;", function()
 	builtin.find_files({
 		find_command = {
