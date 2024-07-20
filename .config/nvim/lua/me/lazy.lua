@@ -14,7 +14,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	{ "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 
-	"itchyny/lightline.vim",
+	"nvim-lualine/lualine.nvim",
 	"christoomey/vim-tmux-navigator",
 	"mbbill/undotree",
 	"tpope/vim-fugitive",
