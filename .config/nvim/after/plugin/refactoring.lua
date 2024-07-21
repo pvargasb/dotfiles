@@ -1,12 +1,11 @@
-vim.api.nvim_set_keymap(
-	"x",
-	"<leader>er",
-	[[<Esc><cmd>silent! lua require('telescope').extensions.refactoring.refactors()<CR>]],
-	{ noremap = true }
-)
+require("refactoring").setup()
+
+vim.keymap.set("x", "<leader>er", function()
+    require("refactoring").select_refactor()
+end)
 
 vim.keymap.set("n", "<leader>ep", function()
-	require("refactoring").debug.printf()
+	require("refactoring").debug.printf({below = false})
 end)
 
 vim.keymap.set("x", "<leader>ep", function()
