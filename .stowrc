@@ -1,4 +1,5 @@
 --restow
+--no-folding
 --target=$HOME
 
 --ignore README.md
