@@ -1,4 +1,5 @@
 require("gruvbox").setup({
+	contrast = "hard",
 	invert_selection = false,
 })
 
