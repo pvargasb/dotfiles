@@ -11,6 +11,9 @@ require("formatter").setup({
 		python = {
 			require("formatter.filetypes.python").black,
 		},
+        java = {
+            require("formatter.filetypes.java").google_java_format,
+        },
 		javascript = {
 			require("formatter.filetypes.javascript").prettier,
 		},
@@ -26,6 +29,12 @@ require("formatter").setup({
 		markdown = {
 			require("formatter.filetypes.markdown").prettier,
 		},
+        go = {
+            require("formatter.filetypes.go").gofumpt,
+        },
+        sql = {
+             require("formatter.filetypes.sql").sqlfmt,
+        },
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
