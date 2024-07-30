@@ -87,4 +87,6 @@ require("lazy").setup({
 
 	"mfussenegger/nvim-lint",
 	"mhartington/formatter.nvim",
+
+    "github/copilot.vim",
 })

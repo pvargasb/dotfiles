@@ -108,3 +108,6 @@ fi
 if command -v ssh &> /dev/null && [ $SSH_AGENT_PID ] && [ -f .ssh/id-rsa ]; then
     ssh-add -l > /dev/null || ssh-add .ssh/id-rsa
 fi
+
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+source /usr/share/nvm/init-nvm.sh
