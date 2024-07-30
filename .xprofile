@@ -8,7 +8,7 @@ dunst &
 check_battery &
 
 # Save power settings
-sudo powertop --auto-tune &> /dev/null &
+# sudo powertop --auto-tune &> /dev/null &
 
 # Set Keyboard
 keyboard dvorak
