@@ -2,8 +2,9 @@
 alias _='sudo'
 alias vim='nvim'
 alias e='vim'
-alias update='yay -Syu'
-alias nvimupdate='nvim +silent +PlugUpdate +CocUpdate'
+alias update='pacmanupdate && nvimupdate && echo -e "\nMason has to be manually updated"'
+alias pacmanupdate='yay -Syyu'
+alias nvimupdate='nvim --headless +"Lazy sync" +"q"'
 alias clean='yay -Sc --noconfirm'
 
 # Colors
