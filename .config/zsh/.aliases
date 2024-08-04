@@ -2,9 +2,7 @@
 alias _='sudo'
 alias vim='nvim'
 alias e='vim'
-alias update='pacmanupdate && nvimupdate && echo -e "\nMason has to be manually updated"'
-alias pacmanupdate='yay -Syyu'
-alias nvimupdate='nvim --headless +"Lazy sync" +"q"'
+alias update='yay -Syyu'
 alias clean='yay -Sc --noconfirm'
 
 # Colors
@@ -43,7 +41,7 @@ alias df='df -H'
 alias ports='ss -tulanp'
 alias usb='udisksctl mount -b'
 alias usbunmount='udisksctl unmount -b'
-alias vmup='sudo systemctl start libvirtd.service && sudo virsh net-start default'
+alias vmup='sudo systemctl start libvirtd.service && sudo virsh net-start default && virsh start archlinux-dev'
 alias vmdown='sudo virsh net-destroy default && sudo systemctl stop libvirtd.service'
 
 # Keyboard layouts
