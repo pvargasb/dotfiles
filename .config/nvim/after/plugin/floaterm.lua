@@ -9,4 +9,3 @@ vim.keymap.set("t", "<C-t>", "<C-\\><C-n>:FloatermToggle<CR>", { silent = true }
 vim.keymap.set("t", "<C-p>", "<C-\\><C-n>:FloatermPrev<CR>", { silent = true })
 vim.keymap.set("t", "<C-n>", "<C-\\><C-n>:FloatermNext<CR>", { silent = true })
 vim.keymap.set("n", "<C-t>", vim.cmd.FloatermToggle, { silent = true })
-vim.keymap.set("n", "<C-T>", ":let $VIM_DIR=expand('%:p:h')<CR>:silent !tmux split-window -vc $VIM_DIR<CR>")
