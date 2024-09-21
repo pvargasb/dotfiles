@@ -2,7 +2,7 @@
 
 set -e
 
-SAVE_OPTIONS=("clipboard" "file")
+SAVE_OPTIONS=("clipboard" "file" "open")
 EXTENSION="png"
 
 TMP_DIR="/tmp/scripts/screeshot"
@@ -72,6 +72,9 @@ save_screenshot () {
         'file')
             prepare_destination_path
             cp "${TMP_FILE}" "${DST_DIR}/${DST_FILE}"
+            ;;
+        'open')
+            sxiv "${TMP_FILE}"
             ;;
         *)
             echo "Invalid action $action"
