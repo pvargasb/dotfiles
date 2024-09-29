@@ -58,11 +58,28 @@ vim.keymap.set("n", "tq", function()
 	end
 end)
 
-vim.api.nvim_create_autocmd('FileType', {
-  pattern = 'qf',
-  callback = function(event)
-    local opts = { buffer = event.buf, silent = true }
-    vim.keymap.set('n', '<C-n>', '<cmd>cn | wincmd p<CR>', opts)
-    vim.keymap.set('n', '<C-p>', '<cmd>cN | wincmd p<CR>', opts)
-  end,
-})
+vim.keymap.set("n", "<C-n>", function()
+	local qf_exists = false
+	for _, win in pairs(vim.fn.getwininfo()) do
+		if win["quickfix"] == 1 then
+			qf_exists = true
+		end
+	end
+	if qf_exists == true then
+		vim.cmd("cn")
+		return
+	end
+end)
+
+vim.keymap.set("n", "<C-p>", function()
+	local qf_exists = false
+	for _, win in pairs(vim.fn.getwininfo()) do
+		if win["quickfix"] == 1 then
+			qf_exists = true
+		end
+	end
+	if qf_exists == true then
+		vim.cmd("cp")
+		return
+	end
+end)
