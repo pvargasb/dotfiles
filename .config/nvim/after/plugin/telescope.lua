@@ -64,7 +64,13 @@ vim.keymap.set("n", "<leader>t;", function()
 		attach_mappings = function(prompt_bufnr, _)
 			actions.select_default:replace(function()
 				actions.close(prompt_bufnr)
-				builtin.git_files({ cwd = action_state.get_selected_entry()[1] })
+
+                local entries = action_state.get_selected_entry()
+                if entries == nil then
+                    return
+                end
+
+				builtin.git_files({ cwd = entries[1] })
 			end)
 			return true
 		end,
