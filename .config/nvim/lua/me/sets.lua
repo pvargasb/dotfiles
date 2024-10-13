@@ -5,6 +5,7 @@ vim.opt.expandtab = true
 vim.opt.hidden = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
+vim.opt.inccommand = "split"
 vim.opt.lazyredraw = true
 vim.opt.magic = true
 vim.opt.mouse = "nv"
