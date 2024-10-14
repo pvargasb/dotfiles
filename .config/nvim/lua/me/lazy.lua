@@ -87,4 +87,5 @@ require("lazy").setup({
 
 	"mfussenegger/nvim-lint",
 	"stevearc/conform.nvim",
+    "stevearc/dressing.nvim"
 })
