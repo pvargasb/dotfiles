@@ -1,5 +1,7 @@
 local conform = require("conform")
 
+vim.o.formatexpr = "v:lua.require'conform'.formatexpr()"
+
 conform.setup({
 	format_on_save = function(bufnr)
 		-- Disable with a global or buffer-local variable
@@ -9,6 +11,10 @@ conform.setup({
 		return { timeout_ms = 500, lsp_format = "fallback" }
 	end,
 	formatters_by_ft = {
+		["*"] = {
+			"trim_whitespace",
+			"trim_newlines",
+		},
 		lua = { "stylua" },
 		rust = { "rustfmt" },
 		python = { "black" },
@@ -20,7 +26,6 @@ conform.setup({
 		markdown = { "prettier" },
 		go = { "gofumpt" },
 		sql = { "sqlfmt" },
-		["_"] = { "trim_whitespace" },
 	},
 })
 
