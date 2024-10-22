@@ -64,3 +64,7 @@ require("nvim-ts-autotag").setup()
 require("ts_context_commentstring").setup({
 	enable_autocmd = false,
 })
+require("treesitter-context").setup({
+	enable = true,
+	max_lines = 3,
+})
