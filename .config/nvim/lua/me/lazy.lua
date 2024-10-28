@@ -19,4 +19,6 @@ require("lazy").setup({
 	change_detection = {
 		notify = false,
 	},
+
+	{ "github/copilot.vim", enabled = false },
 })
